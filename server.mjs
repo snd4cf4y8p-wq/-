@@ -7,6 +7,16 @@ const __dirname = fileURLToPath(new URL(".", import.meta.url));
 const publicDir = join(__dirname, "public");
 const port = Number(process.env.PORT || 3000);
 const siteOrigin = process.env.PUBLIC_SITE_URL || "http://localhost:3000";
+const rawAdsenseClient = (process.env.ADSENSE_CLIENT || "").trim();
+const adsenseClient = rawAdsenseClient
+  ? rawAdsenseClient.startsWith("ca-") ? rawAdsenseClient : `ca-${rawAdsenseClient}`
+  : "";
+const adsensePublisherId = rawAdsenseClient
+  ? rawAdsenseClient.replace(/^ca-/, "")
+  : "";
+const adsenseInlineSlot = (process.env.ADSENSE_SLOT_INLINE || "").trim();
+const adsenseSidebarSlot = (process.env.ADSENSE_SLOT_SIDEBAR || "").trim();
+const adsenseEnabled = Boolean(adsenseClient);
 
 const siteName = "Minecraft For Beginners";
 
@@ -3267,6 +3277,34 @@ function buildFooterLinks(locale) {
     .join("");
 }
 
+function renderAdsenseHead() {
+  if (!adsenseEnabled) {
+    return "";
+  }
+
+  return `
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${escapeHtml(
+      adsenseClient
+    )}" crossorigin="anonymous"></script>`;
+}
+
+function renderAdSlot({ slot, className = "ad-slot", label = "Advertisement" }) {
+  if (!adsenseEnabled || !slot) {
+    return "";
+  }
+
+  return `<div class="${className}">
+    <p class="ad-slot-label">${escapeHtml(label)}</p>
+    <ins class="adsbygoogle"
+      style="display:block"
+      data-ad-client="${escapeHtml(adsenseClient)}"
+      data-ad-slot="${escapeHtml(slot)}"
+      data-ad-format="auto"
+      data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>`;
+}
+
 function buildLanguageLinks(currentLocale, guide) {
   return locales
     .map((locale) => {
@@ -3323,6 +3361,7 @@ function renderLayout({ locale, title, description, hero, main, guide, pageKey }
     ${hreflangs}
     <link rel="alternate" hreflang="x-default" href="${siteOrigin}/en/" />
     <link rel="stylesheet" href="/styles.css" />
+    ${renderAdsenseHead()}
     <script src="/crafting-sim.js" defer></script>
   </head>
   <body>
@@ -3415,6 +3454,12 @@ function renderHome(locale) {
       </div>
       <div class="compare-grid">${compare}</div>
     </section>
+
+    ${renderAdSlot({
+      slot: adsenseInlineSlot,
+      className: "ad-slot ad-slot-home",
+      label: locale === "de" ? "Werbung" : locale === "fr" ? "Publicite" : "Advertisement"
+    })}
 
     <section id="guides" class="section-block">
       <div class="section-head">
@@ -3524,6 +3569,7 @@ function renderGuide(locale, guide) {
       visualNote: "Use these simple visual cues so you know what to look for in-game.",
       terms: "Game terms in this guide",
       termsNote: "These are the blocks, items and places mentioned below, shown with Minecraft-style visuals.",
+      ad: "Advertisement",
       ingredients: "Ingredients",
       result: "Result",
       notes: "What it looks like and how to use it"
@@ -3539,6 +3585,7 @@ function renderGuide(locale, guide) {
       visualNote: "Diese einfachen Bilder helfen dir, wichtige Dinge im Spiel schneller zu erkennen.",
       terms: "Spielbegriffe in diesem Guide",
       termsNote: "Diese Blocke, Gegenstande und Orte werden unten erwahnt und hier mit Minecraft-Optik gezeigt.",
+      ad: "Werbung",
       ingredients: "Materialien",
       result: "Ergebnis",
       notes: "So sieht es aus und so benutzt du es"
@@ -3554,6 +3601,7 @@ function renderGuide(locale, guide) {
       visualNote: "Utilisez ces reperes visuels simples pour savoir quoi chercher dans le jeu.",
       terms: "Termes du jeu dans ce guide",
       termsNote: "Voici les blocs, objets et lieux mentionnes plus bas, montres avec des visuels de style Minecraft.",
+      ad: "Publicite",
       ingredients: "Ingredients",
       result: "Resultat",
       notes: "A quoi cela ressemble et comment l'utiliser"
@@ -3578,6 +3626,11 @@ function renderGuide(locale, guide) {
       ${crafting}
       ${simulator}
       ${furnaceSimulator}
+      ${renderAdSlot({
+        slot: adsenseInlineSlot,
+        className: "ad-slot ad-slot-inline",
+        label: labels.ad
+      })}
       <section>
         <h2>${escapeHtml(labels.quick)}</h2>
         <p>${annotateGameTerms(locale, page.quickAnswer)}</p>
@@ -3596,6 +3649,11 @@ function renderGuide(locale, guide) {
       </section>
     </article>
     <aside class="sidebar-card">
+      ${renderAdSlot({
+        slot: adsenseSidebarSlot,
+        className: "ad-slot ad-slot-sidebar",
+        label: labels.ad
+      })}
       <h3>${escapeHtml(labels.related)}</h3>
       <ul>${relatedLinks(locale, guide.id)}</ul>
     </aside>
@@ -4894,6 +4952,14 @@ function buildRobotsTxt() {
   return `User-agent: *\nAllow: /\n\nSitemap: ${siteOrigin}/sitemap.xml\n`;
 }
 
+function buildAdsTxt() {
+  if (adsensePublisherId) {
+    return `google.com, ${adsensePublisherId}, DIRECT, f08c47fec0942fa0\n`;
+  }
+
+  return `# Add your Google AdSense publisher id in ADSENSE_CLIENT to enable ads.txt automatically.\n# Expected format: google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0\n`;
+}
+
 async function serveStatic(pathname, res) {
   try {
     const relativePath = pathname.replace(/^\/+/, "");
@@ -4935,6 +5001,12 @@ const server = createServer(async (req, res) => {
   if (url.pathname === "/robots.txt") {
     res.writeHead(200, { "Content-Type": "text/plain; charset=utf-8" });
     res.end(buildRobotsTxt());
+    return;
+  }
+
+  if (url.pathname === "/ads.txt") {
+    res.writeHead(200, { "Content-Type": "text/plain; charset=utf-8" });
+    res.end(buildAdsTxt());
     return;
   }
 

@@ -11,3 +11,9 @@ services:
         value: 24.14.1
       - key: PUBLIC_SITE_URL
         sync: false
+      - key: ADSENSE_CLIENT
+        sync: false
+      - key: ADSENSE_SLOT_INLINE
+        sync: false
+      - key: ADSENSE_SLOT_SIDEBAR
+        sync: false
