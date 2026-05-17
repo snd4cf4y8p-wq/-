@@ -2040,6 +2040,380 @@ function escapeHtml(value) {
     .replaceAll("'", "&#39;");
 }
 
+function escapeRegExp(value) {
+  return String(value).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+const gameTermCatalog = [
+  {
+    key: "craftingTable",
+    images: ["crafting_table_front.png"],
+    locales: {
+      en: { label: "Crafting table", aliases: ["crafting table", "crafting tables"] },
+      de: { label: "Werkbank", aliases: ["werkbank", "werkbanken"] },
+      fr: { label: "Table de craft", aliases: ["table de craft", "tables de craft"] }
+    }
+  },
+  {
+    key: "furnace",
+    images: ["furnace_front.png"],
+    locales: {
+      en: { label: "Furnace", aliases: ["furnace", "furnaces"] },
+      de: { label: "Ofen", aliases: ["ofen", "ofenblock", "ofenblocks"] },
+      fr: { label: "Four", aliases: ["four", "fours"] }
+    }
+  },
+  {
+    key: "chest",
+    images: ["chest.png"],
+    locales: {
+      en: { label: "Chest", aliases: ["chest", "chests"] },
+      de: { label: "Truhe", aliases: ["truhe", "truhen"] },
+      fr: { label: "Coffre", aliases: ["coffre", "coffres"] }
+    }
+  },
+  {
+    key: "coal",
+    images: ["coal.png"],
+    locales: {
+      en: { label: "Coal", aliases: ["coal"] },
+      de: { label: "Kohle", aliases: ["kohle"] },
+      fr: { label: "Charbon", aliases: ["charbon"] }
+    }
+  },
+  {
+    key: "charcoal",
+    images: ["charcoal.png"],
+    locales: {
+      en: { label: "Charcoal", aliases: ["charcoal"] },
+      de: { label: "Holzkohle", aliases: ["holzkohle"] },
+      fr: { label: "Charbon de bois", aliases: ["charbon de bois"] }
+    }
+  },
+  {
+    key: "coalOre",
+    images: ["coal_ore.png"],
+    locales: {
+      en: { label: "Coal ore", aliases: ["coal ore"] },
+      de: { label: "Kohleerz", aliases: ["kohleerz"] },
+      fr: { label: "Minerai de charbon", aliases: ["minerai de charbon"] }
+    }
+  },
+  {
+    key: "ironOre",
+    images: ["iron_ore.png"],
+    locales: {
+      en: { label: "Iron ore", aliases: ["iron ore"] },
+      de: { label: "Eisenerz", aliases: ["eisenerz"] },
+      fr: { label: "Minerai de fer", aliases: ["minerai de fer"] }
+    }
+  },
+  {
+    key: "rawIron",
+    images: ["raw_iron.png"],
+    locales: {
+      en: { label: "Raw iron", aliases: ["raw iron"] },
+      de: { label: "Roheisen", aliases: ["roheisen"] },
+      fr: { label: "Fer brut", aliases: ["fer brut"] }
+    }
+  },
+  {
+    key: "ironIngot",
+    images: ["iron_ingot.png"],
+    locales: {
+      en: { label: "Iron ingot", aliases: ["iron ingot", "iron ingots"] },
+      de: { label: "Eisenbarren", aliases: ["eisenbarren"] },
+      fr: { label: "Lingot de fer", aliases: ["lingot de fer", "lingots de fer"] }
+    }
+  },
+  {
+    key: "torch",
+    images: ["torch.png"],
+    locales: {
+      en: { label: "Torch", aliases: ["torch", "torches"] },
+      de: { label: "Fackel", aliases: ["fackel", "fackeln"] },
+      fr: { label: "Torche", aliases: ["torche", "torches"] }
+    }
+  },
+  {
+    key: "oakLog",
+    images: ["oak_log.png"],
+    locales: {
+      en: { label: "Wood log", aliases: ["wood log", "wood logs", "log", "logs"] },
+      de: { label: "Holzstamm", aliases: ["holzstamm", "holzstamme"] },
+      fr: { label: "Tronc", aliases: ["tronc", "troncs de bois", "tronc de bois"] }
+    }
+  },
+  {
+    key: "oakPlanks",
+    images: ["oak_planks.png"],
+    locales: {
+      en: { label: "Wooden planks", aliases: ["wooden planks", "planks"] },
+      de: { label: "Holzbretter", aliases: ["holzbretter", "bretter"] },
+      fr: { label: "Planches", aliases: ["planches", "planches de bois"] }
+    }
+  },
+  {
+    key: "bed",
+    images: ["red_bed.png"],
+    locales: {
+      en: { label: "Bed", aliases: ["bed", "beds"] },
+      de: { label: "Bett", aliases: ["bett", "betten"] },
+      fr: { label: "Lit", aliases: ["lit", "lits"] }
+    }
+  },
+  {
+    key: "village",
+    images: ["oak_door_bottom.png", "red_bed.png", "hay_block_top.png"],
+    locales: {
+      en: { label: "Village", aliases: ["village", "villages"] },
+      de: { label: "Dorf", aliases: ["dorf", "dorfer"] },
+      fr: { label: "Village", aliases: ["village", "villages"] }
+    }
+  },
+  {
+    key: "villager",
+    images: ["oak_door_bottom.png", "red_bed.png", "hay_block_top.png"],
+    locales: {
+      en: { label: "Villager", aliases: ["villager", "villagers"] },
+      de: { label: "Dorfbewohner", aliases: ["dorfbewohner", "dorfbewohnern"] },
+      fr: { label: "Villageois", aliases: ["villageois", "villageoise", "villageoises"] }
+    }
+  },
+  {
+    key: "hay",
+    images: ["hay_block_top.png"],
+    locales: {
+      en: { label: "Hay bale", aliases: ["hay bale", "hay bales"] },
+      de: { label: "Heuballen", aliases: ["heuballen"] },
+      fr: { label: "Botte de foin", aliases: ["botte de foin", "bottes de foin"] }
+    }
+  },
+  {
+    key: "coordinates",
+    images: ["map.png", "compass_00.png"],
+    locales: {
+      en: { label: "Coordinates", aliases: ["coordinates"] },
+      de: { label: "Koordinaten", aliases: ["koordinaten"] },
+      fr: { label: "Coordonnees", aliases: ["coordonnees"] }
+    }
+  },
+  {
+    key: "map",
+    images: ["map.png"],
+    locales: {
+      en: { label: "Map", aliases: ["map", "maps"] },
+      de: { label: "Karte", aliases: ["karte", "karten"] },
+      fr: { label: "Carte", aliases: ["carte", "cartes"] }
+    }
+  },
+  {
+    key: "compass",
+    images: ["compass_00.png"],
+    locales: {
+      en: { label: "Compass", aliases: ["compass"] },
+      de: { label: "Kompass", aliases: ["kompass"] },
+      fr: { label: "Boussole", aliases: ["boussole"] }
+    }
+  },
+  {
+    key: "door",
+    images: ["oak_door_bottom.png"],
+    locales: {
+      en: { label: "Door", aliases: ["door", "doors"] },
+      de: { label: "Tur", aliases: ["tur", "turen"] },
+      fr: { label: "Porte", aliases: ["porte", "portes"] }
+    }
+  },
+  {
+    key: "cobblestone",
+    images: ["cobblestone.png"],
+    locales: {
+      en: { label: "Cobblestone", aliases: ["cobblestone"] },
+      de: { label: "Bruchstein", aliases: ["bruchstein"] },
+      fr: { label: "Cobblestone", aliases: ["cobblestone"] }
+    }
+  },
+  {
+    key: "stonePickaxe",
+    images: ["stone_pickaxe.png"],
+    locales: {
+      en: { label: "Stone pickaxe", aliases: ["stone pickaxe", "stone tools"] },
+      de: { label: "Steinspitzhacke", aliases: ["steinspitzhacke", "steinwerkzeuge"] },
+      fr: { label: "Pioche en pierre", aliases: ["pioche en pierre", "outils en pierre"] }
+    }
+  },
+  {
+    key: "stoneAxe",
+    images: ["stone_axe.png"],
+    locales: {
+      en: { label: "Stone axe", aliases: ["stone axe"] },
+      de: { label: "Steinaxt", aliases: ["steinaxt"] },
+      fr: { label: "Hache en pierre", aliases: ["hache en pierre"] }
+    }
+  },
+  {
+    key: "woodenPickaxe",
+    images: ["wooden_pickaxe.png"],
+    locales: {
+      en: { label: "Wooden pickaxe", aliases: ["wooden pickaxe"] },
+      de: { label: "Holzspitzhacke", aliases: ["holzspitzhacke"] },
+      fr: { label: "Pioche en bois", aliases: ["pioche en bois"] }
+    }
+  },
+  {
+    key: "woodenSword",
+    images: ["wooden_sword.png"],
+    locales: {
+      en: { label: "Wooden sword", aliases: ["wooden sword"] },
+      de: { label: "Holzschwert", aliases: ["holzschwert"] },
+      fr: { label: "Epee en bois", aliases: ["epee en bois"] }
+    }
+  },
+  {
+    key: "wheatSeeds",
+    images: ["wheat_seeds.png"],
+    locales: {
+      en: { label: "Wheat seeds", aliases: ["wheat seeds", "seeds"] },
+      de: { label: "Weizensamen", aliases: ["weizensamen", "samen"] },
+      fr: { label: "Graines de ble", aliases: ["graines de ble"] }
+    }
+  },
+  {
+    key: "shield",
+    images: ["iron_ingot.png", "oak_planks.png", "wooden_sword.png"],
+    locales: {
+      en: { label: "Shield", aliases: ["shield"] },
+      de: { label: "Schild", aliases: ["schild"] },
+      fr: { label: "Bouclier", aliases: ["bouclier"] }
+    }
+  }
+];
+
+const gameTermsByLocale = Object.fromEntries(
+  locales.map((locale) => [
+    locale,
+    gameTermCatalog.map((entry) => ({
+      key: entry.key,
+      label: entry.locales[locale].label,
+      aliases: entry.locales[locale].aliases,
+      images: entry.images
+    }))
+  ])
+);
+
+const gameTermLookup = Object.fromEntries(
+  locales.map((locale) => {
+    const pairs = [];
+    for (const def of gameTermsByLocale[locale]) {
+      for (const alias of def.aliases) {
+        pairs.push([alias.toLowerCase(), def]);
+      }
+    }
+    return [locale, Object.fromEntries(pairs)];
+  })
+);
+
+const gameTermPatternByLocale = Object.fromEntries(
+  locales.map((locale) => {
+    const aliases = gameTermsByLocale[locale]
+      .flatMap((def) => def.aliases)
+      .sort((a, b) => b.length - a.length)
+      .map((alias) => escapeRegExp(alias));
+    return [locale, new RegExp(`(${aliases.join("|")})`, "gi")];
+  })
+);
+
+function renderTermChip(def) {
+  const images = def.images
+    .map(
+      (image) =>
+        `<img class="term-chip-texture" src="/assets/minecraft/${image}" alt="${escapeHtml(def.label)}" />`
+    )
+    .join("");
+  const iconClass = def.images.length > 1 ? "term-chip-icon term-chip-icon-stack" : "term-chip-icon";
+  return `<span class="term-chip" title="${escapeHtml(def.label)} in Minecraft">
+    <span class="${iconClass}" aria-hidden="true">${images}</span>
+  </span>`;
+}
+
+function annotateGameTerms(locale, text) {
+  if (!text) {
+    return "";
+  }
+
+  const regex = gameTermPatternByLocale[locale];
+  const lookup = gameTermLookup[locale];
+  let lastIndex = 0;
+  let result = "";
+
+  for (const match of text.matchAll(regex)) {
+    const matchedText = match[0];
+    const index = match.index ?? 0;
+    const def = lookup[matchedText.toLowerCase()];
+    result += escapeHtml(text.slice(lastIndex, index));
+    result += escapeHtml(matchedText);
+    if (def) {
+      result += renderTermChip(def);
+    }
+    lastIndex = index + matchedText.length;
+  }
+
+  result += escapeHtml(text.slice(lastIndex));
+  return result;
+}
+
+function collectGuideTerms(locale, page) {
+  const textBlocks = [
+    page.summary,
+    page.quickAnswer,
+    ...(page.steps || []),
+    ...(page.mistakes || []),
+    ...(page.tips || []),
+    ...(page.crafting?.ingredients || []),
+    ...(page.crafting?.notes || []),
+    page.crafting?.intro,
+    page.crafting?.result
+  ]
+    .filter(Boolean)
+    .join(" ")
+    .toLowerCase();
+
+  return gameTermsByLocale[locale].filter((def) =>
+    def.aliases.some((alias) => textBlocks.includes(alias.toLowerCase()))
+  );
+}
+
+function renderGameTermLegend(locale, page, labels) {
+  const terms = collectGuideTerms(locale, page).slice(0, 12);
+  if (!terms.length) {
+    return "";
+  }
+
+  const cards = terms
+    .map((term) => {
+      const images = term.images
+        .map(
+          (image) =>
+            `<img class="term-legend-texture" src="/assets/minecraft/${image}" alt="${escapeHtml(term.label)}" />`
+        )
+        .join("");
+      const visualClass =
+        term.images.length > 1 ? "term-legend-visual term-legend-visual-stack" : "term-legend-visual";
+      return `<article class="term-legend-card">
+        <div class="${visualClass}">${images}</div>
+        <h3>${escapeHtml(term.label)}</h3>
+      </article>`;
+    })
+    .join("");
+
+  return `<section class="term-legend-section">
+    <h2>${escapeHtml(labels.terms)}</h2>
+    <p>${escapeHtml(labels.termsNote)}</p>
+    <div class="term-legend-grid">${cards}</div>
+  </section>`;
+}
+
 function pageTitle(locale, title) {
   return `${escapeHtml(title)} | ${siteName}`;
 }
@@ -2223,19 +2597,20 @@ function renderGuide(locale, guide) {
     <div class="hero-copy">
       <p class="eyebrow">${escapeHtml(nav[guide.category])}</p>
       <h1>${escapeHtml(page.title)}</h1>
-      <p class="lede">${escapeHtml(page.summary)}</p>
+      <p class="lede">${annotateGameTerms(locale, page.summary)}</p>
       <div class="hero-actions">
         <a class="ghost-button" href="/${locale}/">${escapeHtml(nav.back)}</a>
       </div>
     </div>
   </section>`;
 
-  const steps = page.steps.map((item) => `<li>${escapeHtml(item)}</li>`).join("");
-  const mistakes = page.mistakes.map((item) => `<li>${escapeHtml(item)}</li>`).join("");
-  const tips = page.tips.map((item) => `<li>${escapeHtml(item)}</li>`).join("");
+  const steps = page.steps.map((item) => `<li>${annotateGameTerms(locale, item)}</li>`).join("");
+  const mistakes = page.mistakes.map((item) => `<li>${annotateGameTerms(locale, item)}</li>`).join("");
+  const tips = page.tips.map((item) => `<li>${annotateGameTerms(locale, item)}</li>`).join("");
 
   const labels = {
     en: {
+      locale: "en",
       quick: "Quick Answer",
       steps: "Step-by-Step Guide",
       mistakes: "Common Mistakes",
@@ -2243,11 +2618,14 @@ function renderGuide(locale, guide) {
       related: "Related Guides",
       visual: "What to recognize",
       visualNote: "Use these simple visual cues so you know what to look for in-game.",
+      terms: "Game terms in this guide",
+      termsNote: "These are the blocks, items and places mentioned below, shown with Minecraft-style visuals.",
       ingredients: "Ingredients",
       result: "Result",
       notes: "What it looks like and how to use it"
     },
     de: {
+      locale: "de",
       quick: "Kurze Antwort",
       steps: "Schritt-fur-Schritt-Guide",
       mistakes: "Haufige Fehler",
@@ -2255,11 +2633,14 @@ function renderGuide(locale, guide) {
       related: "Verwandte Guides",
       visual: "Was du erkennen solltest",
       visualNote: "Diese einfachen Bilder helfen dir, wichtige Dinge im Spiel schneller zu erkennen.",
+      terms: "Spielbegriffe in diesem Guide",
+      termsNote: "Diese Blocke, Gegenstande und Orte werden unten erwahnt und hier mit Minecraft-Optik gezeigt.",
       ingredients: "Materialien",
       result: "Ergebnis",
       notes: "So sieht es aus und so benutzt du es"
     },
     fr: {
+      locale: "fr",
       quick: "Reponse rapide",
       steps: "Guide etape par etape",
       mistakes: "Erreurs frequentes",
@@ -2267,6 +2648,8 @@ function renderGuide(locale, guide) {
       related: "Guides lies",
       visual: "Ce qu'il faut reconnaitre",
       visualNote: "Utilisez ces reperes visuels simples pour savoir quoi chercher dans le jeu.",
+      terms: "Termes du jeu dans ce guide",
+      termsNote: "Voici les blocs, objets et lieux mentionnes plus bas, montres avec des visuels de style Minecraft.",
       ingredients: "Ingredients",
       result: "Resultat",
       notes: "A quoi cela ressemble et comment l'utiliser"
@@ -2274,6 +2657,7 @@ function renderGuide(locale, guide) {
   }[locale];
 
   const visual = renderGuideVisual(locale, guide.visual);
+  const termLegend = renderGameTermLegend(locale, page, labels);
   const crafting = renderCraftingSection(page.crafting, labels);
   const simulator = guide.id === "crafting-table" ? renderCraftingSimulator(locale) : "";
   const furnaceSimulator = guide.id === "furnace-guide" ? renderFurnaceSimulator(locale) : "";
@@ -2286,12 +2670,13 @@ function renderGuide(locale, guide) {
         <p>${escapeHtml(labels.visualNote)}</p>
         ${visual}
       </section>
+      ${termLegend}
       ${crafting}
       ${simulator}
       ${furnaceSimulator}
       <section>
         <h2>${escapeHtml(labels.quick)}</h2>
-        <p>${escapeHtml(page.quickAnswer)}</p>
+        <p>${annotateGameTerms(locale, page.quickAnswer)}</p>
       </section>
       <section>
         <h2>${escapeHtml(labels.steps)}</h2>
@@ -2692,13 +3077,13 @@ function renderCraftingSection(crafting, labels) {
   if (!crafting) return "";
 
   const ingredients = crafting.ingredients
-    .map((item) => `<li>${escapeHtml(item)}</li>`)
+    .map((item) => `<li>${annotateGameTerms(labels.locale, item)}</li>`)
     .join("");
-  const notes = crafting.notes.map((item) => `<li>${escapeHtml(item)}</li>`).join("");
+  const notes = crafting.notes.map((item) => `<li>${annotateGameTerms(labels.locale, item)}</li>`).join("");
 
   return `<section class="crafting-section">
     <h2>${escapeHtml(crafting.title)}</h2>
-    <p>${escapeHtml(crafting.intro)}</p>
+    <p>${annotateGameTerms(labels.locale, crafting.intro)}</p>
     <div class="crafting-grid">
       <div class="crafting-box">
         <h3>${escapeHtml(labels.ingredients)}</h3>
@@ -2706,7 +3091,7 @@ function renderCraftingSection(crafting, labels) {
       </div>
       <div class="crafting-box">
         <h3>${escapeHtml(labels.result)}</h3>
-        <p class="crafting-result">${escapeHtml(crafting.result)}</p>
+        <p class="crafting-result">${annotateGameTerms(labels.locale, crafting.result)}</p>
       </div>
     </div>
     <div class="crafting-box crafting-notes">

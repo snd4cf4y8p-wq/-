@@ -295,6 +295,86 @@ h3 {
   line-height: 1.72;
 }
 
+.term-chip {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 0.38rem;
+  vertical-align: text-bottom;
+}
+
+.term-chip-icon {
+  display: inline-grid;
+  place-items: center;
+  width: 1.7rem;
+  height: 1.7rem;
+  padding: 0.18rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 251, 244, 0.95);
+  box-shadow: 0 6px 16px rgba(31, 36, 28, 0.08);
+}
+
+.term-chip-icon-stack {
+  grid-auto-flow: column;
+  gap: 0.08rem;
+  width: auto;
+  min-width: 2.4rem;
+  padding-inline: 0.22rem;
+}
+
+.term-chip-texture {
+  width: 0.92rem;
+  height: 0.92rem;
+  object-fit: contain;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+.term-legend-section {
+  margin-top: 28px;
+}
+
+.term-legend-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 16px;
+}
+
+.term-legend-card {
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.52);
+}
+
+.term-legend-card h3 {
+  margin-top: 12px;
+  font-size: 1rem;
+}
+
+.term-legend-visual {
+  display: grid;
+  place-items: center;
+  min-height: 82px;
+  border-radius: 18px;
+  background:
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.72), transparent 36%),
+    rgba(250, 244, 232, 0.9);
+}
+
+.term-legend-visual-stack {
+  grid-auto-flow: column;
+  gap: 10px;
+}
+
+.term-legend-texture {
+  width: min(100%, 44px);
+  height: auto;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
 .guide-kicker {
   margin: 0 0 10px;
   color: var(--accent-2);
@@ -782,6 +862,7 @@ h3 {
   .guides-grid,
   .mini-grid,
   .visual-grid,
+  .term-legend-grid,
   .crafting-grid,
   .crafting-sim-grid,
   .furnace-sim-grid {
