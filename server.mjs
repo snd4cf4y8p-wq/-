@@ -1668,6 +1668,364 @@ const guides = [
         ]
       }
     }
+  },
+  {
+    id: "shield",
+    category: "resources",
+    visual: "shield",
+    pages: {
+      en: {
+        slug: "how-to-make-a-shield-in-minecraft",
+        title: "How to Make a Shield in Minecraft",
+        summary: "A shield is one of the best early-game survival upgrades because it prevents cheap beginner deaths.",
+        quickAnswer:
+          "A shield is crafted with 6 wooden planks and 1 iron ingot on a crafting table. Use it as soon as you have your first iron spare.",
+        steps: [
+          "Find and smelt at least one iron ingot first.",
+          "Turn wood logs into wooden planks.",
+          "Open the crafting table and place 6 planks plus 1 iron ingot in the shield pattern.",
+          "Move the shield into your hotbar and equip it.",
+          "Use it against skeleton arrows, close-range hits and dangerous surprise attacks."
+        ],
+        mistakes: [
+          "Spending early iron on less important items before making a shield.",
+          "Crafting one but never equipping it in a useful slot.",
+          "Assuming armor alone is enough to survive early caves."
+        ],
+        tips: [
+          "For beginners, a shield often saves more lives than one extra armor piece.",
+          "If skeletons are your biggest problem, a shield changes the game immediately.",
+          "Make the shield as soon as your iron pickaxe is already secured."
+        ],
+        crafting: {
+          title: "Crafting recipe",
+          intro:
+            "A shield is crafted with wooden planks and one iron ingot on a crafting table.",
+          ingredients: [
+            "6 wooden planks",
+            "1 iron ingot"
+          ],
+          result: "1 shield",
+          notes: [
+            "The shield is a defensive item you hold to block damage.",
+            "It is especially valuable against skeleton arrows and sudden cave hits."
+          ]
+        }
+      },
+      de: {
+        slug: "wie-macht-man-ein-schild-in-minecraft",
+        title: "Wie macht man ein Schild in Minecraft?",
+        summary: "Ein Schild ist eines der besten fruhen Uberlebens-Upgrades, weil es billige Anfanger-Tode verhindert.",
+        quickAnswer:
+          "Ein Schild wird an der Werkbank aus 6 Holzbrettern und 1 Eisenbarren hergestellt. Nutze es, sobald dein erstes freies Eisen da ist.",
+        steps: [
+          "Finde und schmelze zuerst mindestens einen Eisenbarren.",
+          "Verwandle Holzstamme in Holzbretter.",
+          "Offne die Werkbank und lege 6 Bretter plus 1 Eisenbarren im Schildmuster hinein.",
+          "Zieh das Schild in die Hotbar und ruste es aus.",
+          "Nutze es gegen Skelette, Nahkampftreffer und uberraschende Angriffe."
+        ],
+        mistakes: [
+          "Fruhes Eisen fur weniger wichtige Dinge auszugeben, bevor ein Schild gebaut wird.",
+          "Ein Schild zu craften, aber nie sinnvoll auszurusten.",
+          "Zu denken, Rüstung allein reiche in fruhen Hohlen aus."
+        ],
+        tips: [
+          "Fur Anfanger rettet ein Schild oft mehr Leben als ein zusatzliches Rustungsteil.",
+          "Wenn Skelette dein grotes Problem sind, verandert ein Schild sofort alles.",
+          "Baue es, sobald deine Eisenspitzhacke schon gesichert ist."
+        ],
+        crafting: {
+          title: "Crafting-Rezept",
+          intro:
+            "Ein Schild wird an der Werkbank aus Holzbrettern und einem Eisenbarren hergestellt.",
+          ingredients: [
+            "6 Holzbretter",
+            "1 Eisenbarren"
+          ],
+          result: "1 Schild",
+          notes: [
+            "Das Schild ist ein Verteidigungsgegenstand zum Blocken von Schaden.",
+            "Besonders wertvoll ist es gegen Skelettpfeile und plötzliche Treffer in Hohlen."
+          ]
+        }
+      },
+      fr: {
+        slug: "comment-fabriquer-un-bouclier-dans-minecraft",
+        title: "Comment fabriquer un bouclier dans Minecraft ?",
+        summary: "Le bouclier est l'un des meilleurs upgrades de survie du debut car il evite beaucoup de morts betes.",
+        quickAnswer:
+          "Un bouclier se fabrique avec 6 planches de bois et 1 lingot de fer sur une table de craft. Utilisez-le des que vous avez un peu de fer libre.",
+        steps: [
+          "Trouvez et faites fondre au moins un lingot de fer.",
+          "Transformez des troncs en planches.",
+          "Ouvrez la table de craft et placez 6 planches plus 1 lingot dans le motif du bouclier.",
+          "Mettez le bouclier dans votre barre rapide et equipez-le.",
+          "Utilisez-le contre les fleches des squelettes, les coups de pres et les attaques surprises."
+        ],
+        mistakes: [
+          "Depenser le premier fer dans des objets moins utiles avant de faire un bouclier.",
+          "En fabriquer un puis ne jamais l'equiper correctement.",
+          "Croire que l'armure seule suffit dans les premieres grottes."
+        ],
+        tips: [
+          "Pour un debutant, un bouclier sauve souvent plus de vies qu'une piece d'armure en plus.",
+          "Si les squelettes vous posent probleme, le bouclier change tout tres vite.",
+          "Fabriquez-le des que votre pioche en fer est deja securisee."
+        ],
+        crafting: {
+          title: "Recette de fabrication",
+          intro:
+            "Un bouclier se fabrique sur une table de craft avec des planches de bois et un lingot de fer.",
+          ingredients: [
+            "6 planches de bois",
+            "1 lingot de fer"
+          ],
+          result: "1 bouclier",
+          notes: [
+            "Le bouclier est un objet defensif que l'on tient pour bloquer les degats.",
+            "Il est tres utile contre les fleches des squelettes et les coups surprises dans les grottes."
+          ]
+        }
+      }
+    }
+  },
+  {
+    id: "safe-mining",
+    category: "resources",
+    visual: "safeMining",
+    pages: {
+      en: {
+        slug: "how-to-mine-safely-in-minecraft",
+        title: "How to Mine Safely in Minecraft",
+        summary: "Most beginner mining deaths come from entering caves too early, too dark, or too greedy.",
+        quickAnswer:
+          "Mine safely by bringing torches, food, spare tools, blocks and a calm plan. Light your path, stop when your inventory is full, and leave before panic starts.",
+        steps: [
+          "Do not start a real mining trip until you have food, torches and at least stone tools.",
+          "Place torches regularly so you can see and find the way back.",
+          "Keep blocks on you to close dangerous openings or make quick bridges.",
+          "If mobs appear and the cave feels messy, retreat instead of forcing progress.",
+          "Return home before your inventory, health or confidence completely collapses."
+        ],
+        mistakes: [
+          "Going underground with almost no food or torches.",
+          "Digging deeper when already low on health.",
+          "Getting greedy after finding iron and then dying with everything."
+        ],
+        tips: [
+          "Safe mining is slower than panic mining, but it gives better results.",
+          "The real beginner skill is coming back alive with resources.",
+          "A short successful trip is better than a long disaster."
+        ]
+      },
+      de: {
+        slug: "wie-baut-man-sicher-in-minecraft-ab",
+        title: "Wie baut man sicher in Minecraft ab?",
+        summary: "Die meisten Anfanger sterben beim Abbau, weil sie zu fruh, zu dunkel oder zu gierig in Hohlen gehen.",
+        quickAnswer:
+          "Baue sicher ab, indem du Fackeln, Essen, Ersatzwerkzeuge, Blocke und einen ruhigen Plan mitnimmst. Beleuchte den Weg, geh rechtzeitig zuruck und zwinge keinen Fortschritt.",
+        steps: [
+          "Starte keinen echten Mining-Trip ohne Essen, Fackeln und mindestens Steinwerkzeuge.",
+          "Setze regelmaig Fackeln, damit du sehen und zuruckfinden kannst.",
+          "Trage Blocke bei dir, um Gefahrenstellen zu schlieen oder kleine Brücken zu bauen.",
+          "Wenn Mobs auftauchen und die Hohle chaotisch wirkt, zieh dich lieber zuruck.",
+          "Kehre heim, bevor Inventar, Leben oder Nerven komplett leer sind."
+        ],
+        mistakes: [
+          "Fast ohne Essen oder Fackeln unter Tage zu gehen.",
+          "Mit wenig Leben immer tiefer zu graben.",
+          "Nach dem ersten Eisen gierig zu werden und alles zu verlieren."
+        ],
+        tips: [
+          "Sicheres Mining ist langsamer als Panik-Mining, bringt aber bessere Ergebnisse.",
+          "Die wichtigste Anfangerfahigkeit ist, lebend mit Beute zuruckzukommen.",
+          "Ein kurzer erfolgreicher Trip ist besser als eine lange Katastrophe."
+        ]
+      },
+      fr: {
+        slug: "comment-miner-en-securite-dans-minecraft",
+        title: "Comment miner en securite dans Minecraft ?",
+        summary: "La plupart des morts des debutants arrivent parce qu'ils entrent trop tot dans les grottes, sans lumiere ou avec trop de greed.",
+        quickAnswer:
+          "Minez en securite avec des torches, de la nourriture, des outils de rechange, des blocs et un plan calme. Eclairez votre chemin, arretez-vous avant la panique, et rentrez vivant.",
+        steps: [
+          "Ne partez pas miner serieusement sans nourriture, torches et au moins des outils en pierre.",
+          "Placez regulierement des torches pour voir et retrouver la sortie.",
+          "Gardez des blocs pour fermer des ouvertures dangereuses ou faire de petits ponts.",
+          "Si des mobs apparaissent et que la grotte devient confuse, reculez au lieu de forcer.",
+          "Rentrez a la base avant que l'inventaire, la vie ou le calme ne s'effondrent."
+        ],
+        mistakes: [
+          "Descendre avec presque pas de nourriture ni de torches.",
+          "Continuer a miner avec peu de points de vie.",
+          "Devenir trop gourmand apres avoir trouve du fer et tout perdre."
+        ],
+        tips: [
+          "Miner prudemment est plus lent que miner dans la panique, mais bien plus rentable.",
+          "La vraie competence du debutant, c'est de revenir vivant avec les ressources.",
+          "Un petit trajet reussi vaut mieux qu'une longue catastrophe."
+        ]
+      }
+    }
+  },
+  {
+    id: "villager-trading",
+    category: "farming",
+    visual: "villagerTrade",
+    pages: {
+      en: {
+        slug: "how-to-trade-with-villagers-in-minecraft",
+        title: "How to Trade with Villagers in Minecraft",
+        summary: "Trading looks complicated at first, but beginners only need the simple idea: useful items in, better progression out.",
+        quickAnswer:
+          "Trading with villagers means giving them certain items, often emerald-related exchanges, in return for useful gear, food or materials. Start simple and do not overbuild the system too early.",
+        steps: [
+          "Find a village and keep it safe enough to use during the day.",
+          "Click a villager and look at the offered trades instead of guessing.",
+          "Start with easy value sources like village resources or simple farm output.",
+          "Learn which villagers are actually useful for your stage of the game.",
+          "Do not turn trading into a giant project until your base, food and mining are already stable."
+        ],
+        mistakes: [
+          "Trying to understand every villager type on day one.",
+          "Ignoring villages completely because trading seems too advanced.",
+          "Getting distracted by trading before solving food and survival basics."
+        ],
+        tips: [
+          "Beginner trading is about practical help, not a perfect emerald empire.",
+          "Villagers become much easier once you already know one safe village location.",
+          "Treat trading as a bonus layer after your first survival basics are under control."
+        ]
+      },
+      de: {
+        slug: "wie-handelt-man-mit-dorfbewohnern-in-minecraft",
+        title: "Wie handelt man mit Dorfbewohnern in Minecraft?",
+        summary: "Handel wirkt am Anfang kompliziert, aber Einsteiger brauchen nur das Grundprinzip: nützliche Dinge hinein, Fortschritt heraus.",
+        quickAnswer:
+          "Beim Handel gibst du Dorfbewohnern bestimmte Gegenstande und bekommst dafur nutzliche Ausrustung, Essen oder Materialien. Fang einfach an und bau nicht zu fruh ein Riesensystem.",
+        steps: [
+          "Finde ein Dorf und halte es tagsuber sicher genug zur Nutzung.",
+          "Offne einen Dorfbewohner und schau dir die angebotenen Handel an, statt zu raten.",
+          "Starte mit einfachen Wertquellen wie Dorfer-Ressourcen oder einer kleinen Farm.",
+          "Lerne, welche Dorfbewohner fur deine aktuelle Spielphase wirklich hilfreich sind.",
+          "Mach aus Handel kein Groprojekt, solange Basis, Essen und Mining noch nicht stabil sind."
+        ],
+        mistakes: [
+          "Am ersten Tag alle Dorfbewohnertypen verstehen zu wollen.",
+          "Dorfer komplett zu ignorieren, weil Handel zu kompliziert wirkt.",
+          "Sich vom Handel ablenken zu lassen, bevor die Uberlebensgrundlagen stehen."
+        ],
+        tips: [
+          "Anfanger-Handel bedeutet praktische Hilfe, nicht sofort ein perfektes Smaragd-System.",
+          "Dorfbewohner werden viel einfacher, wenn du schon ein sicheres Dorf kennst.",
+          "Sieh Handel als Zusatzschicht, nachdem die ersten Survival-Grundlagen sitzen."
+        ]
+      },
+      fr: {
+        slug: "comment-echanger-avec-les-villageois-dans-minecraft",
+        title: "Comment echanger avec les villageois dans Minecraft ?",
+        summary: "Le commerce parait complexe au debut, mais un nouveau joueur n'a besoin que de l'idee simple: donner des ressources utiles contre une meilleure progression.",
+        quickAnswer:
+          "Echanger avec les villageois consiste a leur donner certains objets pour recevoir de l'equipement, de la nourriture ou des ressources utiles. Commencez simple et n'en faites pas un gros systeme trop tot.",
+        steps: [
+          "Trouvez un village et gardez-le assez sur pour l'utiliser pendant la journee.",
+          "Cliquez sur un villageois et regardez les echanges proposes au lieu de deviner.",
+          "Commencez avec des sources simples de valeur comme les ressources du village ou une petite production de ferme.",
+          "Apprenez quels villageois sont vraiment utiles a votre stade de progression.",
+          "Ne transformez pas le commerce en grand projet tant que la base, la nourriture et le minage ne sont pas stables."
+        ],
+        mistakes: [
+          "Essayer de comprendre tous les types de villageois des le premier jour.",
+          "Ignorer completement les villages parce que le commerce semble trop avance.",
+          "Se laisser distraire par le commerce avant de regler la survie de base."
+        ],
+        tips: [
+          "Le commerce debutant sert a obtenir une aide pratique, pas a construire tout de suite un empire d'emeraudes.",
+          "Les villageois deviennent beaucoup plus simples quand vous connaissez deja un village sur.",
+          "Voyez le commerce comme une couche supplementaire apres les bases de survie."
+        ]
+      }
+    }
+  },
+  {
+    id: "starter-house",
+    category: "path",
+    visual: "starterHouse",
+    pages: {
+      en: {
+        slug: "how-to-build-a-simple-starter-house-in-minecraft",
+        title: "How to Build a Simple Starter House in Minecraft",
+        summary: "Your first house should solve survival problems, not become an architecture project that delays everything else.",
+        quickAnswer:
+          "A simple starter house only needs walls, a roof, a door, light, a bed, storage and space for a crafting table and furnace.",
+        steps: [
+          "Pick a flat spot close to wood, food and your first mining area.",
+          "Build small walls from dirt, wood or cobblestone instead of trying to make a big house.",
+          "Add a roof quickly so mobs cannot drop in from above.",
+          "Place a door, torches, a bed, a crafting table, a furnace and at least one chest inside.",
+          "Improve the house later only after your food, mining and tools are stable."
+        ],
+        mistakes: [
+          "Trying to build a beautiful large base on day one.",
+          "Leaving the roof open and calling it finished.",
+          "Putting key blocks outside instead of inside safe walls."
+        ],
+        tips: [
+          "A good starter house is boring in a useful way.",
+          "Size matters less than safety, lighting and location.",
+          "Your first house is a survival tool, not your forever home."
+        ]
+      },
+      de: {
+        slug: "wie-baut-man-ein-einfaches-starthaus-in-minecraft",
+        title: "Wie baut man ein einfaches Starthaus in Minecraft?",
+        summary: "Dein erstes Haus soll Uberlebensprobleme losen und nicht zu einem Bauprojekt werden, das alles andere verzogert.",
+        quickAnswer:
+          "Ein einfaches Starthaus braucht nur Wande, Dach, Tur, Licht, Bett, Stauraum und Platz fur Werkbank und Ofen.",
+        steps: [
+          "Wahle einen flachen Ort nahe Holz, Essen und deinem ersten Minengebiet.",
+          "Baue kleine Wande aus Erde, Holz oder Bruchstein statt sofort ein groes Haus zu planen.",
+          "Setze schnell ein Dach, damit keine Mobs von oben hineinfallen.",
+          "Stell Tur, Fackeln, Bett, Werkbank, Ofen und mindestens eine Truhe hinein.",
+          "Verbessere das Haus erst, wenn Nahrung, Mining und Werkzeuge stabil sind."
+        ],
+        mistakes: [
+          "Schon an Tag eins ein schones Riesenhaus bauen zu wollen.",
+          "Das Dach offen zu lassen und es trotzdem fertig zu nennen.",
+          "Wichtige Bloche drauen statt in sicheren Wanden zu platzieren."
+        ],
+        tips: [
+          "Ein gutes Starthaus ist auf nutzliche Weise langweilig.",
+          "Groe ist weniger wichtig als Sicherheit, Licht und Standort.",
+          "Dein erstes Haus ist ein Survival-Werkzeug und nicht dein Endprojekt."
+        ]
+      },
+      fr: {
+        slug: "comment-construire-une-maison-de-depart-simple-dans-minecraft",
+        title: "Comment construire une maison de depart simple dans Minecraft ?",
+        summary: "Votre premiere maison doit regler des problemes de survie, pas devenir un projet d'architecture qui ralentit tout le reste.",
+        quickAnswer:
+          "Une maison de depart simple a seulement besoin de murs, d'un toit, d'une porte, de lumiere, d'un lit, de stockage et de place pour une table de craft et un four.",
+        steps: [
+          "Choisissez un endroit plat pres du bois, de la nourriture et de votre premiere zone de minage.",
+          "Construisez de petits murs en terre, bois ou cobblestone au lieu de viser trop grand.",
+          "Ajoutez vite un toit pour empecher les mobs de tomber dedans.",
+          "Placez une porte, des torches, un lit, une table de craft, un four et au moins un coffre a l'interieur.",
+          "Ameliorez la maison plus tard, une fois la nourriture, le minage et les outils stabilises."
+        ],
+        mistakes: [
+          "Essayer de construire une grande belle base des le premier jour.",
+          "Laisser le toit ouvert et considerer la maison terminee.",
+          "Laisser les blocs importants dehors au lieu de les mettre a l'abri."
+        ],
+        tips: [
+          "Une bonne maison de depart est simple d'une maniere utile.",
+          "La taille compte moins que la securite, la lumiere et l'emplacement.",
+          "Votre premiere maison est un outil de survie, pas votre maison finale."
+        ]
+      }
+    }
   }
 ];
 
@@ -2452,6 +2810,26 @@ function visualSet(locale) {
         ["Food stack", "Bring enough food before the first trip."],
         ["Portal note", "Record coordinates before you go in."],
         ["Base supplies", "Blocks, torch marks and backup gear matter more than speed."]
+      ],
+      shield: [
+        ["Iron ingot", "You need one iron ingot for the recipe."],
+        ["Wood planks", "Six planks form the main body of the shield."],
+        ["Defense tool", "Use it early to stop arrows and panic damage."]
+      ],
+      safeMining: [
+        ["Torches", "Light your path so the cave stays readable."],
+        ["Stone pickaxe", "Bring reliable tools, not just one weak spare."],
+        ["Food and blocks", "Safe mining always starts with preparation."]
+      ],
+      villagerTrade: [
+        ["Village houses", "A village is the base for all early trading."],
+        ["Hay bales", "Simple village value often starts with easy food."],
+        ["Useful trades", "Start with practical help, not perfect systems."]
+      ],
+      starterHouse: [
+        ["Door", "Close yourself off from the outside fast."],
+        ["Bed", "Sleeping safely matters more than style."],
+        ["Chest and furnace", "Your first house should hold your core survival setup."]
       ]
     },
     de: {
@@ -2524,6 +2902,26 @@ function visualSet(locale) {
         ["Essensvorrat", "Nimm genug Nahrung fur den ersten Trip mit."],
         ["Portal-Notiz", "Koordinaten vor dem Durchgang sichern."],
         ["Basisvorrate", "Blocke, Markierungen und Ersatzzeug zahlen mehr als Tempo."]
+      ],
+      shield: [
+        ["Eisenbarren", "Du brauchst einen Eisenbarren fur das Rezept."],
+        ["Holzbretter", "Sechs Bretter bilden den Hauptteil des Schilds."],
+        ["Verteidigung", "Nutze es fruh gegen Pfeile und Panikschaden."]
+      ],
+      safeMining: [
+        ["Fackeln", "Beleuchte den Weg, damit die Hohle lesbar bleibt."],
+        ["Steinspitzhacke", "Nimm verlassliche Werkzeuge statt nur einen Notbehelf."],
+        ["Essen und Blocke", "Sicheres Mining beginnt immer mit Vorbereitung."]
+      ],
+      villagerTrade: [
+        ["Dorfhauser", "Ein Dorf ist die Grundlage fur fruhen Handel."],
+        ["Heuballen", "Einfacher Dorfwert beginnt oft mit schneller Nahrung."],
+        ["Nutzliche Handel", "Starte praktisch statt perfekt."]
+      ],
+      starterHouse: [
+        ["Tur", "Schlie dich schnell von drauen ab."],
+        ["Bett", "Sicher schlafen ist wichtiger als Stil."],
+        ["Truhe und Ofen", "Dein erstes Haus soll dein Uberlebens-Setup tragen."]
       ]
     },
     fr: {
@@ -2596,6 +2994,26 @@ function visualSet(locale) {
         ["Reserve de nourriture", "Prenez assez de nourriture avant le premier passage."],
         ["Note du portail", "Enregistrez les coordonnees avant d'entrer."],
         ["Reserve de base", "Blocs, reperes et equipement de secours comptent plus que la vitesse."]
+      ],
+      shield: [
+        ["Lingot de fer", "Il faut un lingot de fer pour la recette."],
+        ["Planches", "Six planches forment la base du bouclier."],
+        ["Outil defensif", "Utilisez-le tot contre les fleches et les degats surprises."]
+      ],
+      safeMining: [
+        ["Torches", "Eclairez votre chemin pour garder la grotte lisible."],
+        ["Pioche en pierre", "Prenez des outils fiables et pas seulement un secours fragile."],
+        ["Nourriture et blocs", "Miner en securite commence toujours par la preparation."]
+      ],
+      villagerTrade: [
+        ["Maisons du village", "Un village est la base du commerce du debut."],
+        ["Bottes de foin", "La valeur simple du village commence souvent par la nourriture."],
+        ["Echanges utiles", "Commencez pratique plutot que parfait."]
+      ],
+      starterHouse: [
+        ["Porte", "Fermez-vous rapidement du danger exterieur."],
+        ["Lit", "Dormir en securite compte plus que le style."],
+        ["Coffre et four", "Votre premiere maison doit contenir le noyau de survie."]
       ]
     }
   }[locale];
@@ -2889,6 +3307,94 @@ function renderGuideVisual(locale, visualKind) {
           { path: "iron_ingot.png", alt: "Iron ingot item icon" },
           { path: "torch.png", alt: "Torch texture" },
           { path: "oak_log.png", alt: "Oak log texture" }
+        ])
+      })
+    ],
+    shield: [
+      svgCard({
+        title: copy.shield[0][0],
+        subtitle: copy.shield[0][1],
+        art: mcTexture("iron_ingot.png", "Iron ingot item icon")
+      }),
+      svgCard({
+        title: copy.shield[1][0],
+        subtitle: copy.shield[1][1],
+        art: mcTexture("oak_planks.png", "Oak planks texture")
+      }),
+      svgCard({
+        title: copy.shield[2][0],
+        subtitle: copy.shield[2][1],
+        art: mcTextureStack([
+          { path: "iron_ingot.png", alt: "Iron ingot item icon" },
+          { path: "oak_planks.png", alt: "Oak planks texture" },
+          { path: "wooden_sword.png", alt: "Wooden sword item icon" }
+        ])
+      })
+    ],
+    safeMining: [
+      svgCard({
+        title: copy.safeMining[0][0],
+        subtitle: copy.safeMining[0][1],
+        art: mcTexture("torch.png", "Torch texture")
+      }),
+      svgCard({
+        title: copy.safeMining[1][0],
+        subtitle: copy.safeMining[1][1],
+        art: mcTexture("stone_pickaxe.png", "Stone pickaxe item icon")
+      }),
+      svgCard({
+        title: copy.safeMining[2][0],
+        subtitle: copy.safeMining[2][1],
+        art: mcTextureStack([
+          { path: "cooked_beef.png", alt: "Cooked beef item icon" },
+          { path: "cobblestone.png", alt: "Cobblestone texture" },
+          { path: "torch.png", alt: "Torch texture" }
+        ])
+      })
+    ],
+    villagerTrade: [
+      svgCard({
+        title: copy.villagerTrade[0][0],
+        subtitle: copy.villagerTrade[0][1],
+        art: mcTextureStack([
+          { path: "oak_door_bottom.png", alt: "Oak door texture" },
+          { path: "red_bed.png", alt: "Red bed item icon" },
+          { path: "torch.png", alt: "Torch texture" }
+        ])
+      }),
+      svgCard({
+        title: copy.villagerTrade[1][0],
+        subtitle: copy.villagerTrade[1][1],
+        art: mcTexture("hay_block_top.png", "Hay bale texture")
+      }),
+      svgCard({
+        title: copy.villagerTrade[2][0],
+        subtitle: copy.villagerTrade[2][1],
+        art: mcTextureStack([
+          { path: "chest.png", alt: "Chest texture" },
+          { path: "iron_ingot.png", alt: "Iron ingot item icon" },
+          { path: "cooked_beef.png", alt: "Cooked beef item icon" }
+        ])
+      })
+    ],
+    starterHouse: [
+      svgCard({
+        title: copy.starterHouse[0][0],
+        subtitle: copy.starterHouse[0][1],
+        art: mcTexture("oak_door_bottom.png", "Oak door texture")
+      }),
+      svgCard({
+        title: copy.starterHouse[1][0],
+        subtitle: copy.starterHouse[1][1],
+        art: mcTexture("red_bed.png", "Red bed item icon")
+      }),
+      svgCard({
+        title: copy.starterHouse[2][0],
+        subtitle: copy.starterHouse[2][1],
+        art: mcTextureStack([
+          { path: "chest.png", alt: "Chest texture" },
+          { path: "furnace_front.png", alt: "Furnace texture" },
+          { path: "crafting_table_front.png", alt: "Crafting table texture" }
         ])
       })
     ]
