@@ -2287,6 +2287,177 @@ const gameTermCatalog = [
       de: { label: "Schild", aliases: ["schild"] },
       fr: { label: "Bouclier", aliases: ["bouclier"] }
     }
+  },
+  {
+    key: "stick",
+    images: ["stick.png"],
+    locales: {
+      en: { label: "Stick", aliases: ["stick", "sticks"] },
+      de: { label: "Stock", aliases: ["stock", "stocke"] },
+      fr: { label: "Baton", aliases: ["baton", "batons"] }
+    }
+  },
+  {
+    key: "wool",
+    images: ["white_wool.png"],
+    locales: {
+      en: { label: "Wool", aliases: ["wool"] },
+      de: { label: "Wolle", aliases: ["wolle"] },
+      fr: { label: "Laine", aliases: ["laine", "laines"] }
+    }
+  },
+  {
+    key: "sheep",
+    images: ["white_wool.png", "red_bed.png"],
+    locales: {
+      en: { label: "Sheep", aliases: ["sheep"] },
+      de: { label: "Schaf", aliases: ["schaf", "schafe", "schafen"] },
+      fr: { label: "Mouton", aliases: ["mouton", "moutons"] }
+    }
+  },
+  {
+    key: "axe",
+    images: ["wooden_axe.png"],
+    locales: {
+      en: { label: "Axe", aliases: ["axe", "axes"] },
+      de: { label: "Axt", aliases: ["axt", "axte"] },
+      fr: { label: "Hache", aliases: ["hache", "haches"] }
+    }
+  },
+  {
+    key: "shovel",
+    images: ["wooden_shovel.png"],
+    locales: {
+      en: { label: "Shovel", aliases: ["shovel", "shovels"] },
+      de: { label: "Schaufel", aliases: ["schaufel", "schaufeln"] },
+      fr: { label: "Pelle", aliases: ["pelle", "pelles"] }
+    }
+  },
+  {
+    key: "pickaxe",
+    images: ["stone_pickaxe.png"],
+    locales: {
+      en: { label: "Pickaxe", aliases: ["pickaxe", "pickaxes"] },
+      de: { label: "Spitzhacke", aliases: ["spitzhacke", "spitzhacken"] },
+      fr: { label: "Pioche", aliases: ["pioche", "pioches"] }
+    }
+  },
+  {
+    key: "farm",
+    images: ["wheat_seeds.png", "hay_block_top.png"],
+    locales: {
+      en: { label: "Farm", aliases: ["farm", "farms", "farmland"] },
+      de: { label: "Farm", aliases: ["farm", "farmen", "ackerboden"] },
+      fr: { label: "Ferme", aliases: ["ferme", "fermes", "terre agricole"] }
+    }
+  },
+  {
+    key: "wheat",
+    images: ["wheat_seeds.png", "hay_block_top.png"],
+    locales: {
+      en: { label: "Wheat", aliases: ["wheat"] },
+      de: { label: "Weizen", aliases: ["weizen"] },
+      fr: { label: "Ble", aliases: ["ble"] }
+    }
+  },
+  {
+    key: "food",
+    images: ["cooked_beef.png"],
+    locales: {
+      en: { label: "Food", aliases: ["food"] },
+      de: { label: "Essen", aliases: ["essen", "nahrung"] },
+      fr: { label: "Nourriture", aliases: ["nourriture"] }
+    }
+  },
+  {
+    key: "beef",
+    images: ["beef.png", "cooked_beef.png"],
+    locales: {
+      en: { label: "Beef", aliases: ["beef", "raw beef", "cooked beef"] },
+      de: { label: "Rindfleisch", aliases: ["rindfleisch"] },
+      fr: { label: "Boeuf", aliases: ["boeuf", "boeuf cru", "boeuf cuit"] }
+    }
+  },
+  {
+    key: "sand",
+    images: ["sand.png"],
+    locales: {
+      en: { label: "Sand", aliases: ["sand"] },
+      de: { label: "Sand", aliases: ["sand"] },
+      fr: { label: "Sable", aliases: ["sable"] }
+    }
+  },
+  {
+    key: "glass",
+    images: ["glass.png"],
+    locales: {
+      en: { label: "Glass", aliases: ["glass"] },
+      de: { label: "Glas", aliases: ["glas"] },
+      fr: { label: "Verre", aliases: ["verre"] }
+    }
+  },
+  {
+    key: "grass",
+    images: ["grass_block_top.png", "grass_block_side.png"],
+    locales: {
+      en: { label: "Grass", aliases: ["grass"] },
+      de: { label: "Gras", aliases: ["gras"] },
+      fr: { label: "Herbe", aliases: ["herbe"] }
+    }
+  },
+  {
+    key: "cave",
+    images: ["stone.png", "torch.png"],
+    locales: {
+      en: { label: "Cave", aliases: ["cave", "caves"] },
+      de: { label: "Hohle", aliases: ["hohle", "hohlen"] },
+      fr: { label: "Grotte", aliases: ["grotte", "grottes"] }
+    }
+  },
+  {
+    key: "shelter",
+    images: ["oak_door_bottom.png", "torch.png", "dirt.png"],
+    locales: {
+      en: { label: "Shelter", aliases: ["shelter"] },
+      de: { label: "Unterschlupf", aliases: ["unterschlupf"] },
+      fr: { label: "Abri", aliases: ["abri", "abris"] }
+    }
+  },
+  {
+    key: "house",
+    images: ["oak_door_bottom.png", "chest.png", "red_bed.png"],
+    locales: {
+      en: { label: "House", aliases: ["house", "starter house", "base"] },
+      de: { label: "Haus", aliases: ["haus", "starthaus", "basis"] },
+      fr: { label: "Maison", aliases: ["maison", "maison de depart", "base"] }
+    }
+  },
+  {
+    key: "nether",
+    images: ["map.png", "torch.png", "iron_ingot.png"],
+    locales: {
+      en: { label: "Nether", aliases: ["nether"] },
+      de: { label: "Nether", aliases: ["nether"] },
+      fr: { label: "Nether", aliases: ["nether"] }
+    }
+  },
+  {
+    key: "portal",
+    images: ["map.png", "compass_00.png", "torch.png"],
+    locales: {
+      en: { label: "Portal", aliases: ["portal", "portals", "nether portal"] },
+      de: { label: "Portal", aliases: ["portal", "portale", "nether-portal"] },
+      fr: { label: "Portail", aliases: ["portail", "portails", "portail du nether"] }
+    }
+  },
+  {
+    key: "blocks",
+    images: ["cobblestone.png", "oak_planks.png", "dirt.png"],
+    locales: {
+      en: { label: "Blocks", aliases: ["block", "blocks", "building blocks"] },
+      de: { label: "Blocke", aliases: ["blocke", "blocken", "baublocke"] },
+      fr: { label: "Blocs", aliases: ["bloc", "blocs", "blocs de construction"] }
+    }
   }
 ];
 

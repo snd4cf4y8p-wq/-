@@ -1,15 +1,16 @@
-@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Instrument+Serif:ital@0;1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Grotesk:wght@400;500;700&family=Instrument+Serif:ital@0;1&display=swap");
 
 :root {
-  --bg: #ede6d7;
-  --paper: rgba(255, 251, 244, 0.92);
-  --ink: #1f241c;
-  --muted: #626857;
-  --line: rgba(31, 36, 28, 0.12);
-  --accent: #3e8c52;
-  --accent-2: #c96d3a;
-  --panel: #faf4e8;
-  --shadow: 0 24px 70px rgba(35, 34, 20, 0.12);
+  --bg: #cfd8b2;
+  --paper: rgba(248, 244, 230, 0.96);
+  --ink: #182012;
+  --muted: #516048;
+  --line: rgba(24, 32, 18, 0.18);
+  --accent: #4d8f3a;
+  --accent-2: #8a5b2f;
+  --panel: #f4edd9;
+  --shadow: 0 18px 0 rgba(54, 73, 32, 0.08), 0 28px 60px rgba(31, 38, 20, 0.14);
+  --block-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.45), inset 0 -4px 0 rgba(0, 0, 0, 0.06);
 }
 
 * {
@@ -26,9 +27,23 @@ body {
   color: var(--ink);
   font-family: "Space Grotesk", sans-serif;
   background:
-    radial-gradient(circle at top left, rgba(62, 140, 82, 0.14), transparent 24%),
-    radial-gradient(circle at bottom right, rgba(201, 109, 58, 0.14), transparent 22%),
-    linear-gradient(180deg, #ece4d3 0%, #e6ddcc 100%);
+    linear-gradient(180deg, rgba(255, 255, 255, 0.1), transparent 22%),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.04), transparent 100%),
+    repeating-linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.06) 0,
+      rgba(255, 255, 255, 0.06) 48px,
+      rgba(0, 0, 0, 0.02) 48px,
+      rgba(0, 0, 0, 0.02) 49px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.05) 0,
+      rgba(255, 255, 255, 0.05) 48px,
+      rgba(0, 0, 0, 0.02) 48px,
+      rgba(0, 0, 0, 0.02) 49px
+    ),
+    linear-gradient(180deg, #7fb06a 0%, #a6be74 18%, #d9c69f 18%, #d2c19a 100%);
 }
 
 .page-shell {
@@ -43,17 +58,21 @@ body {
   align-items: center;
   gap: 20px;
   padding: 14px 18px;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  background: rgba(255, 251, 244, 0.72);
-  backdrop-filter: blur(16px);
-  box-shadow: var(--shadow);
+  border: 3px solid rgba(58, 74, 36, 0.42);
+  border-radius: 16px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.45), rgba(255, 255, 255, 0.08)),
+    #efe4c8;
+  box-shadow: var(--shadow), var(--block-shadow);
 }
 
 .brand {
   color: var(--ink);
   text-decoration: none;
   font-weight: 700;
+  font-family: "Press Start 2P", cursive;
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
 }
 
 .topnav {
@@ -62,11 +81,26 @@ body {
   justify-content: center;
 }
 
+.topnav a {
+  font-size: 0.62rem;
+  line-height: 1.8;
+}
+
 .topnav a,
 .lang-link,
 .inline-link {
   color: var(--muted);
   text-decoration: none;
+}
+
+.topnav a,
+.lang-link,
+.primary-button,
+.ghost-button,
+.guide-kicker,
+.eyebrow,
+.panel-label {
+  font-family: "Press Start 2P", cursive;
 }
 
 .topnav a:hover,
@@ -83,14 +117,16 @@ body {
 
 .lang-link {
   padding: 8px 12px;
-  border-radius: 999px;
-  border: 1px solid transparent;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  font-size: 0.66rem;
 }
 
 .lang-link.active {
   color: var(--ink);
   border-color: var(--line);
-  background: rgba(255, 255, 255, 0.45);
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: var(--block-shadow);
 }
 
 .hero {
@@ -124,11 +160,15 @@ body {
 .hero-panel,
 .article-card,
 .sidebar-card {
-  border-radius: 32px;
+  border-radius: 22px;
 }
 
 .hero-copy {
   padding: 42px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.28), transparent 28%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.14), rgba(0, 0, 0, 0.02)),
+    var(--paper);
 }
 
 .eyebrow {
@@ -136,8 +176,9 @@ body {
   color: var(--accent);
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  font-size: 0.86rem;
+  font-size: 0.62rem;
   font-weight: 700;
+  line-height: 1.7;
 }
 
 h1,
@@ -176,20 +217,23 @@ h3 {
   justify-content: center;
   min-height: 54px;
   padding: 0 20px;
-  border-radius: 999px;
+  border-radius: 12px;
   text-decoration: none;
   font-weight: 700;
+  font-size: 0.68rem;
+  line-height: 1.7;
+  border: 3px solid rgba(49, 62, 31, 0.38);
+  box-shadow: var(--block-shadow);
 }
 
 .primary-button {
   color: #fdfaf4;
-  background: linear-gradient(90deg, var(--accent), #26663a);
+  background: linear-gradient(180deg, #62b449, #3f7d2f);
 }
 
 .ghost-button {
   color: var(--ink);
-  border: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.45);
+  background: linear-gradient(180deg, #f5ebd0, #ebddb8);
 }
 
 .hero-panel {
@@ -199,18 +243,20 @@ h3 {
 .hero-panel-inner {
   height: 100%;
   padding: 24px;
-  border-radius: 24px;
+  border-radius: 18px;
   background:
-    linear-gradient(145deg, rgba(62, 140, 82, 0.11), rgba(201, 109, 58, 0.08)),
-    #f7f1e5;
+    linear-gradient(180deg, rgba(255, 255, 255, 0.22), transparent 30%),
+    linear-gradient(145deg, rgba(77, 143, 58, 0.16), rgba(138, 91, 47, 0.1)),
+    #e6d8af;
+  box-shadow: var(--block-shadow);
 }
 
 .panel-label {
   display: inline-flex;
   padding: 8px 12px;
-  border-radius: 999px;
+  border-radius: 10px;
   background: rgba(31, 36, 28, 0.08);
-  font-size: 0.84rem;
+  font-size: 0.62rem;
   font-weight: 700;
 }
 
@@ -273,8 +319,9 @@ h3 {
 .compare-card,
 .guide-card,
 .mini-card {
-  border-radius: 26px;
+  border-radius: 18px;
   padding: 22px;
+  box-shadow: var(--block-shadow), var(--shadow);
 }
 
 .compare-card h3,
@@ -283,6 +330,8 @@ h3 {
 .sidebar-card h3,
 .article-card h2 {
   font-size: 1.18rem;
+  font-family: "Press Start 2P", cursive;
+  line-height: 1.7;
 }
 
 .compare-card p,
@@ -380,8 +429,9 @@ h3 {
   color: var(--accent-2);
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  font-size: 0.84rem;
+  font-size: 0.62rem;
   font-weight: 700;
+  line-height: 1.7;
 }
 
 .inline-link {
@@ -389,6 +439,7 @@ h3 {
   margin-top: 12px;
   font-weight: 700;
   color: var(--ink);
+  border-bottom: 2px solid rgba(77, 143, 58, 0.35);
 }
 
 .article-main {
@@ -409,6 +460,7 @@ h3 {
 
 .article-card {
   padding: 32px;
+  box-shadow: var(--shadow), var(--block-shadow);
 }
 
 .article-card section + section {
@@ -429,8 +481,9 @@ h3 {
 .crafting-box {
   padding: 18px;
   border: 1px solid var(--line);
-  border-radius: 22px;
+  border-radius: 18px;
   background: rgba(255, 255, 255, 0.5);
+  box-shadow: var(--block-shadow);
 }
 
 .crafting-box h3 {
@@ -462,17 +515,23 @@ h3 {
 .crafting-sim-section {
   margin-top: 28px;
   padding: 22px;
-  border: 1px solid var(--line);
-  border-radius: 28px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.52), rgba(250, 244, 232, 0.8));
+  border: 3px solid rgba(58, 74, 36, 0.22);
+  border-radius: 20px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.44), rgba(250, 244, 232, 0.82)),
+    rgba(246, 239, 221, 0.95);
+  box-shadow: var(--block-shadow);
 }
 
 .furnace-sim-section {
   margin-top: 28px;
   padding: 22px;
-  border: 1px solid var(--line);
-  border-radius: 28px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.52), rgba(250, 244, 232, 0.8));
+  border: 3px solid rgba(58, 74, 36, 0.22);
+  border-radius: 20px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.44), rgba(250, 244, 232, 0.82)),
+    rgba(246, 239, 221, 0.95);
+  box-shadow: var(--block-shadow);
 }
 
 .crafting-sim-grid {
