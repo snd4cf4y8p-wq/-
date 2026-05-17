@@ -1,16 +1,15 @@
-@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Grotesk:wght@400;500;700&family=Instrument+Serif:ital@0;1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Instrument+Serif:ital@0;1&display=swap");
 
 :root {
-  --bg: #cfd8b2;
-  --paper: rgba(248, 244, 230, 0.96);
-  --ink: #182012;
-  --muted: #516048;
-  --line: rgba(24, 32, 18, 0.18);
-  --accent: #4d8f3a;
-  --accent-2: #8a5b2f;
-  --panel: #f4edd9;
-  --shadow: 0 18px 0 rgba(54, 73, 32, 0.08), 0 28px 60px rgba(31, 38, 20, 0.14);
-  --block-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.45), inset 0 -4px 0 rgba(0, 0, 0, 0.06);
+  --bg: #ede6d7;
+  --paper: rgba(255, 251, 244, 0.92);
+  --ink: #1f241c;
+  --muted: #626857;
+  --line: rgba(31, 36, 28, 0.12);
+  --accent: #3e8c52;
+  --accent-2: #c96d3a;
+  --panel: #faf4e8;
+  --shadow: 0 24px 70px rgba(35, 34, 20, 0.12);
 }
 
 * {
@@ -19,173 +18,20 @@
 
 html {
   scroll-behavior: smooth;
-  background: linear-gradient(180deg, #78c3ef 0%, #b8e2f6 58%, #8caf61 58%, #628242 100%);
 }
 
 body {
-  position: relative;
   margin: 0;
   min-height: 100vh;
   color: var(--ink);
   font-family: "Space Grotesk", sans-serif;
-  background: linear-gradient(180deg, rgba(12, 18, 10, 0.18), rgba(12, 18, 10, 0.1));
-}
-
-body::before,
-body::after {
-  content: none;
-}
-
-.world-scene {
-  position: fixed;
-  inset: 0;
-  overflow: hidden;
-  pointer-events: none;
-  z-index: 0;
-}
-
-.world-scene > div {
-  position: absolute;
-}
-
-.world-sky {
-  inset: 0 0 36% 0;
   background:
-    radial-gradient(circle at 20% 18%, rgba(255, 255, 255, 0.28), transparent 12%),
-    radial-gradient(circle at 74% 14%, rgba(255, 255, 255, 0.22), transparent 12%),
-    linear-gradient(180deg, #74c1ef 0%, #8fd0f0 34%, #c4ecf7 100%);
-}
-
-.world-cloud {
-  height: 72px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.42);
-  filter: blur(3px);
-}
-
-.world-cloud-1 {
-  top: 9%;
-  left: 14%;
-  width: 220px;
-}
-
-.world-cloud-2 {
-  top: 13%;
-  right: 12%;
-  width: 180px;
-}
-
-.world-tree-line {
-  left: 0;
-  right: 58%;
-  top: 36%;
-  bottom: 38%;
-  background:
-    linear-gradient(90deg, rgba(0, 0, 0, 0.18) 12%, transparent 12% 14%, rgba(0, 0, 0, 0.18) 14% 16%, transparent 16% 18%, rgba(0, 0, 0, 0.18) 18% 20%, transparent 20%),
-    linear-gradient(90deg, rgba(0, 0, 0, 0.14) 26%, transparent 26% 28%, rgba(0, 0, 0, 0.14) 28% 30%, transparent 30% 32%, rgba(0, 0, 0, 0.14) 32% 34%, transparent 34%),
-    linear-gradient(90deg, transparent 0 8%, rgba(55, 104, 45, 0.74) 8% 36%, transparent 36% 100%);
-  opacity: 0.85;
-}
-
-.world-sand-ridge {
-  left: 58%;
-  right: 10%;
-  top: 45%;
-  height: 11%;
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.16), transparent 22%),
-    url("/assets/minecraft/sand.png") center / 88px 88px repeat;
-  clip-path: polygon(8% 40%, 38% 14%, 74% 18%, 100% 44%, 100% 100%, 0 100%, 0 58%);
-  opacity: 0.92;
-  image-rendering: pixelated;
-}
-
-.world-snow-ridge {
-  left: 76%;
-  right: 4%;
-  top: 37%;
-  height: 12%;
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.24), transparent 18%),
-    url("/assets/minecraft/white_wool.png") center / 70px 70px repeat;
-  clip-path: polygon(12% 58%, 34% 24%, 58% 16%, 78% 28%, 100% 50%, 100% 100%, 0 100%, 0 72%);
-  opacity: 0.82;
-  image-rendering: pixelated;
-}
-
-.world-field {
-  left: -8%;
-  right: -8%;
-  bottom: 0;
-  height: 42%;
-  background:
-    radial-gradient(ellipse at center top, rgba(119, 176, 77, 0.92) 0%, rgba(95, 148, 58, 0.88) 36%, rgba(0, 0, 0, 0) 74%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.08), transparent 20%),
-    url("/assets/minecraft/grass_block_top.png") center 12% / 118px 118px repeat-x,
-    url("/assets/minecraft/grass_block_side.png") center 46% / 118px 118px repeat-x,
-    url("/assets/minecraft/dirt.png") center 92% / 118px 118px repeat,
-    linear-gradient(180deg, #8dba62 0%, #6e9a4d 54%, #7f6642 54%, #6d5739 76%, #555556 76%, #494a4a 100%);
-}
-
-.world-path {
-  left: 50%;
-  bottom: -3%;
-  width: min(48vw, 760px);
-  height: 30%;
-  transform: translateX(-50%);
-  clip-path: polygon(10% 100%, 90% 100%, 64% 10%, 36% 10%);
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.08), transparent 18%),
-    url("/assets/minecraft/dirt.png") center / 96px 96px repeat;
-  opacity: 0.88;
-  image-rendering: pixelated;
-}
-
-.world-foreground {
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 18%;
-  background:
-    linear-gradient(180deg, transparent 0%, rgba(23, 30, 16, 0.16) 28%, rgba(23, 30, 16, 0.42) 100%),
-    radial-gradient(ellipse at center top, rgba(255, 255, 255, 0.06), transparent 44%);
-}
-
-.world-frame {
-  top: 0;
-  bottom: 0;
-  width: 10vw;
-  min-width: 76px;
-  max-width: 160px;
-  background:
-    linear-gradient(180deg, rgba(0, 0, 0, 0.28), rgba(0, 0, 0, 0.54)),
-    url("/assets/minecraft/oak_planks.png") center / 120px 120px repeat;
-  image-rendering: pixelated;
-}
-
-.world-frame-left {
-  left: 0;
-  transform: perspective(900px) rotateY(-18deg);
-  transform-origin: left center;
-}
-
-.world-frame-right {
-  right: 0;
-  transform: perspective(900px) rotateY(18deg);
-  transform-origin: right center;
-}
-
-.world-vignette {
-  inset: 0;
-  background:
-    radial-gradient(circle at center, transparent 46%, rgba(0, 0, 0, 0.14) 100%),
-    linear-gradient(90deg, rgba(0, 0, 0, 0.18), transparent 10%, transparent 90%, rgba(0, 0, 0, 0.18)),
-    linear-gradient(180deg, rgba(0, 0, 0, 0.16), transparent 12%, transparent 88%, rgba(0, 0, 0, 0.24));
+    radial-gradient(circle at top left, rgba(62, 140, 82, 0.14), transparent 24%),
+    radial-gradient(circle at bottom right, rgba(201, 109, 58, 0.14), transparent 22%),
+    linear-gradient(180deg, #ece4d3 0%, #e6ddcc 100%);
 }
 
 .page-shell {
-  position: relative;
-  z-index: 1;
   width: min(1180px, calc(100% - 32px));
   margin: 0 auto;
   padding: 24px 0 56px;
@@ -197,21 +43,17 @@ body::after {
   align-items: center;
   gap: 20px;
   padding: 14px 18px;
-  border: 3px solid rgba(58, 74, 36, 0.42);
-  border-radius: 16px;
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.45), rgba(255, 255, 255, 0.08)),
-    #efe4c8;
-  box-shadow: var(--shadow), var(--block-shadow);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 251, 244, 0.72);
+  backdrop-filter: blur(16px);
+  box-shadow: var(--shadow);
 }
 
 .brand {
   color: var(--ink);
   text-decoration: none;
   font-weight: 700;
-  font-family: "Press Start 2P", cursive;
-  font-size: 0.9rem;
-  letter-spacing: 0.02em;
 }
 
 .topnav {
@@ -220,26 +62,11 @@ body::after {
   justify-content: center;
 }
 
-.topnav a {
-  font-size: 0.62rem;
-  line-height: 1.8;
-}
-
 .topnav a,
 .lang-link,
 .inline-link {
   color: var(--muted);
   text-decoration: none;
-}
-
-.topnav a,
-.lang-link,
-.primary-button,
-.ghost-button,
-.guide-kicker,
-.eyebrow,
-.panel-label {
-  font-family: "Press Start 2P", cursive;
 }
 
 .topnav a:hover,
@@ -256,16 +83,14 @@ body::after {
 
 .lang-link {
   padding: 8px 12px;
-  border-radius: 10px;
-  border: 2px solid transparent;
-  font-size: 0.66rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
 }
 
 .lang-link.active {
   color: var(--ink);
   border-color: var(--line);
-  background: rgba(255, 255, 255, 0.72);
-  box-shadow: var(--block-shadow);
+  background: rgba(255, 255, 255, 0.45);
 }
 
 .hero {
@@ -299,15 +124,11 @@ body::after {
 .hero-panel,
 .article-card,
 .sidebar-card {
-  border-radius: 22px;
+  border-radius: 32px;
 }
 
 .hero-copy {
   padding: 42px;
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.28), transparent 28%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.14), rgba(0, 0, 0, 0.02)),
-    var(--paper);
 }
 
 .eyebrow {
@@ -315,9 +136,8 @@ body::after {
   color: var(--accent);
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  font-size: 0.62rem;
+  font-size: 0.86rem;
   font-weight: 700;
-  line-height: 1.7;
 }
 
 h1,
@@ -356,23 +176,20 @@ h3 {
   justify-content: center;
   min-height: 54px;
   padding: 0 20px;
-  border-radius: 12px;
+  border-radius: 999px;
   text-decoration: none;
   font-weight: 700;
-  font-size: 0.68rem;
-  line-height: 1.7;
-  border: 3px solid rgba(49, 62, 31, 0.38);
-  box-shadow: var(--block-shadow);
 }
 
 .primary-button {
   color: #fdfaf4;
-  background: linear-gradient(180deg, #62b449, #3f7d2f);
+  background: linear-gradient(90deg, var(--accent), #26663a);
 }
 
 .ghost-button {
   color: var(--ink);
-  background: linear-gradient(180deg, #f5ebd0, #ebddb8);
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.45);
 }
 
 .hero-panel {
@@ -382,20 +199,18 @@ h3 {
 .hero-panel-inner {
   height: 100%;
   padding: 24px;
-  border-radius: 18px;
+  border-radius: 24px;
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.22), transparent 30%),
-    linear-gradient(145deg, rgba(77, 143, 58, 0.16), rgba(138, 91, 47, 0.1)),
-    #e6d8af;
-  box-shadow: var(--block-shadow);
+    linear-gradient(145deg, rgba(62, 140, 82, 0.11), rgba(201, 109, 58, 0.08)),
+    #f7f1e5;
 }
 
 .panel-label {
   display: inline-flex;
   padding: 8px 12px;
-  border-radius: 10px;
+  border-radius: 999px;
   background: rgba(31, 36, 28, 0.08);
-  font-size: 0.62rem;
+  font-size: 0.84rem;
   font-weight: 700;
 }
 
@@ -458,12 +273,8 @@ h3 {
 .compare-card,
 .guide-card,
 .mini-card {
-  border-radius: 18px;
+  border-radius: 26px;
   padding: 22px;
-  box-shadow: var(--block-shadow), var(--shadow);
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.2), transparent 24%),
-    rgba(248, 244, 230, 0.95);
 }
 
 .compare-card h3,
@@ -472,8 +283,6 @@ h3 {
 .sidebar-card h3,
 .article-card h2 {
   font-size: 1.18rem;
-  font-family: "Press Start 2P", cursive;
-  line-height: 1.7;
 }
 
 .compare-card p,
@@ -484,6 +293,22 @@ h3 {
 .sidebar-card li {
   color: var(--muted);
   line-height: 1.72;
+}
+
+.guide-kicker {
+  margin: 0 0 10px;
+  color: var(--accent-2);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.84rem;
+  font-weight: 700;
+}
+
+.inline-link {
+  display: inline-flex;
+  margin-top: 12px;
+  font-weight: 700;
+  color: var(--ink);
 }
 
 .term-chip {
@@ -566,24 +391,6 @@ h3 {
   image-rendering: crisp-edges;
 }
 
-.guide-kicker {
-  margin: 0 0 10px;
-  color: var(--accent-2);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  font-size: 0.62rem;
-  font-weight: 700;
-  line-height: 1.7;
-}
-
-.inline-link {
-  display: inline-flex;
-  margin-top: 12px;
-  font-weight: 700;
-  color: var(--ink);
-  border-bottom: 2px solid rgba(77, 143, 58, 0.35);
-}
-
 .article-main {
   display: grid;
   grid-template-columns: minmax(0, 1.3fr) minmax(260px, 0.7fr);
@@ -602,11 +409,6 @@ h3 {
 
 .article-card {
   padding: 32px;
-  box-shadow: var(--shadow), var(--block-shadow);
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.26), transparent 22%),
-    linear-gradient(90deg, rgba(77, 143, 58, 0.035), transparent 18%, transparent 82%, rgba(138, 91, 47, 0.035)),
-    var(--paper);
 }
 
 .article-card section + section {
@@ -627,9 +429,8 @@ h3 {
 .crafting-box {
   padding: 18px;
   border: 1px solid var(--line);
-  border-radius: 18px;
+  border-radius: 22px;
   background: rgba(255, 255, 255, 0.5);
-  box-shadow: var(--block-shadow);
 }
 
 .crafting-box h3 {
@@ -661,23 +462,17 @@ h3 {
 .crafting-sim-section {
   margin-top: 28px;
   padding: 22px;
-  border: 3px solid rgba(58, 74, 36, 0.22);
-  border-radius: 20px;
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.44), rgba(250, 244, 232, 0.82)),
-    rgba(246, 239, 221, 0.95);
-  box-shadow: var(--block-shadow);
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.52), rgba(250, 244, 232, 0.8));
 }
 
 .furnace-sim-section {
   margin-top: 28px;
   padding: 22px;
-  border: 3px solid rgba(58, 74, 36, 0.22);
-  border-radius: 20px;
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.44), rgba(250, 244, 232, 0.82)),
-    rgba(246, 239, 221, 0.95);
-  box-shadow: var(--block-shadow);
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.52), rgba(250, 244, 232, 0.8));
 }
 
 .crafting-sim-grid {
@@ -1045,9 +840,6 @@ h3 {
   align-self: start;
   position: sticky;
   top: 24px;
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.28), transparent 26%),
-    var(--paper);
 }
 
 .sidebar-card a {
@@ -1063,22 +855,14 @@ h3 {
 }
 
 @media (max-width: 980px) {
-  .world-tree-line {
-    right: 52%;
-  }
-
-  .world-path {
-    width: min(64vw, 520px);
-  }
-
   .topbar,
   .hero-guide-site,
   .article-main,
   .compare-grid,
   .guides-grid,
   .mini-grid,
-  .visual-grid,
   .term-legend-grid,
+  .visual-grid,
   .crafting-grid,
   .crafting-sim-grid,
   .furnace-sim-grid {
@@ -1108,28 +892,6 @@ h3 {
 }
 
 @media (max-width: 640px) {
-  .world-frame {
-    width: 12vw;
-    min-width: 34px;
-    opacity: 0.68;
-  }
-
-  .world-cloud {
-    height: 48px;
-  }
-
-  .world-cloud-1 {
-    width: 140px;
-  }
-
-  .world-cloud-2 {
-    width: 110px;
-  }
-
-  .world-sand-ridge {
-    right: 4%;
-  }
-
   .page-shell {
     width: min(100% - 18px, 1180px);
     padding-top: 14px;

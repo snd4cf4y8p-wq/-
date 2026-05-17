@@ -2627,20 +2627,6 @@ function renderLayout({ locale, title, description, hero, main, guide }) {
     <script src="/crafting-sim.js" defer></script>
   </head>
   <body>
-    <div class="world-scene" aria-hidden="true">
-      <div class="world-sky"></div>
-      <div class="world-cloud world-cloud-1"></div>
-      <div class="world-cloud world-cloud-2"></div>
-      <div class="world-tree-line"></div>
-      <div class="world-sand-ridge"></div>
-      <div class="world-snow-ridge"></div>
-      <div class="world-field"></div>
-      <div class="world-path"></div>
-      <div class="world-foreground"></div>
-      <div class="world-frame world-frame-left"></div>
-      <div class="world-frame world-frame-right"></div>
-      <div class="world-vignette"></div>
-    </div>
     <div class="page-shell guide-theme">
       <header class="topbar">
         <a class="brand" href="/${locale}/">${siteName}</a>
