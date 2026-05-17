@@ -2026,6 +2026,527 @@ const guides = [
         ]
       }
     }
+  },
+  {
+    id: "bread",
+    category: "farming",
+    visual: "breadGuide",
+    pages: {
+      en: {
+        slug: "how-to-make-bread-in-minecraft",
+        title: "How to Make Bread in Minecraft",
+        summary: "Bread is one of the first reliable foods beginners can craft once they stop relying on random animals.",
+        quickAnswer:
+          "Bread is crafted from 3 wheat on a crafting table or in the 2x2 inventory grid. It is one of the simplest early foods to mass-produce.",
+        steps: [
+          "Collect wheat from a village field or grow your own with wheat seeds.",
+          "Wait until the crop is fully grown before harvesting it.",
+          "Place 3 wheat in a horizontal row to craft bread.",
+          "Keep some seeds for replanting so your food supply keeps growing.",
+          "Use bread as steady travel food while saving better items for emergencies."
+        ],
+        mistakes: [
+          "Breaking early wheat too soon and getting poor results.",
+          "Using every harvest immediately instead of replanting part of it.",
+          "Depending only on hunting instead of building a repeatable food source."
+        ],
+        tips: [
+          "If you find a village early, bread can solve food problems almost instantly.",
+          "Bread is not fancy, but it is stable and beginner-friendly.",
+          "A tiny wheat farm plus bread is enough to calm down the early game."
+        ],
+        crafting: {
+          title: "Crafting recipe",
+          intro:
+            "Bread is made from 3 wheat placed in a straight horizontal row.",
+          ingredients: [
+            "3 wheat",
+            "A crafting table is helpful, but the small 2x2 inventory grid also works"
+          ],
+          result: "1 bread",
+          notes: [
+            "Bread is one of the easiest repeatable foods for beginners.",
+            "Make sure you keep enough seeds to grow the next harvest."
+          ]
+        }
+      },
+      de: {
+        slug: "wie-macht-man-brot-in-minecraft",
+        title: "Wie macht man Brot in Minecraft?",
+        summary: "Brot ist eines der ersten verlasslichen Lebensmittel, sobald du nicht mehr nur von zufalligen Tieren lebst.",
+        quickAnswer:
+          "Brot wird aus 3 Weizen hergestellt. Du kannst es an der Werkbank oder sogar im kleinen 2x2-Inventarfeld craften.",
+        steps: [
+          "Sammle Weizen aus einem Dorf oder baue ihn selbst mit Weizensamen an.",
+          "Warte, bis die Pflanzen voll ausgewachsen sind.",
+          "Lege 3 Weizen in eine waagerechte Reihe, um Brot zu craften.",
+          "Behalte genug Samen zum Nachpflanzen.",
+          "Nutze Brot als stabiles Reise-Essen und spare starkeres Essen fur Notfalle."
+        ],
+        mistakes: [
+          "Weizen zu fruh abzubauen.",
+          "Die ganze Ernte sofort zu essen statt etwas neu anzupflanzen.",
+          "Nur auf Jagd zu setzen statt eine wiederholbare Nahrungsquelle aufzubauen."
+        ],
+        tips: [
+          "Wenn du fruh ein Dorf findest, kann Brot dein Essensproblem fast sofort losen.",
+          "Brot ist nicht spektakular, aber stabil und anfangerfreundlich.",
+          "Eine kleine Weizenfarm plus Brot beruhigt den fruhen Spielstart enorm."
+        ],
+        crafting: {
+          title: "Crafting-Rezept",
+          intro:
+            "Brot wird aus 3 Weizen in einer geraden waagerechten Reihe hergestellt.",
+          ingredients: [
+            "3 Weizen",
+            "Eine Werkbank ist praktisch, aber auch das kleine 2x2-Inventarfeld reicht"
+          ],
+          result: "1 Brot",
+          notes: [
+            "Brot ist eines der einfachsten wiederholbaren Lebensmittel fur Anfanger.",
+            "Achte darauf, genug Samen fur die nachste Ernte zu behalten."
+          ]
+        }
+      },
+      fr: {
+        slug: "comment-fabriquer-du-pain-dans-minecraft",
+        title: "Comment fabriquer du pain dans Minecraft ?",
+        summary: "Le pain est l'une des premieres nourritures fiables qu'un debutant peut produire regulierement.",
+        quickAnswer:
+          "Le pain se fabrique avec 3 bles. Vous pouvez le faire sur une table de craft ou meme dans la petite grille 2x2 de l'inventaire.",
+        steps: [
+          "Recuperez du ble dans un village ou faites-le pousser avec des graines de ble.",
+          "Attendez que la culture soit completement mature avant de la recolter.",
+          "Placez 3 ble en ligne horizontale pour fabriquer du pain.",
+          "Gardez assez de graines pour replanter.",
+          "Utilisez le pain comme nourriture reguliere pendant vos deplacements."
+        ],
+        mistakes: [
+          "Recolter le ble trop tot.",
+          "Manger toute la recolte sans replanter une partie.",
+          "Compter uniquement sur la chasse au lieu d'une vraie source stable."
+        ],
+        tips: [
+          "Si vous trouvez un village tot, le pain peut regler tres vite le probleme de nourriture.",
+          "Le pain n'est pas impressionnant, mais il est stable et facile pour un debutant.",
+          "Une petite ferme de ble plus du pain suffit a rendre le debut beaucoup plus calme."
+        ],
+        crafting: {
+          title: "Recette de fabrication",
+          intro:
+            "Le pain se fabrique avec 3 ble places sur une ligne horizontale.",
+          ingredients: [
+            "3 ble",
+            "Une table de craft aide, mais la petite grille 2x2 de l'inventaire suffit aussi"
+          ],
+          result: "1 pain",
+          notes: [
+            "Le pain est l'une des nourritures repetables les plus simples pour debuter.",
+            "Gardez assez de graines pour la prochaine recolte."
+          ]
+        }
+      }
+    }
+  },
+  {
+    id: "find-village",
+    category: "farming",
+    visual: "village",
+    pages: {
+      en: {
+        slug: "how-to-find-a-village-in-minecraft",
+        title: "How to Find a Village in Minecraft",
+        summary: "Villages are one of the strongest beginner shortcuts, so finding one early is worth real time.",
+        quickAnswer:
+          "The easiest way to find a village is to travel through open biomes, stay on high ground when possible, and watch for rooftops, paths, farms and hay bales.",
+        steps: [
+          "Search open areas instead of heavy forests first.",
+          "Climb hills regularly to look farther across the terrain.",
+          "Watch for straight paths, crop fields, hay bales and roof shapes.",
+          "Travel in daylight so you can scan faster and avoid bad fights.",
+          "When you find a village, record the coordinates immediately."
+        ],
+        mistakes: [
+          "Wandering through dense terrain with no plan.",
+          "Missing an obvious village because you never stop to scan from higher ground.",
+          "Finding one and then leaving without noting where it is."
+        ],
+        tips: [
+          "Villages are usually worth more than random exploration at the same stage.",
+          "Even one village can give you beds, food, shelter and better stability.",
+          "If your world start feels rough, finding a village can reset the whole run."
+        ]
+      },
+      de: {
+        slug: "wie-findet-man-ein-dorf-in-minecraft",
+        title: "Wie findet man ein Dorf in Minecraft?",
+        summary: "Dorfer sind eine der starksten Anfanger-Abkurzungen, deshalb lohnt sich die fruhe Suche wirklich.",
+        quickAnswer:
+          "Am einfachsten findest du ein Dorf, wenn du offene Biome absuchst, moglichst oft von hoheren Punkten schaust und auf Wege, Felder, Heuballen und Dachformen achtest.",
+        steps: [
+          "Suche zuerst offene Gebiete statt dichte Walder ab.",
+          "Steig regelmaig auf Hugel, um weiter sehen zu konnen.",
+          "Achte auf gerade Wege, Felder, Heuballen und typische Dachformen.",
+          "Reise tagsuber, damit du schneller scannen und schlechte Kampfe vermeiden kannst.",
+          "Notiere die Koordinaten sofort, wenn du ein Dorf gefunden hast."
+        ],
+        mistakes: [
+          "Planlos durch dichtes Gelande zu laufen.",
+          "Ein offensichtliches Dorf zu ubersehen, weil du nie von oben schaust.",
+          "Ein Dorf zu finden und dann ohne Notiz weiterzugehen."
+        ],
+        tips: [
+          "Dorfer sind in dieser Phase meist wertvoller als zufallige Erkundung.",
+          "Schon ein einziges Dorf kann Betten, Essen, Schutz und Stabilitat geben.",
+          "Wenn dein Start hart ist, kann ein Dorf den ganzen Run beruhigen."
+        ]
+      },
+      fr: {
+        slug: "comment-trouver-un-village-dans-minecraft",
+        title: "Comment trouver un village dans Minecraft ?",
+        summary: "Les villages sont l'un des plus gros raccourcis pour debutants, donc en trouver un tot vaut vraiment le temps passe.",
+        quickAnswer:
+          "Le plus simple est de chercher dans les biomes ouverts, de prendre de la hauteur regulierement et de reperer chemins, champs, bottes de foin et toits.",
+        steps: [
+          "Cherchez d'abord dans les zones ouvertes plutot que dans les forets denses.",
+          "Montez souvent sur des collines pour voir plus loin.",
+          "Observez les chemins rectilignes, les champs, les bottes de foin et les formes de toits.",
+          "Voyagez de jour pour scanner plus vite et eviter les mauvais combats.",
+          "Notez les coordonnees des que vous trouvez un village."
+        ],
+        mistakes: [
+          "Errer dans un terrain dense sans plan.",
+          "Rater un village evident parce qu'on ne prend jamais de hauteur.",
+          "Trouver un village puis repartir sans noter son emplacement."
+        ],
+        tips: [
+          "A ce stade, un village vaut souvent plus qu'une exploration au hasard.",
+          "Un seul village peut donner des lits, de la nourriture, un abri et plus de stabilite.",
+          "Si votre debut est difficile, trouver un village peut relancer toute la partie."
+        ]
+      }
+    }
+  },
+  {
+    id: "door-guide",
+    category: "path",
+    visual: "doorGuide",
+    pages: {
+      en: {
+        slug: "how-to-make-a-door-in-minecraft",
+        title: "How to Make a Door in Minecraft",
+        summary: "A door sounds basic, but beginners often delay it and leave their first shelter much less safe than it should be.",
+        quickAnswer:
+          "A door is crafted from 6 wooden planks arranged in two vertical columns of three. It is one of the fastest safety upgrades for a starter shelter.",
+        steps: [
+          "Turn logs into wooden planks first.",
+          "Place 6 planks in two full vertical columns on a crafting table.",
+          "Put the door at the entrance of your shelter or starter house.",
+          "Light the inside with torches so the shelter stays safe after dark.",
+          "Use the door to control where you enter and leave instead of leaving a hole open."
+        ],
+        mistakes: [
+          "Building a first shelter with no real entrance control.",
+          "Leaving the house open and assuming walls alone are enough.",
+          "Forgetting torches and making the inside unsafe anyway."
+        ],
+        tips: [
+          "A door makes a tiny shelter feel much more secure immediately.",
+          "Your first home does not need style, but it does need closure.",
+          "If you are panicking at sunset, a fast door is better than a perfect base."
+        ],
+        crafting: {
+          title: "Crafting recipe",
+          intro:
+            "A wooden door is made from 6 wooden planks arranged in two vertical columns.",
+          ingredients: [
+            "6 wooden planks",
+            "A crafting table"
+          ],
+          result: "3 doors",
+          notes: [
+            "Doors are simple, cheap and very useful in the early game.",
+            "Put one on your shelter before you start worrying about decoration."
+          ]
+        }
+      },
+      de: {
+        slug: "wie-macht-man-eine-tur-in-minecraft",
+        title: "Wie macht man eine Tur in Minecraft?",
+        summary: "Eine Tur klingt banal, aber viele Anfanger verzichten zu lange darauf und machen den ersten Schutzraum unnötig unsicher.",
+        quickAnswer:
+          "Eine Tur wird aus 6 Holzbrettern hergestellt, angeordnet in zwei senkrechten Dreier-Spalten. Sie ist eines der schnellsten Sicherheits-Upgrades fur den Start.",
+        steps: [
+          "Verwandle zuerst Holz in Holzbretter.",
+          "Lege 6 Bretter in zwei volle senkrechte Spalten auf der Werkbank.",
+          "Setze die Tur an den Eingang deines Schutzraums oder Starthauses.",
+          "Beleuchte innen mit Fackeln, damit der Raum nachts sicher bleibt.",
+          "Nutze die Tur, um Ein- und Ausgang zu kontrollieren statt ein offenes Loch zu lassen."
+        ],
+        mistakes: [
+          "Einen ersten Schutzraum ohne echten Eingang zu bauen.",
+          "Das Haus offen zu lassen und zu glauben, Wande allein reichen.",
+          "Fackeln zu vergessen und das Innere trotzdem unsicher zu machen."
+        ],
+        tips: [
+          "Eine Tur macht selbst einen winzigen Schutzraum sofort sicherer.",
+          "Dein erstes Haus braucht keinen Stil, aber einen ordentlichen Abschluss.",
+          "Wenn die Sonne untergeht, ist eine schnelle Tur besser als eine perfekte Basis."
+        ],
+        crafting: {
+          title: "Crafting-Rezept",
+          intro:
+            "Eine Holztur wird aus 6 Holzbrettern in zwei senkrechten Spalten hergestellt.",
+          ingredients: [
+            "6 Holzbretter",
+            "Eine Werkbank"
+          ],
+          result: "3 Turen",
+          notes: [
+            "Turen sind einfach, billig und im fruhen Spiel sehr nützlich.",
+            "Setze zuerst eine Tur, bevor du uber Deko nachdenkst."
+          ]
+        }
+      },
+      fr: {
+        slug: "comment-fabriquer-une-porte-dans-minecraft",
+        title: "Comment fabriquer une porte dans Minecraft ?",
+        summary: "Une porte parait basique, mais les debutants la retardent souvent et rendent leur premier abri beaucoup moins sur qu'il ne devrait l'etre.",
+        quickAnswer:
+          "Une porte se fabrique avec 6 planches de bois placees en deux colonnes verticales de trois. C'est l'un des upgrades de securite les plus rapides du debut.",
+        steps: [
+          "Transformez d'abord le bois en planches.",
+          "Placez 6 planches en deux colonnes verticales completes sur la table de craft.",
+          "Mettez la porte a l'entree de votre abri ou maison de depart.",
+          "Eclairez l'interieur avec des torches pour garder l'abri sur la nuit.",
+          "Utilisez la porte pour controler l'entree et la sortie au lieu de laisser un trou ouvert."
+        ],
+        mistakes: [
+          "Construire un premier abri sans vraie entree.",
+          "Laisser la maison ouverte en pensant que les murs suffisent.",
+          "Oublier les torches et laisser l'interieur dangereux."
+        ],
+        tips: [
+          "Une porte rend immediatement un petit abri beaucoup plus rassurant.",
+          "Votre premiere maison n'a pas besoin d'etre belle, mais elle doit fermer.",
+          "Si le soleil se couche, une porte rapide vaut mieux qu'une base parfaite."
+        ],
+        crafting: {
+          title: "Recette de fabrication",
+          intro:
+            "Une porte en bois se fabrique avec 6 planches placees en deux colonnes verticales.",
+          ingredients: [
+            "6 planches de bois",
+            "Une table de craft"
+          ],
+          result: "3 portes",
+          notes: [
+            "Les portes sont simples, peu cheres et tres utiles au debut.",
+            "Installez-en une avant de penser a la decoration."
+          ]
+        }
+      }
+    }
+  },
+  {
+    id: "stone-pickaxe-guide",
+    category: "resources",
+    visual: "stonePickaxeGuide",
+    pages: {
+      en: {
+        slug: "how-to-make-a-stone-pickaxe-in-minecraft",
+        title: "How to Make a Stone Pickaxe in Minecraft",
+        summary: "This is the first real upgrade that starts almost every serious Minecraft run.",
+        quickAnswer:
+          "A stone pickaxe is crafted from 3 cobblestone and 2 sticks on a crafting table. It is the minimum tool for safe early progression into iron.",
+        steps: [
+          "Make a wooden pickaxe first so you can mine stone.",
+          "Mine at least 3 cobblestone blocks.",
+          "Craft 2 sticks from planks if you do not already have them.",
+          "Place 3 cobblestone on the top row and 2 sticks down the middle column.",
+          "Use the stone pickaxe for better mining speed and to collect iron."
+        ],
+        mistakes: [
+          "Staying with wooden tools too long.",
+          "Entering caves before upgrading from wood to stone.",
+          "Forgetting that iron ore needs at least a stone pickaxe."
+        ],
+        tips: [
+          "The stone pickaxe is one of the biggest power jumps in the first minutes.",
+          "Upgrade to stone almost immediately after making your first crafting table.",
+          "Without this tool, early mining stays slow and risky."
+        ],
+        crafting: {
+          title: "Crafting recipe",
+          intro:
+            "A stone pickaxe is made from 3 cobblestone and 2 sticks on a crafting table.",
+          ingredients: [
+            "3 cobblestone",
+            "2 sticks"
+          ],
+          result: "1 stone pickaxe",
+          notes: [
+            "This is the tool that unlocks practical early mining.",
+            "Use it before you start trying to collect iron."
+          ]
+        }
+      },
+      de: {
+        slug: "wie-macht-man-eine-steinspitzhacke-in-minecraft",
+        title: "Wie macht man eine Steinspitzhacke in Minecraft?",
+        summary: "Das ist das erste echte Upgrade, mit dem fast jeder ernsthafte Minecraft-Start beginnt.",
+        quickAnswer:
+          "Eine Steinspitzhacke wird aus 3 Bruchstein und 2 Stocken an der Werkbank hergestellt. Sie ist das Mindestwerkzeug fur den sicheren Weg zu Eisen.",
+        steps: [
+          "Baue zuerst eine Holzspitzhacke, um Stein abbauen zu konnen.",
+          "Sammle mindestens 3 Bruchstein.",
+          "Crafte 2 Stocke aus Brettern, falls du noch keine hast.",
+          "Lege 3 Bruchstein oben und 2 Stocke in die mittlere Spalte.",
+          "Nutze die Steinspitzhacke fur schnelleres Mining und um Eisen zu sammeln."
+        ],
+        mistakes: [
+          "Zu lange bei Holzwerkzeugen zu bleiben.",
+          "In Hohlen zu gehen, bevor du von Holz auf Stein upgradest.",
+          "Zu vergessen, dass Eisenerz mindestens eine Steinspitzhacke braucht."
+        ],
+        tips: [
+          "Die Steinspitzhacke ist einer der groten Kraftsprunge in den ersten Minuten.",
+          "Upgrade fast sofort auf Stein, nachdem du deine erste Werkbank gebaut hast.",
+          "Ohne dieses Werkzeug bleibt fruhes Mining langsam und gefahrlich."
+        ],
+        crafting: {
+          title: "Crafting-Rezept",
+          intro:
+            "Eine Steinspitzhacke wird aus 3 Bruchstein und 2 Stocken an der Werkbank hergestellt.",
+          ingredients: [
+            "3 Bruchstein",
+            "2 Stocke"
+          ],
+          result: "1 Steinspitzhacke",
+          notes: [
+            "Dieses Werkzeug schaltet praktisches fruhes Mining erst richtig frei.",
+            "Nutze sie, bevor du ernsthaft Eisen sammeln willst."
+          ]
+        }
+      },
+      fr: {
+        slug: "comment-fabriquer-une-pioche-en-pierre-dans-minecraft",
+        title: "Comment fabriquer une pioche en pierre dans Minecraft ?",
+        summary: "C'est le premier vrai upgrade sur lequel reposent presque tous les debuts de partie serieux.",
+        quickAnswer:
+          "Une pioche en pierre se fabrique avec 3 cobblestone et 2 batons sur une table de craft. C'est l'outil minimum pour progresser vers le fer.",
+        steps: [
+          "Fabriquez d'abord une pioche en bois pour pouvoir miner la pierre.",
+          "Recuperez au moins 3 blocs de cobblestone.",
+          "Fabriquez 2 batons avec des planches si besoin.",
+          "Placez 3 cobblestone en haut et 2 batons dans la colonne centrale.",
+          "Utilisez la pioche en pierre pour miner plus vite et recolter du fer."
+        ],
+        mistakes: [
+          "Rester trop longtemps avec des outils en bois.",
+          "Entrer dans les grottes avant de passer du bois a la pierre.",
+          "Oublier que le minerai de fer demande au minimum une pioche en pierre."
+        ],
+        tips: [
+          "La pioche en pierre est l'un des plus gros gains de puissance des premieres minutes.",
+          "Passez a la pierre presque juste apres votre premiere table de craft.",
+          "Sans cet outil, le debut du minage reste lent et risqué."
+        ],
+        crafting: {
+          title: "Recette de fabrication",
+          intro:
+            "Une pioche en pierre se fabrique avec 3 cobblestone et 2 batons sur une table de craft.",
+          ingredients: [
+            "3 cobblestone",
+            "2 batons"
+          ],
+          result: "1 pioche en pierre",
+          notes: [
+            "C'est l'outil qui debloque vraiment le minage utile du debut.",
+            "Utilisez-la avant de chercher serieusement du fer."
+          ]
+        }
+      }
+    }
+  },
+  {
+    id: "ender-dragon-prep",
+    category: "progression",
+    visual: "enderDragon",
+    pages: {
+      en: {
+        slug: "how-to-prepare-for-the-ender-dragon-in-minecraft",
+        title: "How to Prepare for the Ender Dragon in Minecraft",
+        summary: "The Ender Dragon should feel like a planned expedition, not a random panic fight you entered too early.",
+        quickAnswer:
+          "Before fighting the Ender Dragon, make sure your gear, food, backup plan and portal knowledge are stable. The real goal is preparation, not bravery.",
+        steps: [
+          "Do not rush toward the End just because you finally can.",
+          "Bring strong food, spare blocks and a clear route back through your portal plan.",
+          "Make sure your tools and armor are no longer barely good enough.",
+          "Use your earlier survival habits: note locations, store backups and avoid improvising under pressure.",
+          "Treat the dragon fight like the end of a long preparation line, not the beginning of one."
+        ],
+        mistakes: [
+          "Trying the fight as soon as progression becomes technically possible.",
+          "Entering with weak supplies and no recovery plan.",
+          "Thinking courage matters more than logistics."
+        ],
+        tips: [
+          "The Ender Dragon is much easier when everything before it is already organized.",
+          "A calm prepared run beats a dramatic underprepared one.",
+          "If the fight feels scary, that often means the preparation is still incomplete."
+        ]
+      },
+      de: {
+        slug: "wie-bereitet-man-sich-auf-den-enderdrachen-vor-in-minecraft",
+        title: "Wie bereitet man sich auf den Enderdrachen vor in Minecraft?",
+        summary: "Der Enderdrache sollte sich wie eine geplante Expedition anfuhlen und nicht wie ein Panikkampf, den du zu fruh begonnen hast.",
+        quickAnswer:
+          "Bevor du gegen den Enderdrachen kampfst, mussen Ausrustung, Essen, Notfallplan und Portalwissen stabil sein. Entscheidend ist Vorbereitung, nicht Mut.",
+        steps: [
+          "Hetze nicht ins Ende, nur weil es technisch moglich geworden ist.",
+          "Nimm starkes Essen, Ersatzblocke und einen klaren Ruckweg mit.",
+          "Achte darauf, dass Werkzeuge und Rustung nicht mehr nur gerade so ausreichen.",
+          "Nutze deine bisherigen Uberlebensregeln: Orte notieren, Backups lagern und nicht unter Druck improvisieren.",
+          "Sieh den Drachenkampf als Abschluss einer langen Vorbereitung, nicht als deren Anfang."
+        ],
+        mistakes: [
+          "Den Kampf zu versuchen, sobald der Fortschritt es gerade erlaubt.",
+          "Mit schwachen Vorraten und ohne Rettungsplan hineinzugehen.",
+          "Zu glauben, Mut sei wichtiger als Organisation."
+        ],
+        tips: [
+          "Der Enderdrache ist viel leichter, wenn davor schon alles geordnet ist.",
+          "Ein ruhiger vorbereiteter Run ist besser als ein dramatischer unvorbereiteter.",
+          "Wenn sich der Kampf zu gefahrlich anfuhlt, ist oft die Vorbereitung noch nicht fertig."
+        ]
+      },
+      fr: {
+        slug: "comment-se-preparer-a-lender-dragon-dans-minecraft",
+        title: "Comment se preparer a l'Ender Dragon dans Minecraft ?",
+        summary: "L'Ender Dragon devrait ressembler a une expedition preparee, pas a un combat panique commence trop tot.",
+        quickAnswer:
+          "Avant d'affronter l'Ender Dragon, votre equipement, votre nourriture, votre plan de secours et votre gestion des portails doivent etre solides. L'important, c'est la preparation.",
+        steps: [
+          "Ne vous precipitez pas vers l'End juste parce que vous pouvez enfin y aller.",
+          "Prenez de la bonne nourriture, des blocs de reserve et un vrai plan de retour.",
+          "Assurez-vous que vos outils et votre armure ne sont plus simplement 'a peine suffisants'.",
+          "Appliquez vos bonnes habitudes: noter les lieux, stocker des reserves et eviter d'improviser sous pression.",
+          "Considerez le combat contre le dragon comme l'aboutissement d'une longue preparation."
+        ],
+        mistakes: [
+          "Tenter le combat des que la progression le rend possible.",
+          "Entrer avec peu de ressources et sans plan de recuperation.",
+          "Croire que le courage compte plus que la logistique."
+        ],
+        tips: [
+          "L'Ender Dragon devient bien plus simple quand tout ce qui vient avant est deja organise.",
+          "Une partie calme et preparee vaut mieux qu'une tentative dramatique et mal preparee.",
+          "Si le combat semble trop effrayant, c'est souvent que la preparation n'est pas encore assez solide."
+        ]
+      }
+    }
   }
 ];
 
@@ -2457,6 +2978,24 @@ const gameTermCatalog = [
       en: { label: "Blocks", aliases: ["block", "blocks", "building blocks"] },
       de: { label: "Blocke", aliases: ["blocke", "blocken", "baublocke"] },
       fr: { label: "Blocs", aliases: ["bloc", "blocs", "blocs de construction"] }
+    }
+  },
+  {
+    key: "bread",
+    images: ["hay_block_top.png", "wheat_seeds.png"],
+    locales: {
+      en: { label: "Bread", aliases: ["bread"] },
+      de: { label: "Brot", aliases: ["brot"] },
+      fr: { label: "Pain", aliases: ["pain"] }
+    }
+  },
+  {
+    key: "wheat",
+    images: ["wheat_seeds.png", "hay_block_top.png"],
+    locales: {
+      en: { label: "Wheat", aliases: ["wheat"] },
+      de: { label: "Weizen", aliases: ["weizen"] },
+      fr: { label: "Ble", aliases: ["ble"] }
     }
   }
 ];
@@ -3386,6 +3925,26 @@ function visualSet(locale) {
         ["Door", "Close yourself off from the outside fast."],
         ["Bed", "Sleeping safely matters more than style."],
         ["Chest and furnace", "Your first house should hold your core survival setup."]
+      ],
+      breadGuide: [
+        ["Wheat", "Three wheat in a row become simple early bread."],
+        ["Seeds", "Always keep some seeds for replanting."],
+        ["Bread", "Stable food beats random panic hunting."]
+      ],
+      doorGuide: [
+        ["Wood planks", "The whole recipe starts with cheap planks."],
+        ["Door", "A fast safety upgrade for any tiny shelter."],
+        ["Torch-lit entrance", "A door works best with a lit interior."]
+      ],
+      stonePickaxeGuide: [
+        ["Cobblestone", "You need 3 cobblestone for the tool head."],
+        ["Sticks", "Two sticks form the handle."],
+        ["Stone pickaxe", "This is the first real mining upgrade."]
+      ],
+      enderDragon: [
+        ["Portal route", "Know how you get in and how you recover."],
+        ["Food reserves", "Good supplies matter more than bravery."],
+        ["End goal", "The dragon fight should come after long preparation."]
       ]
     },
     de: {
@@ -3478,6 +4037,26 @@ function visualSet(locale) {
         ["Tur", "Schlie dich schnell von drauen ab."],
         ["Bett", "Sicher schlafen ist wichtiger als Stil."],
         ["Truhe und Ofen", "Dein erstes Haus soll dein Uberlebens-Setup tragen."]
+      ],
+      breadGuide: [
+        ["Weizen", "Drei Weizen in einer Reihe ergeben fruh Brot."],
+        ["Samen", "Behalte immer genug zum Nachpflanzen."],
+        ["Brot", "Stabiles Essen ist besser als hektische Jagd."]
+      ],
+      doorGuide: [
+        ["Holzbretter", "Das ganze Rezept startet mit einfachen Brettern."],
+        ["Tur", "Ein schnelles Sicherheits-Upgrade fur jeden kleinen Schutzraum."],
+        ["Beleuchteter Eingang", "Eine Tur ist mit Licht innen noch wertvoller."]
+      ],
+      stonePickaxeGuide: [
+        ["Bruchstein", "Du brauchst 3 Bruchstein fur den Kopf."],
+        ["Stocke", "Zwei Stocke bilden den Griff."],
+        ["Steinspitzhacke", "Das ist das erste echte Mining-Upgrade."]
+      ],
+      enderDragon: [
+        ["Portalweg", "Wisse, wie du hineingehst und wieder rauskommst."],
+        ["Essensvorrat", "Gute Vorrate zahlen mehr als Mut."],
+        ["Endziel", "Der Drachenkampf sollte nach langer Vorbereitung kommen."]
       ]
     },
     fr: {
@@ -3570,6 +4149,26 @@ function visualSet(locale) {
         ["Porte", "Fermez-vous rapidement du danger exterieur."],
         ["Lit", "Dormir en securite compte plus que le style."],
         ["Coffre et four", "Votre premiere maison doit contenir le noyau de survie."]
+      ],
+      breadGuide: [
+        ["Ble", "Trois ble alignes donnent un pain simple et utile."],
+        ["Graines", "Gardez-en toujours pour replanter."],
+        ["Pain", "Une nourriture stable vaut mieux qu'une chasse paniquee."]
+      ],
+      doorGuide: [
+        ["Planches", "Toute la recette commence par des planches bon marche."],
+        ["Porte", "Un upgrade de securite rapide pour un petit abri."],
+        ["Entree eclairee", "Une porte devient encore meilleure avec un interieur lumineux."]
+      ],
+      stonePickaxeGuide: [
+        ["Cobblestone", "Il faut 3 cobblestone pour la tete de l'outil."],
+        ["Batons", "Deux batons forment le manche."],
+        ["Pioche en pierre", "C'est le premier vrai upgrade de minage."]
+      ],
+      enderDragon: [
+        ["Route du portail", "Sachez comment entrer et comment vous remettre d'un echec."],
+        ["Reserve de nourriture", "Les bonnes provisions valent plus que le courage."],
+        ["Objectif final", "Le combat contre le dragon doit venir apres une longue preparation."]
       ]
     }
   }[locale];
@@ -3951,6 +4550,87 @@ function renderGuideVisual(locale, visualKind) {
           { path: "chest.png", alt: "Chest texture" },
           { path: "furnace_front.png", alt: "Furnace texture" },
           { path: "crafting_table_front.png", alt: "Crafting table texture" }
+        ])
+      })
+    ],
+    breadGuide: [
+      svgCard({
+        title: copy.breadGuide[0][0],
+        subtitle: copy.breadGuide[0][1],
+        art: mcTextureStack([
+          { path: "wheat_seeds.png", alt: "Wheat seeds item icon" },
+          { path: "hay_block_top.png", alt: "Hay bale texture" }
+        ])
+      }),
+      svgCard({
+        title: copy.breadGuide[1][0],
+        subtitle: copy.breadGuide[1][1],
+        art: mcTexture("wheat_seeds.png", "Wheat seeds item icon")
+      }),
+      svgCard({
+        title: copy.breadGuide[2][0],
+        subtitle: copy.breadGuide[2][1],
+        art: mcTexture("hay_block_top.png", "Hay bale texture")
+      })
+    ],
+    doorGuide: [
+      svgCard({
+        title: copy.doorGuide[0][0],
+        subtitle: copy.doorGuide[0][1],
+        art: mcTexture("oak_planks.png", "Oak planks texture")
+      }),
+      svgCard({
+        title: copy.doorGuide[1][0],
+        subtitle: copy.doorGuide[1][1],
+        art: mcTexture("oak_door_bottom.png", "Oak door texture")
+      }),
+      svgCard({
+        title: copy.doorGuide[2][0],
+        subtitle: copy.doorGuide[2][1],
+        art: mcTextureStack([
+          { path: "oak_door_bottom.png", alt: "Oak door texture" },
+          { path: "torch.png", alt: "Torch texture" }
+        ])
+      })
+    ],
+    stonePickaxeGuide: [
+      svgCard({
+        title: copy.stonePickaxeGuide[0][0],
+        subtitle: copy.stonePickaxeGuide[0][1],
+        art: mcTexture("cobblestone.png", "Cobblestone texture")
+      }),
+      svgCard({
+        title: copy.stonePickaxeGuide[1][0],
+        subtitle: copy.stonePickaxeGuide[1][1],
+        art: mcTexture("stick.png", "Stick item icon")
+      }),
+      svgCard({
+        title: copy.stonePickaxeGuide[2][0],
+        subtitle: copy.stonePickaxeGuide[2][1],
+        art: mcTexture("stone_pickaxe.png", "Stone pickaxe item icon")
+      })
+    ],
+    enderDragon: [
+      svgCard({
+        title: copy.enderDragon[0][0],
+        subtitle: copy.enderDragon[0][1],
+        art: mcTextureStack([
+          { path: "map.png", alt: "Map item icon" },
+          { path: "compass_00.png", alt: "Compass item icon" }
+        ])
+      }),
+      svgCard({
+        title: copy.enderDragon[1][0],
+        subtitle: copy.enderDragon[1][1],
+        art: mcTexture("cooked_beef.png", "Cooked beef item icon")
+      }),
+      svgCard({
+        title: copy.enderDragon[2][0],
+        subtitle: copy.enderDragon[2][1],
+        art: mcTextureStack([
+          { path: "iron_ingot.png", alt: "Iron ingot item icon" },
+          { path: "torch.png", alt: "Torch texture" },
+          { path: "map.png", alt: "Map item icon" }
         ])
       })
     ]

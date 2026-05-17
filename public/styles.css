@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Instrument+Serif:ital@0;1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap");
 
 :root {
   --bg: #ede6d7;
@@ -24,7 +24,8 @@ body {
   margin: 0;
   min-height: 100vh;
   color: var(--ink);
-  font-family: "Space Grotesk", sans-serif;
+  font-family: "VT323", monospace;
+  font-size: 1.28rem;
   background:
     radial-gradient(circle at top left, rgba(62, 140, 82, 0.14), transparent 24%),
     radial-gradient(circle at bottom right, rgba(201, 109, 58, 0.14), transparent 22%),
@@ -54,6 +55,9 @@ body {
   color: var(--ink);
   text-decoration: none;
   font-weight: 700;
+  font-family: "Press Start 2P", cursive;
+  font-size: 0.72rem;
+  line-height: 1.8;
 }
 
 .topnav {
@@ -67,6 +71,15 @@ body {
 .inline-link {
   color: var(--muted);
   text-decoration: none;
+}
+
+.topnav a,
+.lang-link,
+.guide-kicker,
+.eyebrow,
+.primary-button,
+.ghost-button {
+  font-family: "Press Start 2P", cursive;
 }
 
 .topnav a:hover,
@@ -85,6 +98,8 @@ body {
   padding: 8px 12px;
   border-radius: 999px;
   border: 1px solid transparent;
+  font-size: 0.62rem;
+  line-height: 1.8;
 }
 
 .lang-link.active {
@@ -136,8 +151,9 @@ body {
   color: var(--accent);
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  font-size: 0.86rem;
+  font-size: 0.56rem;
   font-weight: 700;
+  line-height: 1.8;
 }
 
 h1,
@@ -148,18 +164,18 @@ h3 {
 
 .hero-copy h1 {
   max-width: 12ch;
-  font-family: "Instrument Serif", serif;
-  font-size: clamp(3rem, 7vw, 5.7rem);
-  line-height: 0.92;
-  letter-spacing: -0.03em;
+  font-family: "Press Start 2P", cursive;
+  font-size: clamp(1.8rem, 4vw, 3.2rem);
+  line-height: 1.35;
+  letter-spacing: 0;
 }
 
 .lede {
   max-width: 720px;
   margin: 20px 0 0;
   color: var(--muted);
-  font-size: 1.08rem;
-  line-height: 1.75;
+  font-size: 1.34rem;
+  line-height: 1.55;
 }
 
 .hero-actions {
@@ -179,6 +195,9 @@ h3 {
   border-radius: 999px;
   text-decoration: none;
   font-weight: 700;
+  font-size: 0.62rem;
+  line-height: 1.8;
+  text-align: center;
 }
 
 .primary-button {
@@ -210,20 +229,21 @@ h3 {
   padding: 8px 12px;
   border-radius: 999px;
   background: rgba(31, 36, 28, 0.08);
-  font-size: 0.84rem;
+  font-size: 0.56rem;
   font-weight: 700;
 }
 
 .hero-panel h2 {
   margin-top: 18px;
-  font-family: "Instrument Serif", serif;
-  font-size: 2rem;
+  font-family: "Press Start 2P", cursive;
+  font-size: 1.1rem;
+  line-height: 1.8;
 }
 
 .hero-panel p,
 .hero-panel li {
   color: var(--muted);
-  line-height: 1.7;
+  line-height: 1.55;
 }
 
 .hero-panel ul {
@@ -240,15 +260,16 @@ h3 {
 }
 
 .section-head h2 {
-  font-family: "Instrument Serif", serif;
-  font-size: clamp(2rem, 5vw, 3rem);
+  font-family: "Press Start 2P", cursive;
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  line-height: 1.8;
 }
 
 .section-head p {
   max-width: 760px;
   margin: 10px 0 0;
   color: var(--muted);
-  line-height: 1.7;
+  line-height: 1.55;
 }
 
 .compare-grid,
@@ -282,7 +303,9 @@ h3 {
 .mini-card h3,
 .sidebar-card h3,
 .article-card h2 {
-  font-size: 1.18rem;
+  font-family: "Press Start 2P", cursive;
+  font-size: 0.92rem;
+  line-height: 1.8;
 }
 
 .compare-card p,
@@ -292,7 +315,7 @@ h3 {
 .article-card li,
 .sidebar-card li {
   color: var(--muted);
-  line-height: 1.72;
+  line-height: 1.55;
 }
 
 .guide-kicker {
@@ -300,8 +323,9 @@ h3 {
   color: var(--accent-2);
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  font-size: 0.84rem;
+  font-size: 0.54rem;
   font-weight: 700;
+  line-height: 1.8;
 }
 
 .inline-link {
@@ -309,6 +333,8 @@ h3 {
   margin-top: 12px;
   font-weight: 700;
   color: var(--ink);
+  font-size: 0.62rem;
+  line-height: 1.8;
 }
 
 .term-chip {
@@ -445,14 +471,14 @@ h3 {
 .crafting-box p,
 .crafting-box li {
   color: var(--muted);
-  line-height: 1.68;
+  line-height: 1.5;
 }
 
 .crafting-result {
   margin: 12px 0 0;
   color: var(--ink);
   font-weight: 700;
-  font-size: 1.05rem;
+  font-size: 1.24rem;
 }
 
 .crafting-notes {
@@ -516,7 +542,7 @@ h3 {
 .crafting-sim-card p,
 .crafting-sim-card li {
   color: var(--muted);
-  line-height: 1.66;
+  line-height: 1.5;
 }
 
 .crafting-sim-card:first-child {
@@ -584,8 +610,8 @@ h3 {
 
 .sim-slot span,
 .sim-item span {
-  font-size: 0.86rem;
-  line-height: 1.3;
+  font-size: 1.05rem;
+  line-height: 1.2;
 }
 
 .sim-slot .mc-texture,
@@ -821,7 +847,7 @@ h3 {
 .visual-copy p {
   margin: 8px 0 0;
   color: var(--muted);
-  line-height: 1.62;
+  line-height: 1.5;
 }
 
 .article-card ol,
