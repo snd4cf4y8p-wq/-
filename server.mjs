@@ -1152,6 +1152,522 @@ const guides = [
         ]
       }
     }
+  },
+  {
+    id: "chest-guide",
+    category: "resources",
+    visual: "chest",
+    pages: {
+      en: {
+        slug: "how-to-make-a-chest-in-minecraft",
+        title: "How to Make a Chest in Minecraft",
+        summary: "New players lose items and waste time mostly because they wait too long to build real storage.",
+        quickAnswer:
+          "A chest is crafted from 8 wooden planks in a ring shape around an empty center slot on a crafting table.",
+        steps: [
+          "Turn logs into wooden planks first.",
+          "Open your crafting table and leave the middle slot empty.",
+          "Place 8 planks around that empty center slot.",
+          "Put the chest inside your base near your crafting table and furnace.",
+          "Store wood, food, cobblestone, coal and spare tools early so your inventory stays usable."
+        ],
+        mistakes: [
+          "Keeping everything in your inventory until you die and lose track of it.",
+          "Throwing useful early materials away because your inventory is full.",
+          "Placing your first chest outside where you can miss it at night."
+        ],
+        tips: [
+          "A chest is one of the earliest quality-of-life upgrades in the whole game.",
+          "Make one chest for blocks and one for food and tools as soon as possible.",
+          "If you put two chests side by side, they become one large chest."
+        ],
+        crafting: {
+          title: "Crafting recipe",
+          intro:
+            "A chest is made from 8 wooden planks in a ring shape, with the center square left empty.",
+          ingredients: [
+            "2 wood logs -> turn them into wooden planks",
+            "8 wooden planks"
+          ],
+          result: "1 chest",
+          notes: [
+            "The result looks like a small brown storage box with a latch on the front.",
+            "Put the planks around the outside edge and leave the middle slot empty."
+          ]
+        }
+      },
+      de: {
+        slug: "wie-macht-man-eine-truhe-in-minecraft",
+        title: "Wie macht man eine Truhe in Minecraft?",
+        summary: "Neue Spieler verlieren oft Materialien, weil sie zu spat echte Lagerung bauen.",
+        quickAnswer:
+          "Eine Truhe wird an der Werkbank aus 8 Holzbrettern in Ringform um ein leeres Mittelfeld hergestellt.",
+        steps: [
+          "Verwandle Holzstamme zuerst in Holzbretter.",
+          "Offne die Werkbank und lass das Mittelfeld frei.",
+          "Lege 8 Bretter rund um dieses leere Feld.",
+          "Stelle die Truhe in deine Basis neben Werkbank und Ofen.",
+          "Lagere fruh Holz, Essen, Bruchstein, Kohle und Ersatzwerkzeuge, damit dein Inventar frei bleibt."
+        ],
+        mistakes: [
+          "Alles im Inventar zu tragen, bis man stirbt und Sachen verliert.",
+          "Nutliche Materialien wegzuwerfen, weil das Inventar voll ist.",
+          "Die erste Truhe drauen im Dunkeln zu platzieren."
+        ],
+        tips: [
+          "Eine Truhe ist eines der fruhesten und wichtigsten Komfort-Upgrades.",
+          "Baue moglichst fruh eine Truhe fur Bloche und eine fur Essen und Werkzeuge.",
+          "Zwei Truhen nebeneinander ergeben eine groe Truhe."
+        ],
+        crafting: {
+          title: "Crafting-Rezept",
+          intro:
+            "Eine Truhe wird aus 8 Holzbrettern in Ringform gebaut. Das Feld in der Mitte bleibt leer.",
+          ingredients: [
+            "2 Holzstamme -> in Holzbretter umwandeln",
+            "8 Holzbretter"
+          ],
+          result: "1 Truhe",
+          notes: [
+            "Das Ergebnis sieht aus wie eine kleine braune Aufbewahrungsbox mit Verschluss vorne.",
+            "Lege die Bretter an den Auenrand und lass das Mittelfeld frei."
+          ]
+        }
+      },
+      fr: {
+        slug: "comment-fabriquer-un-coffre-dans-minecraft",
+        title: "Comment fabriquer un coffre dans Minecraft ?",
+        summary: "Les debutants perdent souvent du temps et des objets parce qu'ils attendent trop avant de creer un vrai stockage.",
+        quickAnswer:
+          "Un coffre se fabrique avec 8 planches de bois en cercle autour d'une case centrale vide sur une table de craft.",
+        steps: [
+          "Transformez d'abord des troncs en planches.",
+          "Ouvrez la table de craft et laissez la case du milieu vide.",
+          "Placez 8 planches autour de cette case vide.",
+          "Posez le coffre dans votre base pres de la table de craft et du four.",
+          "Rangez tot le bois, la nourriture, la cobblestone, le charbon et les outils de rechange pour garder un inventaire propre."
+        ],
+        mistakes: [
+          "Garder tous les objets sur soi jusqu'a mourir et tout melanger.",
+          "Jeter des ressources utiles parce que l'inventaire est plein.",
+          "Poser le premier coffre dehors et le perdre dans la nuit."
+        ],
+        tips: [
+          "Le coffre est l'un des meilleurs upgrades de confort du debut de partie.",
+          "Faites un coffre pour les blocs et un autre pour la nourriture et les outils.",
+          "Deux coffres cotes a cote deviennent un grand coffre."
+        ],
+        crafting: {
+          title: "Recette de fabrication",
+          intro:
+            "Un coffre se fabrique avec 8 planches de bois placees autour d'une case centrale vide.",
+          ingredients: [
+            "2 troncs de bois -> a transformer en planches",
+            "8 planches de bois"
+          ],
+          result: "1 coffre",
+          notes: [
+            "Le resultat ressemble a une petite boite de rangement marron avec un fermoir devant.",
+            "Placez les planches sur le bord exterieur et laissez la case du milieu vide."
+          ]
+        }
+      }
+    }
+  },
+  {
+    id: "charcoal",
+    category: "resources",
+    visual: "coal",
+    pages: {
+      en: {
+        slug: "how-to-make-charcoal-in-minecraft",
+        title: "How to Make Charcoal in Minecraft",
+        summary: "If you cannot find coal yet, charcoal is the early-game backup that saves torches, fuel and time.",
+        quickAnswer:
+          "Smelt one wood log in a furnace using another fuel source, and the result is charcoal. Charcoal works almost the same as coal for torches and fuel.",
+        steps: [
+          "Craft a furnace from 8 cobblestone.",
+          "Put one wood log in the top slot of the furnace.",
+          "Use planks, sticks, extra logs or coal as temporary fuel in the bottom slot.",
+          "Wait for the furnace to finish smelting the log into charcoal.",
+          "Use charcoal with sticks to make torches, or keep it as better fuel."
+        ],
+        mistakes: [
+          "Wandering too long for coal when you already have wood and a furnace.",
+          "Burning all your planks before turning one log into charcoal first.",
+          "Ignoring charcoal and staying in the dark too long."
+        ],
+        tips: [
+          "Charcoal solves the classic beginner problem of having wood but no cave coal yet.",
+          "Once you have one charcoal, you can often snowball into more fuel and more torches.",
+          "This is one of the fastest ways to stabilize your first base."
+        ]
+      },
+      de: {
+        slug: "wie-bekommt-man-schnell-holzkohle-in-minecraft",
+        title: "Wie bekommt man schnell Holzkohle in Minecraft?",
+        summary: "Wenn du noch keine Kohle findest, ist Holzkohle die fruhe Ersatzlosung fur Fackeln, Brennstoff und Zeit.",
+        quickAnswer:
+          "Schmelze einen Holzstamm im Ofen mit einem anderen Brennstoff, dann entsteht Holzkohle. Sie funktioniert fast wie normale Kohle fur Fackeln und als Brennstoff.",
+        steps: [
+          "Baue einen Ofen aus 8 Bruchstein.",
+          "Lege einen Holzstamm in den oberen Slot des Ofens.",
+          "Nutze Bretter, Stocke, Ersatzstamme oder Kohle als vorlaufigen Brennstoff unten.",
+          "Warte, bis aus dem Stamm Holzkohle geworden ist.",
+          "Nutze die Holzkohle mit Stocken fur Fackeln oder direkt als besseren Brennstoff."
+        ],
+        mistakes: [
+          "Zu lange nach Kohle zu suchen, obwohl Holz und Ofen schon da sind.",
+          "Alle Bretter zu verbrennen, statt zuerst einen Stamm in Holzkohle zu verwandeln.",
+          "Holzkohle zu ignorieren und dadurch zu lange im Dunkeln zu bleiben."
+        ],
+        tips: [
+          "Holzkohle lost ein typisches Anfangerproblem: viel Holz, aber noch keine Kohle.",
+          "Mit dem ersten Stuck Holzkohle kommst du oft schnell zu mehr Brennstoff und mehr Fackeln.",
+          "So stabilisierst du deine erste Basis deutlich fruher."
+        ]
+      },
+      fr: {
+        slug: "comment-obtenir-du-charbon-de-bois-dans-minecraft",
+        title: "Comment obtenir du charbon de bois dans Minecraft ?",
+        summary: "Si vous ne trouvez pas encore de charbon, le charbon de bois est la solution du debut pour les torches, le combustible et le temps gagne.",
+        quickAnswer:
+          "Faites cuire un tronc de bois dans un four avec un autre combustible, et vous obtenez du charbon de bois. Il fonctionne presque comme le charbon normal pour les torches et le four.",
+        steps: [
+          "Fabriquez un four avec 8 blocs de cobblestone.",
+          "Placez un tronc de bois dans la case du haut.",
+          "Utilisez des planches, des batons, d'autres troncs ou du charbon comme combustible temporaire en bas.",
+          "Attendez la fin de la cuisson pour obtenir du charbon de bois.",
+          "Utilisez-le avec des batons pour faire des torches ou gardez-le comme meilleur combustible."
+        ],
+        mistakes: [
+          "Chercher du charbon trop longtemps alors que vous avez deja du bois et un four.",
+          "Bruler toutes vos planches avant de transformer un tronc en charbon de bois.",
+          "Ignorer cette solution et rester trop longtemps sans lumiere."
+        ],
+        tips: [
+          "Le charbon de bois regle un probleme classique du debut: beaucoup de bois, mais pas encore de charbon.",
+          "Une fois le premier obtenu, il devient plus facile de produire du combustible et des torches.",
+          "C'est une des manieres les plus rapides de stabiliser votre premiere base."
+        ]
+      }
+    }
+  },
+  {
+    id: "coordinates",
+    category: "path",
+    visual: "lost",
+    pages: {
+      en: {
+        slug: "how-to-use-coordinates-in-minecraft",
+        title: "How to Use Coordinates in Minecraft",
+        summary: "Most new players get lost because they never start using coordinates early enough.",
+        quickAnswer:
+          "Coordinates tell you your exact location in the world. Use them to record your base, villages, caves and portal spots so you can return without guessing.",
+        steps: [
+          "Open the coordinate display for your version of Minecraft.",
+          "Stand inside your base and write down the X, Y and Z values.",
+          "Repeat this for useful places like a village, a mine entrance or a ruined portal.",
+          "Before exploring far away, screenshot or note your base coordinates again.",
+          "When lost, move your X and Z values back toward home instead of wandering randomly."
+        ],
+        mistakes: [
+          "Only trying to learn coordinates after you are already badly lost.",
+          "Remembering only one number instead of the full location.",
+          "Traveling far with no written home coordinates."
+        ],
+        tips: [
+          "For beginners, coordinates are better than memory.",
+          "Your first base, first village and first Nether portal should all be written down.",
+          "This one habit saves more time than almost any beginner trick."
+        ]
+      },
+      de: {
+        slug: "wie-benutzt-man-koordinaten-in-minecraft",
+        title: "Wie benutzt man Koordinaten in Minecraft?",
+        summary: "Viele neue Spieler verlaufen sich, weil sie Koordinaten nicht fruh genug benutzen.",
+        quickAnswer:
+          "Koordinaten zeigen deine exakte Position in der Welt. Nutze sie fur deine Basis, Dorfer, Hohleneingange und Portale, damit du sicher zuruckfindest.",
+        steps: [
+          "Aktiviere die Koordinatenanzeige fur deine Minecraft-Version.",
+          "Stell dich in deine Basis und notiere X, Y und Z.",
+          "Wiederhole das fur nutzliche Orte wie ein Dorf, einen Mineneingang oder ein ruiniertes Portal.",
+          "Bevor du weit losziehst, sichere die Heimat-Koordinaten erneut per Screenshot oder Notiz.",
+          "Wenn du dich verirrst, bewege X und Z gezielt Richtung Zuhause statt planlos zu laufen."
+        ],
+        mistakes: [
+          "Koordinaten erst lernen zu wollen, wenn man schon komplett verloren ist.",
+          "Sich nur eine Zahl statt den ganzen Ort zu merken.",
+          "Weit zu reisen, ohne die Heim-Koordinaten aufzuschreiben."
+        ],
+        tips: [
+          "Fur Anfanger sind Koordinaten besser als Erinnerung.",
+          "Deine erste Basis, dein erstes Dorf und dein erstes Nether-Portal sollten notiert sein.",
+          "Diese eine Gewohnheit spart mehr Zeit als fast jeder kleine Trick."
+        ]
+      },
+      fr: {
+        slug: "comment-utiliser-les-coordonnees-dans-minecraft",
+        title: "Comment utiliser les coordonnees dans Minecraft ?",
+        summary: "Beaucoup de nouveaux joueurs se perdent parce qu'ils n'utilisent pas les coordonnees assez tot.",
+        quickAnswer:
+          "Les coordonnees donnent votre position exacte dans le monde. Utilisez-les pour noter votre base, les villages, les grottes et les portails afin de toujours pouvoir revenir.",
+        steps: [
+          "Activez l'affichage des coordonnees dans votre version de Minecraft.",
+          "Placez-vous dans votre base et notez les valeurs X, Y et Z.",
+          "Faites la meme chose pour les lieux utiles comme un village, l'entree d'une mine ou un portail en ruine.",
+          "Avant d'explorer loin, reprenez une capture ou notez encore les coordonnees de la base.",
+          "Si vous etes perdu, ramenez vos valeurs X et Z vers la maison au lieu de marcher au hasard."
+        ],
+        mistakes: [
+          "Essayer d'apprendre les coordonnees seulement apres s'etre deja perdu.",
+          "Retenir un seul nombre au lieu de l'emplacement complet.",
+          "Partir loin sans noter les coordonnees de la maison."
+        ],
+        tips: [
+          "Pour un debutant, les coordonnees sont plus fiables que la memoire.",
+          "Votre premiere base, votre premier village et votre premier portail du Nether devraient etre notes.",
+          "Cette habitude vous fera gagner plus de temps que presque n'importe quelle astuce de debut."
+        ]
+      }
+    }
+  },
+  {
+    id: "wheat-farm",
+    category: "farming",
+    visual: "food",
+    pages: {
+      en: {
+        slug: "how-to-start-a-wheat-farm-in-minecraft",
+        title: "How to Start a Wheat Farm in Minecraft",
+        summary: "A tiny wheat farm is one of the safest ways for beginners to stop food panic in the first few days.",
+        quickAnswer:
+          "Get seeds from grass, place them on hydrated farmland near water, and protect the farm so it can keep growing while you do other tasks.",
+        steps: [
+          "Break grass until you collect several wheat seeds.",
+          "Find water or dig one water block near your base.",
+          "Use a hoe on dirt blocks around the water to make farmland.",
+          "Plant the seeds and wait for the wheat to grow fully before harvesting.",
+          "Replant seeds immediately so the farm keeps producing food."
+        ],
+        mistakes: [
+          "Planting seeds on plain dirt instead of farmland.",
+          "Breaking all the wheat and forgetting to replant.",
+          "Starting the farm too far from your base and not checking it often."
+        ],
+        tips: [
+          "A small farm beats random food searching once your first day is over.",
+          "Villages often speed this up because hay bales can become early bread.",
+          "Wheat also helps later with animal breeding."
+        ]
+      },
+      de: {
+        slug: "wie-startet-man-eine-weizenfarm-in-minecraft",
+        title: "Wie startet man eine Weizenfarm in Minecraft?",
+        summary: "Eine kleine Weizenfarm ist eine der sichersten Losungen gegen fruhen Essensstress.",
+        quickAnswer:
+          "Sammle Samen aus Gras, pflanze sie auf befeuchtetem Ackerboden neben Wasser und schutze die Farm, damit sie wahrend anderer Aufgaben wachsen kann.",
+        steps: [
+          "Zerstore Gras, bis du einige Weizensamen hast.",
+          "Suche Wasser oder setze einen Wasserblock nahe deiner Basis.",
+          "Benutze eine Hacke auf Erde um das Wasser herum, um Ackerboden zu erzeugen.",
+          "Pflanze die Samen und warte, bis der Weizen voll ausgewachsen ist.",
+          "Pflanze nach der Ernte sofort neue Samen nach."
+        ],
+        mistakes: [
+          "Samen auf normale Erde statt auf Ackerboden zu setzen.",
+          "Den ganzen Weizen abzubauen und nichts neu zu pflanzen.",
+          "Die Farm zu weit weg von der Basis anzulegen."
+        ],
+        tips: [
+          "Nach Tag eins ist eine kleine Farm besser als dauernd Essen zu suchen.",
+          "Dorfer beschleunigen das oft, weil Heuballen schnell zu Brot werden.",
+          "Weizen ist spater auch fur Tierzucht wichtig."
+        ]
+      },
+      fr: {
+        slug: "comment-demarrer-une-ferme-de-ble-dans-minecraft",
+        title: "Comment demarrer une ferme de ble dans Minecraft ?",
+        summary: "Une petite ferme de ble est l'un des moyens les plus surs d'eviter la panique de nourriture au debut.",
+        quickAnswer:
+          "Recuperez des graines dans l'herbe, plantez-les sur une terre hydratee pres de l'eau et protegez la ferme pour qu'elle pousse pendant que vous faites autre chose.",
+        steps: [
+          "Cassez de l'herbe jusqu'a obtenir plusieurs graines de ble.",
+          "Trouvez de l'eau ou placez un bloc d'eau pres de votre base.",
+          "Utilisez une houe sur la terre autour de l'eau pour creer des terres agricoles.",
+          "Plantez les graines et attendez que le ble soit completement mature avant de recolter.",
+          "Replantez immediatement pour que la ferme continue a produire."
+        ],
+        mistakes: [
+          "Planter sur de la terre normale au lieu d'une terre agricole.",
+          "Recolter tout le ble puis oublier de replanter.",
+          "Construire la ferme trop loin de la base."
+        ],
+        tips: [
+          "Une petite ferme devient vite meilleure que chercher de la nourriture au hasard.",
+          "Les villages accelerent souvent ce depart grace aux bottes de foin transformables en pain.",
+          "Le ble servira aussi plus tard pour l'elevage des animaux."
+        ]
+      }
+    }
+  },
+  {
+    id: "village-guide",
+    category: "farming",
+    visual: "village",
+    pages: {
+      en: {
+        slug: "how-to-find-and-use-a-village-in-minecraft",
+        title: "How to Find and Use a Village in Minecraft",
+        summary: "Villages are one of the biggest beginner shortcuts for food, beds, shelter and early survival.",
+        quickAnswer:
+          "A village can give you beds, food, shelter, workstations and fast early safety. Take what you need, but stay alert at night and avoid making the village less safe.",
+        steps: [
+          "Search plains and open areas first because villages are easier to spot there.",
+          "Use village beds for safe sleeping if night is coming.",
+          "Check hay bales, crops and houses for fast early food and shelter.",
+          "Place your own chest and furnace nearby if you want to use the village as a temporary base.",
+          "Keep watch at night so zombies and other mobs do not turn the village into a trap."
+        ],
+        mistakes: [
+          "Treating a village as perfectly safe after dark.",
+          "Looting everything but never setting up your own storage or respawn point.",
+          "Leaving without recording the village coordinates."
+        ],
+        tips: [
+          "For true beginners, a village can remove half the pressure of the first few days.",
+          "Hay bales are one of the fastest food boosts you can find early.",
+          "If a village helps you once, write down the coordinates immediately."
+        ]
+      },
+      de: {
+        slug: "wie-benutzt-man-ein-dorf-in-minecraft-am-anfang",
+        title: "Wie benutzt man ein Dorf in Minecraft am Anfang?",
+        summary: "Dorfer sind eine der groten Abkurzungen fur Nahrung, Betten, Schutz und fruhes Uberleben.",
+        quickAnswer:
+          "Ein Dorf kann dir Betten, Essen, Schutz, Werkstationen und schnelle Sicherheit geben. Nimm, was du brauchst, aber pass nachts auf und mach das Dorf nicht unsicher.",
+        steps: [
+          "Suche zuerst Ebenen und offene Gebiete, dort sind Dorfer leichter zu entdecken.",
+          "Nutze Dorfbetten, wenn die Nacht naherkommt.",
+          "Prufe Heuballen, Felder und Hauser fur schnelles Essen und Schutz.",
+          "Stell eigene Truhe und Ofen auf, wenn du das Dorf als vorlaufige Basis nutzen willst.",
+          "Bleib nachts wachsam, damit Zombies und andere Mobs das Dorf nicht zur Falle machen."
+        ],
+        mistakes: [
+          "Ein Dorf nachts fur komplett sicher zu halten.",
+          "Alles mitzunehmen, aber keinen eigenen Spawnpunkt oder Stauraum aufzubauen.",
+          "Das Dorf zu verlassen, ohne die Koordinaten zu notieren."
+        ],
+        tips: [
+          "Fur echte Anfanger nimmt ein Dorf oft die Halfte des Anfangsdrucks weg.",
+          "Heuballen sind einer der schnellsten fruhen Essens-Boosts.",
+          "Wenn dir ein Dorf einmal geholfen hat, notiere sofort die Koordinaten."
+        ]
+      },
+      fr: {
+        slug: "comment-utiliser-un-village-au-debut-dans-minecraft",
+        title: "Comment utiliser un village au debut dans Minecraft ?",
+        summary: "Les villages sont l'un des plus grands raccourcis pour la nourriture, les lits, l'abri et la survie au debut.",
+        quickAnswer:
+          "Un village peut vous donner des lits, de la nourriture, un abri, des blocs utiles et une securite rapide. Prenez ce dont vous avez besoin, mais restez prudent la nuit.",
+        steps: [
+          "Cherchez d'abord dans les plaines et les zones ouvertes, car les villages y sont plus visibles.",
+          "Utilisez les lits du village si la nuit approche.",
+          "Verifiez les bottes de foin, les cultures et les maisons pour obtenir vite de la nourriture et un abri.",
+          "Posez votre propre coffre et votre propre four si vous voulez utiliser le village comme base temporaire.",
+          "Restez attentif la nuit pour eviter que zombies et autres mobs transforment le village en piege."
+        ],
+        mistakes: [
+          "Croire qu'un village est totalement sur une fois la nuit tombee.",
+          "Tout recuperer sans creer son propre stockage ni point de respawn.",
+          "Repartir sans noter les coordonnees du village."
+        ],
+        tips: [
+          "Pour un vrai debutant, un village peut enlever une enorme partie de la pression des premiers jours.",
+          "Les bottes de foin donnent l'un des meilleurs boosts de nourriture du debut.",
+          "Si un village vous sauve une fois, notez ses coordonnees tout de suite."
+        ]
+      }
+    }
+  },
+  {
+    id: "nether-prep",
+    category: "progression",
+    visual: "netherPrep",
+    pages: {
+      en: {
+        slug: "how-to-prepare-for-the-nether-in-minecraft",
+        title: "How to Prepare for the Nether in Minecraft",
+        summary: "New players usually enter the Nether too early, then lose gear, food and their way home in minutes.",
+        quickAnswer:
+          "Before entering the Nether, bring solid food, extra blocks, torches, spare tools, a safe overworld base location and the coordinates of your portal.",
+        steps: [
+          "Do not enter the Nether until your overworld basics feel stable.",
+          "Bring enough food, building blocks and at least one backup tool.",
+          "Write down or screenshot your portal coordinates before going through.",
+          "Place a chest near the portal with a few emergency supplies.",
+          "Treat your first Nether trip as scouting, not as a deep adventure."
+        ],
+        mistakes: [
+          "Going in with almost no food or blocks.",
+          "Entering before recording portal coordinates.",
+          "Trying to explore too far on the very first trip."
+        ],
+        tips: [
+          "The Nether is not the place to improvise as a beginner.",
+          "Your first goal is learning the area around the portal and getting back alive.",
+          "If your overworld base is still messy, fix that first and delay the trip."
+        ]
+      },
+      de: {
+        slug: "wie-bereitet-man-sich-auf-den-nether-vor-in-minecraft",
+        title: "Wie bereitet man sich auf den Nether vor in Minecraft?",
+        summary: "Neue Spieler gehen oft zu fruh in den Nether und verlieren dort in Minuten Ausrustung, Essen und den Heimweg.",
+        quickAnswer:
+          "Bevor du in den Nether gehst, brauchst du genug Essen, Ersatzblocke, Fackeln, Werkzeug-Reserve, eine sichere Oberwelt-Basis und die Koordinaten deines Portals.",
+        steps: [
+          "Geh nicht in den Nether, solange deine Oberwelt-Grundlagen noch instabil sind.",
+          "Nimm genug Essen, Baublocke und mindestens ein Ersatzwerkzeug mit.",
+          "Notiere oder screenshotte die Portal-Koordinaten vor dem Durchgang.",
+          "Stell eine Truhe mit Notfallvorraten neben das Portal.",
+          "Sieh den ersten Nether-Trip als Erkundung, nicht als groe Expedition."
+        ],
+        mistakes: [
+          "Mit fast keinem Essen oder Baumaterial hineinzugehen.",
+          "Vorher keine Portal-Koordinaten aufzuschreiben.",
+          "Beim ersten Besuch sofort zu weit wegzulaufen."
+        ],
+        tips: [
+          "Der Nether ist fur Anfanger kein Ort fur Improvisation.",
+          "Dein erstes Ziel ist, die Portal-Umgebung kennenzulernen und lebend zuruckzukommen.",
+          "Wenn deine Oberwelt-Basis noch chaotisch ist, bring erst dort Ordnung rein."
+        ]
+      },
+      fr: {
+        slug: "comment-se-preparer-au-nether-dans-minecraft",
+        title: "Comment se preparer au Nether dans Minecraft ?",
+        summary: "Les nouveaux joueurs entrent souvent trop tot dans le Nether, puis perdent equipement, nourriture et chemin du retour en quelques minutes.",
+        quickAnswer:
+          "Avant d'entrer dans le Nether, apportez assez de nourriture, des blocs, des torches, des outils de secours, une base sure dans l'Overworld et les coordonnees de votre portail.",
+        steps: [
+          "N'entrez pas dans le Nether tant que vos bases de survie dans l'Overworld ne sont pas stables.",
+          "Prenez assez de nourriture, de blocs de construction et au moins un outil de rechange.",
+          "Notez ou capturez les coordonnees du portail avant de traverser.",
+          "Placez un coffre pres du portail avec quelques reserves d'urgence.",
+          "Considerez le premier voyage comme une reconnaissance, pas comme une grande expedition."
+        ],
+        mistakes: [
+          "Entrer avec trop peu de nourriture ou de blocs.",
+          "Traverser sans noter les coordonnees du portail.",
+          "Aller trop loin des la toute premiere visite."
+        ],
+        tips: [
+          "Le Nether n'est pas un endroit ou improviser quand on debute.",
+          "Le premier objectif est d'apprendre la zone autour du portail et de revenir vivant.",
+          "Si votre base principale est encore mal organisee, reglez ca avant le voyage."
+        ]
+      }
+    }
   }
 ];
 
@@ -1323,9 +1839,17 @@ function renderHome(locale) {
 }
 
 function relatedLinks(locale, currentId) {
-  const nav = navLabels[locale];
-  return guides
-    .filter((guide) => guide.id !== currentId)
+  const currentGuide = guides.find((guide) => guide.id === currentId);
+  const prioritized = [
+    ...guides.filter(
+      (guide) => guide.id !== currentId && currentGuide && guide.category === currentGuide.category
+    ),
+    ...guides.filter(
+      (guide) => guide.id !== currentId && (!currentGuide || guide.category !== currentGuide.category)
+    )
+  ];
+
+  return prioritized
     .slice(0, 4)
     .map((guide) => {
       const page = guide.pages[locale];
@@ -1913,6 +2437,21 @@ function visualSet(locale) {
         ["Base marker", "Tall pillar or torch line helps from far away."],
         ["High ground", "Climb to scan the area before running farther."],
         ["Return path", "Search from the last place you clearly remember."]
+      ],
+      chest: [
+        ["Wood planks", "Planks are the only material you need."],
+        ["Chest", "Your first real storage block for base supplies."],
+        ["Base storage", "Keep chest, table and furnace close together."]
+      ],
+      village: [
+        ["Village beds", "Fast sleep and a safer first night."],
+        ["Hay bales", "One of the fastest early food boosts."],
+        ["Village houses", "Useful shelter, but not perfect safety at night."]
+      ],
+      netherPrep: [
+        ["Food stack", "Bring enough food before the first trip."],
+        ["Portal note", "Record coordinates before you go in."],
+        ["Base supplies", "Blocks, torch marks and backup gear matter more than speed."]
       ]
     },
     de: {
@@ -1970,6 +2509,21 @@ function visualSet(locale) {
         ["Basismarkierung", "Ein hoher Pfeiler oder Fackelweg hilft aus der Ferne."],
         ["Hoher Punkt", "Steig hoch, bevor du noch weiter weglaust."],
         ["Ruckweg", "Suche vom letzten sicheren Punkt aus."]
+      ],
+      chest: [
+        ["Holzbretter", "Mehr brauchst du fur eine Truhe nicht."],
+        ["Truhe", "Dein erster richtiger Lagerblock fur Startmaterialien."],
+        ["Basislager", "Truhe, Werkbank und Ofen gehoren nah zusammen."]
+      ],
+      village: [
+        ["Dorfbetten", "Schnelles Schlafen und eine sicherere erste Nacht."],
+        ["Heuballen", "Einer der schnellsten fruhen Essensschube."],
+        ["Dorfhauser", "Guter Schutz, aber nachts nicht automatisch sicher."]
+      ],
+      netherPrep: [
+        ["Essensvorrat", "Nimm genug Nahrung fur den ersten Trip mit."],
+        ["Portal-Notiz", "Koordinaten vor dem Durchgang sichern."],
+        ["Basisvorrate", "Blocke, Markierungen und Ersatzzeug zahlen mehr als Tempo."]
       ]
     },
     fr: {
@@ -2027,6 +2581,21 @@ function visualSet(locale) {
         ["Marqueur de base", "Une haute colonne se voit de loin."],
         ["Hauteur", "Montez pour observer avant de partir plus loin."],
         ["Chemin retour", "Repartez du dernier point que vous reconnaissez."]
+      ],
+      chest: [
+        ["Planches", "C'est le seul materiau necessaire."],
+        ["Coffre", "Votre premier vrai bloc de stockage."],
+        ["Stockage de base", "Coffre, table de craft et four doivent rester proches."]
+      ],
+      village: [
+        ["Lits du village", "Dormir vite et passer une premiere nuit plus simple."],
+        ["Bottes de foin", "Un des boosts de nourriture les plus rapides du debut."],
+        ["Maisons du village", "Abri utile, mais pas securite parfaite la nuit."]
+      ],
+      netherPrep: [
+        ["Reserve de nourriture", "Prenez assez de nourriture avant le premier passage."],
+        ["Note du portail", "Enregistrez les coordonnees avant d'entrer."],
+        ["Reserve de base", "Blocs, reperes et equipement de secours comptent plus que la vitesse."]
       ]
     }
   }[locale];
@@ -2254,6 +2823,72 @@ function renderGuideVisual(locale, visualKind) {
           { path: "torch.png", alt: "Torch texture" },
           { path: "oak_sign.png", alt: "Oak sign item icon" },
           { path: "grass_block_side.png", alt: "Grass block side texture" }
+        ])
+      })
+    ],
+    chest: [
+      svgCard({
+        title: copy.chest[0][0],
+        subtitle: copy.chest[0][1],
+        art: mcTexture("oak_planks.png", "Oak planks texture")
+      }),
+      svgCard({
+        title: copy.chest[1][0],
+        subtitle: copy.chest[1][1],
+        art: mcTexture("chest.png", "Chest texture")
+      }),
+      svgCard({
+        title: copy.chest[2][0],
+        subtitle: copy.chest[2][1],
+        art: mcTextureStack([
+          { path: "chest.png", alt: "Chest texture" },
+          { path: "crafting_table_front.png", alt: "Crafting table texture" },
+          { path: "furnace_front.png", alt: "Furnace texture" }
+        ])
+      })
+    ],
+    village: [
+      svgCard({
+        title: copy.village[0][0],
+        subtitle: copy.village[0][1],
+        art: mcTexture("red_bed.png", "Red bed item icon")
+      }),
+      svgCard({
+        title: copy.village[1][0],
+        subtitle: copy.village[1][1],
+        art: mcTexture("hay_block_top.png", "Hay bale texture")
+      }),
+      svgCard({
+        title: copy.village[2][0],
+        subtitle: copy.village[2][1],
+        art: mcTextureStack([
+          { path: "oak_door_bottom.png", alt: "Oak door texture" },
+          { path: "torch.png", alt: "Torch texture" },
+          { path: "grass_block_side.png", alt: "Grass block texture" }
+        ])
+      })
+    ],
+    netherPrep: [
+      svgCard({
+        title: copy.netherPrep[0][0],
+        subtitle: copy.netherPrep[0][1],
+        art: mcTexture("cooked_beef.png", "Cooked beef item icon")
+      }),
+      svgCard({
+        title: copy.netherPrep[1][0],
+        subtitle: copy.netherPrep[1][1],
+        art: mcTextureStack([
+          { path: "map.png", alt: "Map item icon" },
+          { path: "compass_00.png", alt: "Compass item icon" }
+        ])
+      }),
+      svgCard({
+        title: copy.netherPrep[2][0],
+        subtitle: copy.netherPrep[2][1],
+        art: mcTextureStack([
+          { path: "iron_ingot.png", alt: "Iron ingot item icon" },
+          { path: "torch.png", alt: "Torch texture" },
+          { path: "oak_log.png", alt: "Oak log texture" }
         ])
       })
     ]
