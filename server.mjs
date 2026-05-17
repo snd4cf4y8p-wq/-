@@ -20,7 +20,10 @@ const navLabels = {
     progression: "Progression",
     read: "Read guide",
     back: "Back to home",
-    language: "Language"
+    language: "Language",
+    about: "About",
+    privacy: "Privacy",
+    contact: "Contact"
   },
   de: {
     home: "Start",
@@ -31,7 +34,10 @@ const navLabels = {
     progression: "Fortschritt",
     read: "Guide lesen",
     back: "Zuruck zur Startseite",
-    language: "Sprache"
+    language: "Sprache",
+    about: "Uber das Projekt",
+    privacy: "Datenschutz",
+    contact: "Kontakt"
   },
   fr: {
     home: "Accueil",
@@ -42,7 +48,10 @@ const navLabels = {
     progression: "Progression",
     read: "Lire le guide",
     back: "Retour a l'accueil",
-    language: "Langue"
+    language: "Langue",
+    about: "A propos",
+    privacy: "Confidentialite",
+    contact: "Contact"
   }
 };
 
@@ -2552,6 +2561,123 @@ const guides = [
 
 const locales = ["en", "de", "fr"];
 
+const infoPages = {
+  about: {
+    en: {
+      slug: "about",
+      title: "About Minecraft For Beginners",
+      summary:
+        "Why this site exists, who it is for, and how the guides are written for complete beginners.",
+      body: [
+        "Minecraft For Beginners is a three-language guide project built for people who are still confused by Minecraft after the first few hours.",
+        "The goal is simple: answer one beginner problem at a time in plain language, with visual help for key in-game items, blocks and places.",
+        "This site is written for new players in English, German and French, with a strong focus on the early game, survival basics and practical progression.",
+        "We prefer short, actionable guides over wiki-style overload. If a guide cannot help a beginner do the next step, it needs to be improved."
+      ]
+    },
+    de: {
+      slug: "uber-das-projekt",
+      title: "Uber Minecraft For Beginners",
+      summary:
+        "Warum diese Website existiert, fur wen sie gedacht ist und wie die Inhalte fur komplette Anfanger aufgebaut sind.",
+      body: [
+        "Minecraft For Beginners ist ein dreisprachiges Guide-Projekt fur Menschen, die sich nach den ersten Stunden in Minecraft noch immer verloren fuhlen.",
+        "Das Ziel ist einfach: immer nur ein Anfangerproblem klar und in einfacher Sprache losen, mit visueller Hilfe fur wichtige Begriffe aus dem Spiel.",
+        "Die Inhalte richten sich an neue Spieler in Englisch, Deutsch und Franzosisch, mit starkem Fokus auf fruhes Uberleben und praktischen Fortschritt.",
+        "Wir bevorzugen kurze, nutzliche Guides statt uberladener Wiki-Texte. Wenn ein Beitrag einem Anfanger nicht beim nachsten Schritt hilft, muss er besser werden."
+      ]
+    },
+    fr: {
+      slug: "a-propos",
+      title: "A propos de Minecraft For Beginners",
+      summary:
+        "Pourquoi ce site existe, a qui il s'adresse et comment les guides sont construits pour de vrais debutants.",
+      body: [
+        "Minecraft For Beginners est un projet de guides en trois langues pour les personnes qui se sentent encore perdues dans Minecraft apres leurs premieres heures de jeu.",
+        "L'objectif est simple: resoudre un probleme de debutant a la fois, avec un langage clair et une aide visuelle pour les objets, blocs et lieux du jeu.",
+        "Le site s'adresse aux nouveaux joueurs en anglais, allemand et francais, avec un accent fort sur la survie du debut et une progression pratique.",
+        "Nous preferons des guides courts et utiles plutot qu'un style wiki surcharge. Si un guide n'aide pas un debutant a faire le prochain pas, il doit etre ameliore."
+      ]
+    }
+  },
+  privacy: {
+    en: {
+      slug: "privacy-policy",
+      title: "Privacy Policy",
+      summary:
+        "Basic privacy information for visitors, including analytics, advertising preparation and contact handling.",
+      body: [
+        "Minecraft For Beginners may collect limited technical information such as browser type, pages viewed, device information and approximate location through standard website analytics tools.",
+        "If advertising tools such as Google AdSense are connected in the future, third parties may use cookies or similar technologies to serve and measure ads.",
+        "If you contact the site directly, the information you send is used only to respond to your message or manage the site.",
+        "By using the site, you understand that basic operational and analytics data may be processed to improve content, performance and monetization."
+      ]
+    },
+    de: {
+      slug: "datenschutz",
+      title: "Datenschutz",
+      summary:
+        "Grundlegende Datenschutzinformationen fur Besucher, einschlielich Analyse, Werbevorbereitung und Kontaktanfragen.",
+      body: [
+        "Minecraft For Beginners kann begrenzte technische Informationen wie Browsertyp, besuchte Seiten, Gerateinformationen und ungefahren Standort uber ublichen Analyse-Tools erfassen.",
+        "Falls in Zukunft Werbetools wie Google AdSense verbunden werden, konnen Dritte Cookies oder ahnliche Technologien zur Ausspielung und Messung von Anzeigen verwenden.",
+        "Wenn du die Website direkt kontaktierst, werden deine Angaben nur zur Beantwortung deiner Nachricht oder zur Verwaltung der Website genutzt.",
+        "Mit der Nutzung der Website erkennst du an, dass grundlegende Betriebs- und Analysedaten verarbeitet werden konnen, um Inhalte, Leistung und Monetarisierung zu verbessern."
+      ]
+    },
+    fr: {
+      slug: "politique-de-confidentialite",
+      title: "Politique de confidentialite",
+      summary:
+        "Informations de base sur la confidentialite des visiteurs, y compris l'analyse, la preparation publicitaire et la gestion des messages.",
+      body: [
+        "Minecraft For Beginners peut collecter des informations techniques limitees comme le type de navigateur, les pages consultees, l'appareil utilise et une localisation approximative via des outils d'analyse standard.",
+        "Si des outils publicitaires comme Google AdSense sont connectes plus tard, des tiers pourront utiliser des cookies ou technologies similaires pour afficher et mesurer des annonces.",
+        "Si vous contactez directement le site, les informations envoyees sont utilisees uniquement pour repondre a votre message ou gerer le site.",
+        "En utilisant le site, vous acceptez que des donnees techniques et analytiques de base puissent etre traitees pour ameliorer le contenu, la performance et la monetisation."
+      ]
+    }
+  },
+  contact: {
+    en: {
+      slug: "contact",
+      title: "Contact",
+      summary:
+        "How to reach the site owner for corrections, feedback, advertising questions or content suggestions.",
+      body: [
+        "If you want to report a mistake, suggest a guide topic or ask about the project, use the contact email below.",
+        "For advertising, collaboration or site questions, you can use a placeholder address until a final business email is set up.",
+        "Recommended contact address: hello@minecraftforbeginners.example",
+        "Until a dedicated support system is added, replies may be delayed."
+      ]
+    },
+    de: {
+      slug: "kontakt",
+      title: "Kontakt",
+      summary:
+        "So erreichst du den Betreiber fur Korrekturen, Feedback, Werbeanfragen oder Themenvorschlage.",
+      body: [
+        "Wenn du einen Fehler melden, ein Thema vorschlagen oder eine Frage zum Projekt stellen willst, nutze die unten genannte Kontaktadresse.",
+        "Fur Werbung, Zusammenarbeit oder allgemeine Website-Fragen kannst du vorerst eine Platzhalter-Adresse verwenden, bis eine endgultige Business-Mail eingerichtet ist.",
+        "Empfohlene Kontaktadresse: hello@minecraftforbeginners.example",
+        "Bis ein richtiges Support-System eingerichtet ist, konnen Antworten etwas dauern."
+      ]
+    },
+    fr: {
+      slug: "contact",
+      title: "Contact",
+      summary:
+        "Comment joindre le responsable du site pour une correction, un retour, une question publicitaire ou une suggestion de contenu.",
+      body: [
+        "Si vous voulez signaler une erreur, proposer un sujet de guide ou poser une question sur le projet, utilisez l'adresse de contact ci-dessous.",
+        "Pour la publicite, une collaboration ou une question generale, vous pouvez utiliser une adresse provisoire jusqu'a la mise en place d'un email definitif.",
+        "Adresse de contact recommandee: hello@minecraftforbeginners.example",
+        "Tant qu'un vrai systeme de support n'est pas en place, les reponses peuvent prendre un peu de temps."
+      ]
+    }
+  }
+};
+
 function escapeHtml(value) {
   return String(value)
     .replaceAll("&", "&amp;")
@@ -3128,6 +3254,19 @@ function pageTitle(locale, title) {
   return `${escapeHtml(title)} | ${siteName}`;
 }
 
+function buildFooterLinks(locale) {
+  const nav = navLabels[locale];
+  const links = [
+    { href: `/${locale}/${infoPages.about[locale].slug}/`, label: nav.about },
+    { href: `/${locale}/${infoPages.privacy[locale].slug}/`, label: nav.privacy },
+    { href: `/${locale}/${infoPages.contact[locale].slug}/`, label: nav.contact }
+  ];
+
+  return links
+    .map((link) => `<a class="footer-link" href="${link.href}">${escapeHtml(link.label)}</a>`)
+    .join("");
+}
+
 function buildLanguageLinks(currentLocale, guide) {
   return locales
     .map((locale) => {
@@ -3141,17 +3280,38 @@ function buildLanguageLinks(currentLocale, guide) {
     .join("");
 }
 
-function renderLayout({ locale, title, description, hero, main, guide }) {
+function buildInfoLanguageLinks(currentLocale, pageKey) {
+  return locales
+    .map((locale) => {
+      const page = infoPages[pageKey][locale];
+      const label = homeCopy[locale].langName;
+      const active = locale === currentLocale ? "active" : "";
+      return `<a class="lang-link ${active}" href="/${locale}/${page.slug}/">${escapeHtml(label)}</a>`;
+    })
+    .join("");
+}
+
+function renderLayout({ locale, title, description, hero, main, guide, pageKey }) {
   const nav = navLabels[locale];
-  const canonicalPath = guide ? `/${locale}/${guide.pages[locale].slug}/` : `/${locale}/`;
+  const canonicalPath = guide
+    ? `/${locale}/${guide.pages[locale].slug}/`
+    : pageKey
+      ? `/${locale}/${infoPages[pageKey][locale].slug}/`
+      : `/${locale}/`;
   const hreflangs = locales
     .map((altLocale) => {
       const href = guide
         ? `${siteOrigin}/${altLocale}/${guide.pages[altLocale].slug}/`
-        : `${siteOrigin}/${altLocale}/`;
+        : pageKey
+          ? `${siteOrigin}/${altLocale}/${infoPages[pageKey][altLocale].slug}/`
+          : `${siteOrigin}/${altLocale}/`;
       return `<link rel="alternate" hreflang="${altLocale}" href="${href}" />`;
     })
     .join("\n    ");
+  const languageLinks = pageKey
+    ? buildInfoLanguageLinks(locale, pageKey)
+    : buildLanguageLinks(locale, guide);
+  const guideNavLink = pageKey ? `/${locale}/#guides` : "#guides";
   return `<!DOCTYPE html>
 <html lang="${locale}">
   <head>
@@ -3171,16 +3331,17 @@ function renderLayout({ locale, title, description, hero, main, guide }) {
         <a class="brand" href="/${locale}/">${siteName}</a>
         <nav class="topnav">
           <a href="/${locale}/">${escapeHtml(nav.home)}</a>
-          <a href="#guides">${escapeHtml(nav.guides)}</a>
+          <a href="${guideNavLink}">${escapeHtml(nav.guides)}</a>
         </nav>
         <div class="lang-switch" aria-label="${escapeHtml(nav.language)}">
-          ${buildLanguageLinks(locale, guide)}
+          ${languageLinks}
         </div>
       </header>
       ${hero}
       ${main}
       <footer class="site-footer">
         <p>${escapeHtml(homeCopy[locale].footer)}</p>
+        <div class="footer-links">${buildFooterLinks(locale)}</div>
       </footer>
     </div>
   </body>
@@ -3277,6 +3438,39 @@ function renderHome(locale) {
     description: copy.subtitle,
     hero,
     main
+  });
+}
+
+function renderInfoPage(locale, pageKey) {
+  const nav = navLabels[locale];
+  const page = infoPages[pageKey][locale];
+  const hero = `<section class="hero hero-article">
+    <div class="hero-copy">
+      <p class="eyebrow">${escapeHtml(nav[pageKey])}</p>
+      <h1>${escapeHtml(page.title)}</h1>
+      <p class="lede">${escapeHtml(page.summary)}</p>
+      <div class="hero-actions">
+        <a class="ghost-button" href="/${locale}/">${escapeHtml(nav.back)}</a>
+      </div>
+    </div>
+  </section>`;
+
+  const body = page.body.map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join("");
+  const main = `<main class="article-main article-main-wide">
+    <article class="article-card">
+      <section class="info-page-copy">
+        ${body}
+      </section>
+    </article>
+  </main>`;
+
+  return renderLayout({
+    locale,
+    title: page.title,
+    description: page.summary,
+    hero,
+    main,
+    pageKey
   });
 }
 
@@ -4662,6 +4856,12 @@ function resolveRoute(pathname) {
   }
 
   const slug = parts[1];
+  for (const [pageKey, pages] of Object.entries(infoPages)) {
+    if (pages[locale].slug === slug) {
+      return { type: "info", locale, pageKey };
+    }
+  }
+
   const guide = guides.find((item) => item.pages[locale].slug === slug);
   if (!guide) {
     return { type: "not-found" };
@@ -4674,6 +4874,9 @@ function buildSitemapXml() {
   const urls = [];
   for (const locale of locales) {
     urls.push(`${siteOrigin}/${locale}/`);
+    for (const pages of Object.values(infoPages)) {
+      urls.push(`${siteOrigin}/${locale}/${pages[locale].slug}/`);
+    }
     for (const guide of guides) {
       urls.push(`${siteOrigin}/${locale}/${guide.pages[locale].slug}/`);
     }
@@ -4749,6 +4952,12 @@ const server = createServer(async (req, res) => {
   if (route.type === "home") {
     res.writeHead(200, { "Content-Type": "text/html; charset=utf-8" });
     res.end(renderHome(route.locale));
+    return;
+  }
+
+  if (route.type === "info") {
+    res.writeHead(200, { "Content-Type": "text/html; charset=utf-8" });
+    res.end(renderInfoPage(route.locale, route.pageKey));
     return;
   }
 
