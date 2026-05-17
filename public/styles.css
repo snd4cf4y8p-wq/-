@@ -19,7 +19,7 @@
 
 html {
   scroll-behavior: smooth;
-  background: linear-gradient(180deg, #82c9f4 0%, #b8e2f6 36%, #9bc56d 36%, #8db45d 100%);
+  background: linear-gradient(180deg, #82c9f4 0%, #b8e2f6 30%, #a8c97a 30%, #8db45d 100%);
 }
 
 body {
@@ -32,7 +32,7 @@ body {
     linear-gradient(180deg, rgba(255, 255, 255, 0.22), transparent 18%),
     radial-gradient(circle at 20% 16%, rgba(255, 255, 255, 0.26), transparent 12%),
     radial-gradient(circle at 78% 12%, rgba(255, 255, 255, 0.22), transparent 11%),
-    linear-gradient(180deg, #82c9f4 0%, #b8e2f6 34%, #8bb45c 34%, #86ad59 42%, #7a653f 42%, #675537 58%, #5a5a58 58%, #4d4e4d 100%);
+    linear-gradient(180deg, #82c9f4 0%, #b8e2f6 30%, #9dc56f 30%, #8bb45c 38%, #ccb47a 38%, #d8c68e 45%, #7a653f 45%, #675537 58%, #5a5a58 58%, #4d4e4d 100%);
 }
 
 body::before,
@@ -48,10 +48,23 @@ body::before {
   opacity: 1;
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.14), transparent 24%),
-    linear-gradient(180deg, transparent 0 33%, rgba(255, 255, 255, 0.08) 33% 35%, transparent 35%),
-    url("/assets/minecraft/grass_block_top.png") left calc(34% - 42px) / 84px 84px repeat-x,
-    url("/assets/minecraft/grass_block_side.png") left 34% / 84px 84px repeat-x,
-    url("/assets/minecraft/dirt.png") left calc(34% + 84px) / 84px 84px repeat,
+    linear-gradient(180deg, transparent 0 29%, rgba(255, 255, 255, 0.08) 29% 31%, transparent 31%),
+    linear-gradient(90deg, transparent 0 12%, rgba(255, 255, 255, 0.05) 12% 16%, transparent 16% 68%, rgba(255, 255, 255, 0.05) 68% 72%, transparent 72%),
+    url("/assets/minecraft/grass_block_top.png") left calc(31% - 42px) / 84px 84px repeat-x,
+    url("/assets/minecraft/grass_block_side.png") left 31% / 84px 84px repeat-x,
+    url("/assets/minecraft/sand.png") 72% 38% / 72px 72px repeat-x,
+    url("/assets/minecraft/white_wool.png") 84% 24% / 56px 56px repeat-x,
+    url("/assets/minecraft/oak_log.png") 10% 20% / 34px 116px no-repeat,
+    url("/assets/minecraft/oak_log.png") 16% 18% / 34px 126px no-repeat,
+    url("/assets/minecraft/oak_log.png") 22% 21% / 34px 110px no-repeat,
+    url("/assets/minecraft/grass_block_top.png") 7% 15% / 86px 86px no-repeat,
+    url("/assets/minecraft/grass_block_top.png") 13% 12% / 98px 98px no-repeat,
+    url("/assets/minecraft/grass_block_top.png") 19% 16% / 84px 84px no-repeat,
+    url("/assets/minecraft/grass_block_top.png") 78% 24% / 62px 62px no-repeat,
+    url("/assets/minecraft/grass_block_top.png") 83% 21% / 74px 74px no-repeat,
+    url("/assets/minecraft/white_wool.png") 88% 17% / 72px 72px no-repeat,
+    url("/assets/minecraft/white_wool.png") 92% 14% / 84px 84px no-repeat,
+    url("/assets/minecraft/dirt.png") left calc(31% + 84px) / 84px 84px repeat,
     url("/assets/minecraft/stone.png") left calc(58% + 8px) / 96px 96px repeat;
   image-rendering: pixelated;
   image-rendering: crisp-edges;
@@ -955,8 +968,16 @@ h3 {
     opacity: 1;
     background:
       linear-gradient(180deg, rgba(255, 255, 255, 0.14), transparent 20%),
+      linear-gradient(90deg, transparent 0 10%, rgba(255, 255, 255, 0.05) 10% 18%, transparent 18% 66%, rgba(255, 255, 255, 0.05) 66% 74%, transparent 74%),
       url("/assets/minecraft/grass_block_top.png") left calc(30% - 28px) / 56px 56px repeat-x,
       url("/assets/minecraft/grass_block_side.png") left 30% / 56px 56px repeat-x,
+      url("/assets/minecraft/sand.png") 74% 36% / 56px 56px repeat-x,
+      url("/assets/minecraft/white_wool.png") 86% 22% / 38px 38px repeat-x,
+      url("/assets/minecraft/oak_log.png") 12% 18% / 22px 74px no-repeat,
+      url("/assets/minecraft/oak_log.png") 18% 16% / 22px 80px no-repeat,
+      url("/assets/minecraft/grass_block_top.png") 10% 12% / 60px 60px no-repeat,
+      url("/assets/minecraft/grass_block_top.png") 16% 10% / 68px 68px no-repeat,
+      url("/assets/minecraft/white_wool.png") 90% 14% / 52px 52px no-repeat,
       url("/assets/minecraft/dirt.png") left calc(30% + 56px) / 56px 56px repeat,
       url("/assets/minecraft/stone.png") left calc(58% + 8px) / 72px 72px repeat;
   }
