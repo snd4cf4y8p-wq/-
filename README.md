@@ -50,6 +50,7 @@ Use these settings:
 Recommended environment:
 
 - `NODE_VERSION=24.14.1`
+- `PUBLIC_SITE_URL=https://your-render-domain.onrender.com`
 
 ## GitHub upload
 

@@ -6,6 +6,7 @@ import { readFile } from "node:fs/promises";
 const __dirname = fileURLToPath(new URL(".", import.meta.url));
 const publicDir = join(__dirname, "public");
 const port = Number(process.env.PORT || 3000);
+const siteOrigin = process.env.PUBLIC_SITE_URL || "http://localhost:3000";
 
 const siteName = "Minecraft For Beginners";
 
@@ -1184,6 +1185,15 @@ function buildLanguageLinks(currentLocale, guide) {
 
 function renderLayout({ locale, title, description, hero, main, guide }) {
   const nav = navLabels[locale];
+  const canonicalPath = guide ? `/${locale}/${guide.pages[locale].slug}/` : `/${locale}/`;
+  const hreflangs = locales
+    .map((altLocale) => {
+      const href = guide
+        ? `${siteOrigin}/${altLocale}/${guide.pages[altLocale].slug}/`
+        : `${siteOrigin}/${altLocale}/`;
+      return `<link rel="alternate" hreflang="${altLocale}" href="${href}" />`;
+    })
+    .join("\n    ");
   return `<!DOCTYPE html>
 <html lang="${locale}">
   <head>
@@ -1191,6 +1201,9 @@ function renderLayout({ locale, title, description, hero, main, guide }) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>${pageTitle(locale, title)}</title>
     <meta name="description" content="${escapeHtml(description)}" />
+    <link rel="canonical" href="${siteOrigin}${canonicalPath}" />
+    ${hreflangs}
+    <link rel="alternate" hreflang="x-default" href="${siteOrigin}/en/" />
     <link rel="stylesheet" href="/styles.css" />
     <script src="/crafting-sim.js" defer></script>
   </head>
@@ -2280,6 +2293,27 @@ function resolveRoute(pathname) {
   return { type: "guide", locale, guide };
 }
 
+function buildSitemapXml() {
+  const urls = [];
+  for (const locale of locales) {
+    urls.push(`${siteOrigin}/${locale}/`);
+    for (const guide of guides) {
+      urls.push(`${siteOrigin}/${locale}/${guide.pages[locale].slug}/`);
+    }
+  }
+
+  const body = urls
+    .map((url) => `<url><loc>${escapeHtml(url)}</loc></url>`)
+    .join("");
+
+  return `<?xml version="1.0" encoding="UTF-8"?>` +
+    `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${body}</urlset>`;
+}
+
+function buildRobotsTxt() {
+  return `User-agent: *\nAllow: /\n\nSitemap: ${siteOrigin}/sitemap.xml\n`;
+}
+
 async function serveStatic(pathname, res) {
   try {
     const relativePath = pathname.replace(/^\/+/, "");
@@ -2315,6 +2349,18 @@ const server = createServer(async (req, res) => {
   if (route.type === "redirect") {
     res.writeHead(302, { Location: route.location });
     res.end();
+    return;
+  }
+
+  if (url.pathname === "/robots.txt") {
+    res.writeHead(200, { "Content-Type": "text/plain; charset=utf-8" });
+    res.end(buildRobotsTxt());
+    return;
+  }
+
+  if (url.pathname === "/sitemap.xml") {
+    res.writeHead(200, { "Content-Type": "application/xml; charset=utf-8" });
+    res.end(buildSitemapXml());
     return;
   }
 
