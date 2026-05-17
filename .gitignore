@@ -1,0 +1,6 @@
+.env.local
+server.log
+server-error.log
+data/free-usage.json
+minecraft-assets-1.18.2.zip
+*.jpg

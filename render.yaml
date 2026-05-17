@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: minecraft-for-beginners
+    runtime: node
+    plan: free
+    autoDeploy: true
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_VERSION
+        value: 24.14.1
