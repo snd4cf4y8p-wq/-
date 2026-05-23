@@ -1,4 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Baloo+2:wght@400;600;700&display=swap");
+@font-face {
+  font-family: "mocoSans";
+  src: url("https://mo.co/fonts/mocoSans-Regular.woff2") format("woff2");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "mocoSansBold";
+  src: url("https://mo.co/fonts/mocoSans-Black.woff2") format("woff2");
+  font-weight: 900;
+}
 
 :root {
   --bg-top: #80e6ff;
@@ -28,7 +38,7 @@ body {
   margin: 0;
   min-height: 100vh;
   color: var(--ink);
-  font-family: "Baloo 2", system-ui, sans-serif;
+  font-family: "mocoSans", "Baloo 2", system-ui, sans-serif;
   background:
     radial-gradient(circle at 10% 14%, rgba(255, 255, 255, 0.8), transparent 11%),
     radial-gradient(circle at 86% 14%, rgba(255, 245, 187, 0.9), transparent 12%),
@@ -94,7 +104,7 @@ body::after {
 .team-card h3,
 .hero-card strong,
 .mission-tab {
-  font-family: "Press Start 2P", cursive;
+  font-family: "mocoSansBold", "Press Start 2P", cursive;
 }
 
 .moco-logo-badge {
@@ -168,8 +178,10 @@ body::after {
 
 .hero-copy h1 {
   margin: 0;
+  font-family: "mocoSansBold", "Baloo 2", sans-serif;
   font-size: clamp(1.7rem, 3vw, 2.9rem);
   line-height: 1.4;
+  text-transform: uppercase;
 }
 
 .hero-text {
@@ -232,183 +244,35 @@ body::after {
   position: relative;
   overflow: hidden;
   min-height: 540px;
-  background:
-    linear-gradient(180deg, #5edcff 0%, #84e6ff 26%, #b4f4ff 46%, #ceffd5 58%, #88de68 100%);
+  background: linear-gradient(180deg, #1f1a66 0%, #4736b2 16%, #8beeff 52%, #d0ffd5 100%);
 }
 
-.stage-sun,
-.stage-cloud,
-.stage-hill,
-.stage-path,
-.portal,
-.monster,
-.loot,
+.hero-stage-bg,
 .hero-card {
   position: absolute;
 }
 
-.stage-sun {
-  top: 36px;
-  right: 44px;
-  width: 92px;
-  height: 92px;
-  border-radius: 50%;
-  background: radial-gradient(circle at 35% 35%, #fffbe3 0 18%, #ffe66b 19% 62%, #ffbf4c 63% 100%);
-  box-shadow: 0 0 42px rgba(255, 222, 100, 0.55);
-}
-
-.stage-cloud {
-  height: 36px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.68);
-}
-
-.stage-cloud::before,
-.stage-cloud::after {
-  content: "";
-  position: absolute;
-  bottom: 10px;
-  border-radius: 50%;
-  background: inherit;
-}
-
-.stage-cloud::before {
-  left: 10px;
-  width: 38px;
-  height: 38px;
-}
-
-.stage-cloud::after {
-  right: 16px;
-  width: 48px;
-  height: 48px;
-}
-
-.cloud-a {
-  top: 74px;
-  left: 58px;
-  width: 120px;
-}
-
-.cloud-b {
-  top: 132px;
-  left: 180px;
-  width: 150px;
-}
-
-.stage-hill {
-  left: -4%;
-  right: -4%;
-  border-radius: 50% 50% 0 0;
-}
-
-.hill-back {
-  bottom: 32%;
-  height: 26%;
-  background: linear-gradient(180deg, #8fe374, #52be67);
-}
-
-.hill-mid {
-  bottom: 18%;
-  height: 26%;
-  background: linear-gradient(180deg, #93ef7f, #43c66c);
-}
-
-.stage-path {
-  left: 50%;
-  bottom: -3%;
-  width: 62%;
-  height: 40%;
-  transform: translateX(-50%);
-  clip-path: polygon(44% 0, 56% 0, 100% 100%, 0 100%);
-  background: linear-gradient(180deg, #fff0ab, #ffcb6d);
-}
-
-.portal {
-  left: 50%;
-  top: 24%;
-  width: 190px;
-  height: 190px;
-  transform: translateX(-50%);
-  border-radius: 50%;
-  background:
-    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.96) 0 12%, rgba(121, 255, 222, 0.86) 13% 34%, rgba(67, 217, 255, 0.86) 35% 56%, rgba(89, 110, 255, 0.78) 57% 74%, transparent 75%),
-    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.34), transparent 66%);
-  box-shadow: 0 0 0 14px rgba(255, 255, 255, 0.24), 0 0 68px rgba(58, 220, 255, 0.45);
-}
-
-.monster {
-  bottom: 14%;
-  width: 108px;
-  height: 90px;
-  border-radius: 48% 52% 42% 44%;
-  box-shadow: inset 0 -12px 0 rgba(20, 87, 114, 0.18);
-}
-
-.slime-monster {
-  left: 14%;
-  background: linear-gradient(180deg, #62efd6, #24bfd2);
-}
-
-.fire-monster {
-  right: 16%;
-  background: linear-gradient(180deg, #ffd15b, #ff7d45);
-}
-
-.eye {
-  position: absolute;
-  top: 32px;
-  width: 14px;
-  height: 18px;
-  border-radius: 50%;
-  background: #111942;
-}
-
-.eye-left {
-  left: 30px;
-}
-
-.eye-right {
-  right: 30px;
-}
-
-.loot {
-  width: 72px;
-  height: 72px;
-  clip-path: polygon(50% 0, 94% 24%, 94% 76%, 50% 100%, 6% 76%, 6% 24%);
-  background: linear-gradient(135deg, #ff78ae, #8c62ff);
-  box-shadow: 0 20px 30px rgba(92, 61, 169, 0.2);
-}
-
-.loot::after {
-  content: "";
-  position: absolute;
-  inset: 18px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.88);
-}
-
-.loot-a {
-  top: 86px;
-  left: 34px;
-}
-
-.loot-b {
-  top: 188px;
-  right: 42px;
+.hero-stage-bg {
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.96;
 }
 
 .hero-card {
   padding: 14px 16px;
   border-radius: 22px;
-  color: #1f2761;
-  background: rgba(255, 255, 255, 0.84);
+  color: #fff;
+  background: rgba(11, 0, 90, 0.66);
   box-shadow: 0 14px 24px rgba(52, 86, 166, 0.12);
+  backdrop-filter: blur(8px);
 }
 
 .hero-card span {
   display: block;
-  color: var(--muted);
+  color: rgba(255, 255, 255, 0.74);
   font-size: 1rem;
 }
 
@@ -545,8 +409,11 @@ body::after {
 }
 
 .weapon-art,
-.gallery-card svg {
+.gallery-card img,
+.weapon-art img,
+.team-art {
   width: 100%;
+  display: block;
 }
 
 .weapon-card h3,
@@ -603,57 +470,22 @@ body::after {
 
 .mission-illustration {
   min-height: 280px;
+  width: 100%;
   border-radius: 24px;
-  background-size: cover;
-  background-repeat: no-repeat;
+  object-fit: cover;
 }
 
-.chaos-scene {
-  background:
-    radial-gradient(circle at 50% 24%, rgba(255, 255, 255, 0.55), transparent 14%),
-    radial-gradient(circle at 18% 70%, rgba(98, 239, 214, 0.95), transparent 14%),
-    radial-gradient(circle at 76% 68%, rgba(255, 126, 90, 0.92), transparent 14%),
-    linear-gradient(180deg, #73e3ff 0%, #a9f2ff 42%, #8ee46a 42.5%, #4ec56d 100%);
+.gallery-card img {
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  background: linear-gradient(180deg, rgba(129, 0, 217, 0.08), rgba(255, 255, 255, 0.25));
+  border-radius: 24px;
 }
 
-.loot-scene {
-  background:
-    radial-gradient(circle at 26% 62%, rgba(255, 133, 176, 0.92), transparent 14%),
-    radial-gradient(circle at 48% 42%, rgba(255, 239, 106, 0.88), transparent 13%),
-    radial-gradient(circle at 72% 58%, rgba(114, 128, 255, 0.9), transparent 15%),
-    linear-gradient(180deg, #8fe8ff 0%, #c6fbff 38%, #ffe9b2 38.5%, #ffcb75 100%);
-}
-
-.boss-scene {
-  background:
-    radial-gradient(circle at 50% 42%, rgba(99, 126, 255, 0.92), transparent 20%),
-    radial-gradient(circle at 24% 70%, rgba(255, 97, 155, 0.76), transparent 12%),
-    radial-gradient(circle at 78% 76%, rgba(255, 221, 105, 0.82), transparent 11%),
-    linear-gradient(180deg, #90ddff 0%, #beeefe 36%, #c5d6ff 36.5%, #767eff 100%);
-}
-
-.avatar {
-  width: 92px;
-  height: 92px;
+.team-art {
+  height: 180px;
+  object-fit: contain;
   margin-bottom: 18px;
-  border-radius: 28px;
-  background-size: cover;
-}
-
-.avatar-pink {
-  background: linear-gradient(135deg, #ff8cbf, #ff5f91);
-}
-
-.avatar-blue {
-  background: linear-gradient(135deg, #8ee6ff, #59a4ff);
-}
-
-.avatar-green {
-  background: linear-gradient(135deg, #a9ffb4, #46d885);
-}
-
-.avatar-gold {
-  background: linear-gradient(135deg, #ffe78a, #ffa654);
 }
 
 @media (max-width: 1050px) {
