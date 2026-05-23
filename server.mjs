@@ -5,6 +5,7 @@ import { readFile } from "node:fs/promises";
 
 const __dirname = fileURLToPath(new URL(".", import.meta.url));
 const publicDir = join(__dirname, "public");
+const moDir = join(__dirname, "mo");
 const port = Number(process.env.PORT || 3000);
 const siteOrigin = process.env.PUBLIC_SITE_URL || "http://localhost:3000";
 const rawAdsenseClient = (process.env.ADSENSE_CLIENT || "").trim();
@@ -19,7 +20,6 @@ const adsenseSidebarSlot = (process.env.ADSENSE_SLOT_SIDEBAR || "").trim();
 const adsenseEnabled = Boolean(adsenseClient);
 
 const siteName = "Minecraft For Beginners";
-const mocoSiteName = "mo.co Mission Hub";
 
 const navLabels = {
   en: {
@@ -210,62 +210,6 @@ const homeCopy = {
   }
 };
 
-const mocoFeaturePage = {
-  slug: "/moco/",
-  title: "mo.co for Kids in Europe",
-  description:
-    "A bright starter page for mo.co, the newer Supercell mobile game that can appeal to European players aged 9 to 15.",
-  eyebrow: "New Mobile Pick For Europe",
-  heroTitle: "mo.co looks like the strongest new mobile page to build for kids aged 9 to 15.",
-  heroText:
-    "It is colorful, team-focused, easy to watch, and new enough to give you a fresher angle than older giant games. This page explains why it fits younger players and what kind of content to build around it.",
-  chips: ["Global launch: March 18, 2025", "Made by Supercell", "Co-op monster hunting"],
-  reasons: [
-    {
-      title: "Bright and readable",
-      text:
-        "The game uses bold colors, chunky enemies, and playful gear icons. Younger players can understand the screen quickly."
-    },
-    {
-      title: "Short mission energy",
-      text:
-        "Kids in this age range often prefer fast loops. mo.co feels built around quick action instead of long, slow setup."
-    },
-    {
-      title: "Strong social hook",
-      text:
-        "Hunting with friends, flexing gear, and trying new loadouts gives you lots of page angles for kids who like to share tips."
-    },
-    {
-      title: "Still fresh enough",
-      text:
-        "Because it launched in 2025 and is still evolving, there is more room for a focused starter site than with older over-covered games."
-    }
-  ],
-  starterIdeas: [
-    {
-      title: "What is mo.co?",
-      text: "A plain-language intro for parents and first-time players who have no idea what the game loop is."
-    },
-    {
-      title: "Best first weapon",
-      text: "Simple comparisons of safe beginner loadouts, with pictures and no jargon-heavy theorycrafting."
-    },
-    {
-      title: "First 30 minutes",
-      text: "A step-by-step page that tells a child exactly what to tap, equip, and upgrade first."
-    },
-    {
-      title: "Which jobs are fun?",
-      text: "A playful page that sorts missions by chaos level, co-op fun, and how stressful they feel for new players."
-    }
-  ],
-  parentNotes: [
-    "The game is colorful and easy to pick up, but the social layer still means parents should watch chat and spending.",
-    "If you build pages for this audience, keep the tone simple, visual, and mission-based rather than meta-heavy.",
-    "For an ad-supported site, the best pages are beginner setup, best first gear, co-op tips, and short-event explainers."
-  ]
-};
 
 const guides = [
   {
@@ -3534,19 +3478,6 @@ function renderHome(locale) {
       <div class="mini-grid">${categories}</div>
     </section>
 
-    <section class="section-block">
-      <div class="section-head">
-        <h2>Fresh mobile game concept</h2>
-        <p>We also built a new standalone page around mo.co, a newer Supercell mobile game that looks like a strong fit for younger European players.</p>
-      </div>
-      <div class="mini-grid">
-        <article class="mini-card">
-          <h3>mo.co Mission Hub</h3>
-          <p>A brighter, more playful concept page focused on why mo.co works for kids aged 9 to 15 and what kind of beginner pages to build first.</p>
-          <a class="inline-link" href="${mocoFeaturePage.slug}">Open the mo.co page</a>
-        </article>
-      </div>
-    </section>
   </main>`;
 
   return renderLayout({
@@ -3589,128 +3520,6 @@ function renderInfoPage(locale, pageKey) {
     main,
     pageKey
   });
-}
-
-function renderMocoPage() {
-  const reasonCards = mocoFeaturePage.reasons
-    .map(
-      (item) => `<article class="moco-card">
-        <h3>${escapeHtml(item.title)}</h3>
-        <p>${escapeHtml(item.text)}</p>
-      </article>`
-    )
-    .join("");
-  const starterCards = mocoFeaturePage.starterIdeas
-    .map(
-      (item) => `<article class="moco-mini-card">
-        <h3>${escapeHtml(item.title)}</h3>
-        <p>${escapeHtml(item.text)}</p>
-      </article>`
-    )
-    .join("");
-  const chips = mocoFeaturePage.chips
-    .map((chip) => `<span class="moco-chip">${escapeHtml(chip)}</span>`)
-    .join("");
-  const parentNotes = mocoFeaturePage.parentNotes
-    .map((item) => `<li>${escapeHtml(item)}</li>`)
-    .join("");
-
-  return `<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>${escapeHtml(mocoFeaturePage.title)} | ${escapeHtml(mocoSiteName)}</title>
-    <meta name="description" content="${escapeHtml(mocoFeaturePage.description)}" />
-    <link rel="canonical" href="${siteOrigin}${mocoFeaturePage.slug}" />
-    <link rel="stylesheet" href="/styles.css" />
-    ${renderAdsenseHead()}
-  </head>
-  <body class="theme-moco">
-    <div class="page-shell moco-shell">
-      <header class="moco-topbar">
-        <a class="moco-brand" href="${mocoFeaturePage.slug}">${escapeHtml(mocoSiteName)}</a>
-        <nav class="moco-nav">
-          <a href="${mocoFeaturePage.slug}">Why mo.co</a>
-          <a href="#starter-pages">Page ideas</a>
-          <a href="#parent-notes">Parent notes</a>
-          <a href="/en/">Minecraft site</a>
-        </nav>
-      </header>
-
-      <section class="moco-hero">
-        <div class="moco-hero-copy">
-          <p class="moco-eyebrow">${escapeHtml(mocoFeaturePage.eyebrow)}</p>
-          <h1>${escapeHtml(mocoFeaturePage.heroTitle)}</h1>
-          <p class="moco-lede">${escapeHtml(mocoFeaturePage.heroText)}</p>
-          <div class="moco-chip-row">${chips}</div>
-          <div class="moco-hero-actions">
-            <a class="moco-primary-button" href="#starter-pages">Plan the first pages</a>
-            <a class="moco-ghost-button" href="/en/">Back to Minecraft project</a>
-          </div>
-        </div>
-        <div class="moco-stage" aria-hidden="true">
-          <div class="moco-stage-sky"></div>
-          <div class="moco-stage-glow"></div>
-          <div class="moco-stage-portal"></div>
-          <div class="moco-stage-ground"></div>
-          <div class="moco-stage-path"></div>
-          <div class="moco-tree moco-tree-left">
-            <span></span><span></span><span></span>
-          </div>
-          <div class="moco-tree moco-tree-right">
-            <span></span><span></span><span></span>
-          </div>
-          <div class="moco-monster moco-monster-left"></div>
-          <div class="moco-monster moco-monster-right"></div>
-          <div class="moco-loot moco-loot-a"></div>
-          <div class="moco-loot moco-loot-b"></div>
-          <div class="moco-energy moco-energy-a"></div>
-          <div class="moco-energy moco-energy-b"></div>
-        </div>
-      </section>
-
-      ${renderAdSlot({
-        slot: adsenseInlineSlot,
-        className: "ad-slot ad-slot-home",
-        label: "Advertisement"
-      })}
-
-      <main class="moco-main">
-        <section class="moco-section">
-          <div class="moco-section-head">
-            <h2>Why this game works for younger players</h2>
-            <p>This is the page angle: newer than the old giants, bright enough for children, and social enough to generate lots of beginner questions.</p>
-          </div>
-          <div class="moco-card-grid">${reasonCards}</div>
-        </section>
-
-        <section id="starter-pages" class="moco-section">
-          <div class="moco-section-head">
-            <h2>Best first pages to build</h2>
-            <p>These are the kinds of pages that fit 9 to 15 year-old readers: visual, short, specific, and built around the first few play sessions.</p>
-          </div>
-          <div class="moco-mini-grid">${starterCards}</div>
-        </section>
-
-        <section id="parent-notes" class="moco-section">
-          <div class="moco-section-head">
-            <h2>What parents will care about</h2>
-            <p>Even on a child-friendly page, this section matters. It adds trust and makes the site feel more thoughtful than a pure hype page.</p>
-          </div>
-          <article class="moco-notes-card">
-            <ul>${parentNotes}</ul>
-          </article>
-        </section>
-      </main>
-
-      <footer class="moco-footer">
-        <p>Built as a fresh mobile-game concept page alongside the live Minecraft beginner project.</p>
-        <a href="/en/" class="moco-footer-link">Return to Minecraft For Beginners</a>
-      </footer>
-    </div>
-  </body>
-  </html>`;
 }
 
 function relatedLinks(locale, currentId) {
@@ -5091,7 +4900,11 @@ function resolveRoute(pathname) {
   }
 
   if (pathname === "/moco" || pathname === "/moco/") {
-    return { type: "moco" };
+    return { type: "moco-home" };
+  }
+
+  if (pathname.startsWith("/mo/")) {
+    return { type: "mo-static", pathname };
   }
 
   const staticExt = extname(pathname);
@@ -5127,7 +4940,7 @@ function resolveRoute(pathname) {
 }
 
 function buildSitemapXml() {
-  const urls = [`${siteOrigin}${mocoFeaturePage.slug}`];
+  const urls = [`${siteOrigin}/moco/`];
   for (const locale of locales) {
     urls.push(`${siteOrigin}/${locale}/`);
     for (const pages of Object.values(infoPages)) {
@@ -5159,10 +4972,14 @@ function buildAdsTxt() {
 }
 
 async function serveStatic(pathname, res) {
+  return serveStaticFromDir(publicDir, pathname, res);
+}
+
+async function serveStaticFromDir(baseDir, pathname, res) {
   try {
     const relativePath = pathname.replace(/^\/+/, "");
-    const filePath = normalize(join(publicDir, relativePath));
-    if (!filePath.startsWith(publicDir)) {
+    const filePath = normalize(join(baseDir, relativePath));
+    if (!filePath.startsWith(baseDir)) {
       res.writeHead(403, { "Content-Type": "text/plain; charset=utf-8" });
       res.end("Forbidden");
       return;
@@ -5219,15 +5036,22 @@ const server = createServer(async (req, res) => {
     return;
   }
 
+  if (route.type === "mo-static") {
+    const moPath = url.pathname.replace(/^\/mo\//, "/");
+    await serveStaticFromDir(moDir, moPath, res);
+    return;
+  }
+
   if (route.type === "home") {
     res.writeHead(200, { "Content-Type": "text/html; charset=utf-8" });
     res.end(renderHome(route.locale));
     return;
   }
 
-  if (route.type === "moco") {
+  if (route.type === "moco-home") {
     res.writeHead(200, { "Content-Type": "text/html; charset=utf-8" });
-    res.end(renderMocoPage());
+    const file = await readFile(join(moDir, "index.html"), "utf8");
+    res.end(file.replaceAll("__SITE_ORIGIN__", escapeHtml(siteOrigin)));
     return;
   }
 
