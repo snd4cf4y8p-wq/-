@@ -4,3 +4,6 @@ server-error.log
 data/free-usage.json
 minecraft-assets-1.18.2.zip
 *.jpg
+
+server.out.log
+server.err.log
