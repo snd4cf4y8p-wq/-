@@ -4900,7 +4900,15 @@ function resolveRoute(pathname) {
   }
 
   if (pathname === "/moco" || pathname === "/moco/") {
-    return { type: "moco-home" };
+    return { type: "moco-page", file: "index.html" };
+  }
+
+  if (pathname === "/moco/de" || pathname === "/moco/de/") {
+    return { type: "moco-page", file: "de/index.html" };
+  }
+
+  if (pathname === "/moco/fr" || pathname === "/moco/fr/") {
+    return { type: "moco-page", file: "fr/index.html" };
   }
 
   if (pathname.startsWith("/mo/")) {
@@ -4940,7 +4948,7 @@ function resolveRoute(pathname) {
 }
 
 function buildSitemapXml() {
-  const urls = [`${siteOrigin}/moco/`];
+  const urls = [`${siteOrigin}/moco/`, `${siteOrigin}/moco/de/`, `${siteOrigin}/moco/fr/`];
   for (const locale of locales) {
     urls.push(`${siteOrigin}/${locale}/`);
     for (const pages of Object.values(infoPages)) {
@@ -5048,9 +5056,9 @@ const server = createServer(async (req, res) => {
     return;
   }
 
-  if (route.type === "moco-home") {
+  if (route.type === "moco-page") {
     res.writeHead(200, { "Content-Type": "text/html; charset=utf-8" });
-    const file = await readFile(join(moDir, "index.html"), "utf8");
+    const file = await readFile(join(moDir, route.file), "utf8");
     res.end(file.replaceAll("__SITE_ORIGIN__", escapeHtml(siteOrigin)));
     return;
   }

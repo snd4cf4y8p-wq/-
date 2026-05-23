@@ -3,12 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>mo.co Mission Playbook</title>
+    <title>mo.co Hype Board</title>
     <meta
       name="description"
-      content="A brighter mo.co fan page for younger players: favorite weapons, cute monsters, fast mission picks, and visual first-step guides."
+      content="A brighter mo.co fan page for younger players: best weapons, fast level-up picks, boss hype, and reward tips built around the topics players search most."
     />
     <link rel="canonical" href="__SITE_ORIGIN__/moco/" />
+    <link rel="alternate" hreflang="en" href="__SITE_ORIGIN__/moco/" />
+    <link rel="alternate" hreflang="de" href="__SITE_ORIGIN__/moco/de/" />
+    <link rel="alternate" hreflang="fr" href="__SITE_ORIGIN__/moco/fr/" />
+    <link rel="alternate" hreflang="x-default" href="__SITE_ORIGIN__/moco/" />
     <link rel="stylesheet" href="/mo/styles.css" />
     <script src="/mo/app.js" defer></script>
   </head>
@@ -17,71 +21,123 @@
       <header class="moco-header">
         <a class="moco-logo" href="/moco/">
           <span class="moco-logo-badge">mo</span>
-          <span class="moco-logo-text">mission playbook</span>
+          <span class="moco-logo-text">hype board</span>
         </a>
         <nav class="moco-nav">
+          <a href="#searches">Hot searches</a>
           <a href="#weapons">Weapons</a>
-          <a href="#monsters">Monsters</a>
-          <a href="#missions">Missions</a>
-          <a href="#dream-team">Dream team</a>
+          <a href="#missions">Boss & maps</a>
+          <a href="#rewards">Rewards</a>
         </nav>
+        <div class="lang-switch" aria-label="Language switch">
+          <a class="is-active" href="/moco/">EN</a>
+          <a href="/moco/de/">DE</a>
+          <a href="/moco/fr/">FR</a>
+        </div>
       </header>
 
       <main>
         <section class="hero">
           <div class="hero-copy">
-            <p class="eyebrow">new mobile game pick</p>
-            <h1>If kids click because the game looks cool, this is the kind of page they want.</h1>
+            <p class="eyebrow">what kids search first</p>
+            <h1>Best weapon? Fast XP? Cool boss? This is the mo.co page they actually want.</h1>
             <p class="hero-text">
-              Less lecture. More shiny loot, fun monsters, quick builds, and “what should I try first?”
+              Built around the topics that keep showing up across beginner guides, tier lists, Reddit questions,
+              and update chatter.
             </p>
             <div class="hero-chips">
-              <span>Supercell</span>
-              <span>Global launch 2025</span>
-              <span>Monster hunting</span>
-              <span>Co-op chaos</span>
+              <span>best weapon</span>
+              <span>best build</span>
+              <span>level up fast</span>
+              <span>boss tips</span>
+              <span>rewards</span>
             </div>
             <div class="hero-actions">
-              <a class="button button-primary" href="#weapons">Pick a starter weapon</a>
-              <a class="button button-ghost" href="#missions">Jump to cool missions</a>
+              <a class="button button-primary" href="#searches">See the biggest topics</a>
+              <a class="button button-ghost" href="#weapons">Pick a starter weapon</a>
             </div>
           </div>
 
           <div class="hero-stage">
-            <img class="hero-stage-bg" src="/mo/assets/hero-og.jpg" alt="Official mo.co hero artwork" />
+            <img class="hero-stage-bg" src="/mo/assets/key-art.jpg" alt="Official mo.co key art" />
             <div class="hero-card hero-card-left">
               <span>official art</span>
-              <strong>real mo.co screen</strong>
+              <strong>real mo.co visual style</strong>
             </div>
             <div class="hero-card hero-card-right">
-              <span>bright action</span>
-              <strong>looks like a game kids would click</strong>
+              <span>player focus</span>
+              <strong>more images, less lecture</strong>
             </div>
           </div>
         </section>
 
-        <section class="panel-strip">
-          <article class="panel-card">
-            <div class="panel-icon icon-lightning"></div>
-            <h2>Fast battles</h2>
-            <p>Short runs, flashy hits, no giant text wall before the fun starts.</p>
-          </article>
-          <article class="panel-card">
-            <div class="panel-icon icon-friends"></div>
-            <h2>Play with friends</h2>
-            <p>Kids want team-up energy, not a dry systems explainer.</p>
-          </article>
-          <article class="panel-card">
-            <div class="panel-icon icon-loot"></div>
-            <h2>Collect cool stuff</h2>
-            <p>Skins, gear, colors, drops. The page should feel like the game itself.</p>
-          </article>
+        <section id="searches" class="showcase">
+          <div class="section-head">
+            <p class="eyebrow">most searched topics</p>
+            <h2>The mo.co questions that show up again and again</h2>
+          </div>
+
+          <div class="trend-grid">
+            <article class="trend-card">
+              <img class="trend-art" src="/mo/assets/speedshot.png" alt="Official mo.co Speedshot weapon art" />
+              <div class="trend-copy">
+                <span class="trend-tag">Best weapon</span>
+                <h3>What is the best weapon right now?</h3>
+                <p>Weapon tier lists and starter picks dominate guide pages and community discussions.</p>
+              </div>
+            </article>
+
+            <article class="trend-card">
+              <img class="trend-art" src="/mo/assets/headbanger.png" alt="Official mo.co Headbanger weapon art" />
+              <div class="trend-copy">
+                <span class="trend-tag">Best build</span>
+                <h3>What build should I use first?</h3>
+                <p>Players keep looking for easy loadouts with strong weapon and gadget synergy.</p>
+              </div>
+            </article>
+
+            <article class="trend-card">
+              <img class="trend-art" src="/mo/assets/mission-bg.jpg" alt="Official mo.co mission art" />
+              <div class="trend-copy">
+                <span class="trend-tag">Fast XP</span>
+                <h3>How do I level up fast?</h3>
+                <p>Beginner guides and forum threads repeatedly focus on fast progress and smart farming.</p>
+              </div>
+            </article>
+
+            <article class="trend-card">
+              <img class="trend-art" src="/mo/assets/social-hub.png" alt="Official mo.co social hub screenshot" />
+              <div class="trend-copy">
+                <span class="trend-tag">Best gadgets</span>
+                <h3>Which gadgets are worth using?</h3>
+                <p>Build pages keep pairing top weapons with the same few helpful gadget choices.</p>
+              </div>
+            </article>
+
+            <article class="trend-card">
+              <img class="trend-art" src="/mo/assets/boss-scene.png" alt="Official mo.co boss promo art" />
+              <div class="trend-copy">
+                <span class="trend-tag">Boss fight</span>
+                <h3>How do I beat hard bosses?</h3>
+                <p>Boss, elite, and arena-style questions are some of the easiest click magnets for players.</p>
+              </div>
+            </article>
+
+            <article class="trend-card">
+              <img class="trend-art" src="/mo/assets/patch-thumb.jpg" alt="Official mo.co update thumbnail" />
+              <div class="trend-copy">
+                <span class="trend-tag">Rewards</span>
+                <h3>What about free pulls, tokens, and season rewards?</h3>
+                <p>Recent update chatter keeps pulling attention toward rewards, seasons, and free goodies.</p>
+              </div>
+            </article>
+          </div>
         </section>
 
         <section id="weapons" class="showcase">
           <div class="section-head">
             <p class="eyebrow">starter picks</p>
-            <h2>Choose the weapon that feels the most fun first</h2>
+            <h2>Choose the first weapon that feels fun, not the first boring paragraph</h2>
           </div>
 
           <div class="weapon-grid">
@@ -90,7 +146,7 @@
                 <img src="/mo/assets/zapsicle.png" alt="Official mo.co Zapsicle weapon art" />
               </div>
               <h3>Zapsicle</h3>
-              <p>Bright, weird, and instantly readable. This is the kind of weapon art kids remember.</p>
+              <p>Bright, readable, and easy to love if you want something weird and flashy first.</p>
             </article>
 
             <article class="weapon-card">
@@ -98,7 +154,7 @@
                 <img src="/mo/assets/headbanger.png" alt="Official mo.co Headbanger weapon art" />
               </div>
               <h3>Headbanger</h3>
-              <p>Bigger shape, louder vibe, more rush-down energy. This feels closer to what kids call “cool”.</p>
+              <p>Big shape, loud energy, and exactly the kind of weapon kids click in thumbnails.</p>
             </article>
 
             <article class="weapon-card">
@@ -106,15 +162,74 @@
                 <img src="/mo/assets/speedshot.png" alt="Official mo.co Speedshot weapon art" />
               </div>
               <h3>Speedshot</h3>
-              <p>Fast, clean, and easy to imagine in clips or thumbnails. Better than a text-heavy “best build” wall.</p>
+              <p>Fast, clean, and constantly mentioned in weapon lists and build advice.</p>
             </article>
           </div>
         </section>
 
-        <section id="monsters" class="gallery-block">
+        <section id="missions" class="mission-board">
           <div class="section-head">
-            <p class="eyebrow">official hunters</p>
-            <h2>Use the real mo.co crew instead of fake fan-art style filler</h2>
+            <p class="eyebrow">boss and map hype</p>
+            <h2>Kids click scenes that look exciting first</h2>
+          </div>
+
+          <div class="mission-layout">
+            <aside class="mission-tabs" aria-label="Mission moods">
+              <button class="mission-tab is-active" data-target="chaos">Fast farming</button>
+              <button class="mission-tab" data-target="loot">Hub & team-up</button>
+              <button class="mission-tab" data-target="boss">Boss energy</button>
+            </aside>
+
+            <div class="mission-panels">
+              <article class="mission-panel is-active" data-panel="chaos">
+                <img class="mission-illustration" src="/mo/assets/mission-bg.jpg" alt="Official mo.co mission background art" />
+                <div class="mission-copy">
+                  <h3>Fast farming maps</h3>
+                  <p>Players keep searching for the quickest ways to grind levels, tokens, and easy wins.</p>
+                </div>
+              </article>
+
+              <article class="mission-panel" data-panel="loot">
+                <img class="mission-illustration" src="/mo/assets/social-hub.png" alt="Official mo.co social hub screenshot" />
+                <div class="mission-copy">
+                  <h3>Hub and hangout feel</h3>
+                  <p>Social areas help the page feel closer to the game, especially for younger players.</p>
+                </div>
+              </article>
+
+              <article class="mission-panel" data-panel="boss">
+                <img class="mission-illustration" src="/mo/assets/boss-scene.png" alt="Official mo.co promotional boss art" />
+                <div class="mission-copy">
+                  <h3>Boss battle hype</h3>
+                  <p>Big boss visuals sell harder than a long wall of strategy text.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section id="rewards" class="gallery-block">
+          <div class="section-head">
+            <p class="eyebrow">rewards and favorites</p>
+            <h2>What players want next: rewards, updates, and the coolest hunters</h2>
+          </div>
+
+          <div class="reward-grid">
+            <article class="reward-card">
+              <img src="/mo/assets/patch-thumb.jpg" alt="Official mo.co patch thumbnail" />
+              <h3>New season stuff</h3>
+              <p>Updates, free pulls, and fresh reward talk get attention fast.</p>
+            </article>
+            <article class="reward-card">
+              <img src="/mo/assets/luna.png" alt="Official mo.co Luna character art" />
+              <h3>Favorite hunter</h3>
+              <p>Character art is one of the easiest ways to make the page feel collectible.</p>
+            </article>
+            <article class="reward-card">
+              <img src="/mo/assets/vampirebat.png" alt="Official mo.co Vampire Bat item art" />
+              <h3>Cool loot</h3>
+              <p>Gear and item art beat generic filler every time.</p>
+            </article>
           </div>
 
           <div class="gallery-grid">
@@ -131,77 +246,6 @@
             <article class="gallery-card">
               <img src="/mo/assets/jax.png" alt="Official mo.co Jax character art" />
               <h3>Jax</h3>
-            </article>
-          </div>
-        </section>
-
-        <section id="missions" class="mission-board">
-          <div class="section-head">
-            <p class="eyebrow">mission vibes</p>
-            <h2>Kids care more about “which map looks awesome?” than long meta talk</h2>
-          </div>
-
-          <div class="mission-layout">
-            <aside class="mission-tabs" aria-label="Mission moods">
-              <button class="mission-tab is-active" data-target="chaos">Chaos Forest</button>
-              <button class="mission-tab" data-target="loot">Loot Rush</button>
-              <button class="mission-tab" data-target="boss">Boss Arena</button>
-            </aside>
-
-            <div class="mission-panels">
-              <article class="mission-panel is-active" data-panel="chaos">
-                <img class="mission-illustration" src="/mo/assets/mission-bg.jpg" alt="Official mo.co mission background art" />
-                <div class="mission-copy">
-                  <h3>Chaos Forest</h3>
-                  <p>Official mission art feels far stronger than made-up blocks. Use this kind of scenery as the page mood.</p>
-                </div>
-              </article>
-
-              <article class="mission-panel" data-panel="loot">
-                <img class="mission-illustration" src="/mo/assets/social-hub.png" alt="Official mo.co social hub screenshot" />
-                <div class="mission-copy">
-                  <h3>Loot Rush</h3>
-                  <p>The social hub art already gives you real color, UI energy, and a stronger “I want to click this” feel.</p>
-                </div>
-              </article>
-
-              <article class="mission-panel" data-panel="boss">
-                <img class="mission-illustration" src="/mo/assets/boss-scene.png" alt="Official mo.co promotional boss art" />
-                <div class="mission-copy">
-                  <h3>Boss Arena</h3>
-                  <p>Use official promo art like this when you want big hype without inventing your own fake battle scene.</p>
-                </div>
-              </article>
-            </div>
-          </div>
-        </section>
-
-        <section id="dream-team" class="team-wall">
-          <div class="section-head">
-            <p class="eyebrow">dream team</p>
-            <h2>Instead of a long guide, show children the kind of squad they want to become</h2>
-          </div>
-
-          <div class="team-grid">
-            <article class="team-card">
-              <img class="team-art" src="/mo/assets/vampirebat.png" alt="Official mo.co Vampire Bat item art" />
-              <h3>Collectible gear</h3>
-              <p>Kids notice shape and color first. This is the kind of image they actually remember.</p>
-            </article>
-            <article class="team-card">
-              <img class="team-art" src="/mo/assets/zapsicle.png" alt="Official mo.co Zapsicle item art" />
-              <h3>Instant favorite</h3>
-              <p>When the weapon art is strong, the page can be lighter on explanation and still feel exciting.</p>
-            </article>
-            <article class="team-card">
-              <img class="team-art" src="/mo/assets/headbanger.png" alt="Official mo.co Headbanger item art" />
-              <h3>Looks powerful</h3>
-              <p>This kind of official render works much better than abstract colored placeholders.</p>
-            </article>
-            <article class="team-card">
-              <img class="team-art" src="/mo/assets/speedshot.png" alt="Official mo.co Speedshot item art" />
-              <h3>Fast and clear</h3>
-              <p>Good pages for younger players should feel like a sticker album of real game stuff.</p>
             </article>
           </div>
         </section>

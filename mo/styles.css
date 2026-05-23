@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Baloo+2:wght@400;600;700&display=swap");
 @font-face {
   font-family: "mocoSans";
   src: url("https://mo.co/fonts/mocoSans-Regular.woff2") format("woff2");
@@ -38,7 +37,7 @@ body {
   margin: 0;
   min-height: 100vh;
   color: var(--ink);
-  font-family: "mocoSans", "Baloo 2", system-ui, sans-serif;
+  font-family: "mocoSans", system-ui, sans-serif;
   background:
     radial-gradient(circle at 10% 14%, rgba(255, 255, 255, 0.8), transparent 11%),
     radial-gradient(circle at 86% 14%, rgba(255, 245, 187, 0.9), transparent 12%),
@@ -94,17 +93,18 @@ body::after {
 .moco-logo-badge,
 .moco-logo-text,
 .moco-nav a,
+.lang-switch a,
 .eyebrow,
 .button,
 .section-head h2,
-.panel-card h2,
+.trend-card h3,
 .weapon-card h3,
 .gallery-card h3,
+.reward-card h3,
 .mission-copy h3,
-.team-card h3,
 .hero-card strong,
 .mission-tab {
-  font-family: "mocoSansBold", "Press Start 2P", cursive;
+  font-family: "mocoSansBold", sans-serif;
 }
 
 .moco-logo-badge {
@@ -131,15 +131,27 @@ body::after {
   gap: 14px;
 }
 
-.moco-nav a {
+.moco-nav a,
+.lang-switch a {
   color: #3450a5;
   text-decoration: none;
   font-size: 0.56rem;
   line-height: 1.8;
 }
 
-.moco-nav a:hover {
+.moco-nav a:hover,
+.lang-switch a:hover,
+.lang-switch a.is-active {
   color: var(--ink);
+}
+
+.lang-switch {
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+  padding: 8px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.76);
 }
 
 .hero {
@@ -178,7 +190,7 @@ body::after {
 
 .hero-copy h1 {
   margin: 0;
-  font-family: "mocoSansBold", "Baloo 2", sans-serif;
+  font-family: "mocoSansBold", sans-serif;
   font-size: clamp(1.7rem, 3vw, 2.9rem);
   line-height: 1.4;
   text-transform: uppercase;
@@ -293,77 +305,26 @@ body::after {
   top: 28px;
 }
 
-.panel-strip {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
-  margin-top: 22px;
-}
-
-.panel-card,
+.trend-card,
 .weapon-card,
 .gallery-card,
+.reward-card,
 .mission-tabs,
-.mission-panel,
-.team-card {
+.mission-panel {
   padding: 22px;
 }
-
-.panel-icon {
-  width: 68px;
-  height: 68px;
-  border-radius: 22px;
-  background: linear-gradient(135deg, #fff, #eef8ff);
-  position: relative;
-}
-
-.icon-lightning::before,
-.icon-friends::before,
-.icon-loot::before {
-  content: "";
-  position: absolute;
-}
-
-.icon-lightning::before {
-  left: 25px;
-  top: 12px;
-  width: 18px;
-  height: 38px;
-  background: linear-gradient(180deg, var(--yellow), #ffb751);
-  clip-path: polygon(58% 0, 100% 0, 64% 46%, 100% 46%, 34% 100%, 48% 58%, 14% 58%);
-}
-
-.icon-friends::before {
-  inset: 16px;
-  border-radius: 50%;
-  background:
-    radial-gradient(circle at 32% 38%, #6fd9ff 0 10px, transparent 11px),
-    radial-gradient(circle at 68% 38%, #ff9dc0 0 10px, transparent 11px),
-    radial-gradient(circle at 32% 68%, #6fd9ff 0 14px, transparent 15px),
-    radial-gradient(circle at 68% 68%, #ff9dc0 0 14px, transparent 15px);
-}
-
-.icon-loot::before {
-  left: 13px;
-  top: 12px;
-  width: 42px;
-  height: 42px;
-  clip-path: polygon(50% 0, 96% 26%, 96% 74%, 50% 100%, 4% 74%, 4% 26%);
-  background: linear-gradient(135deg, #ff72ab, #7b65ff);
-}
-
-.panel-card h2,
 .section-head h2,
+.trend-card h3,
 .mission-copy h3,
-.team-card h3 {
+.reward-card h3 {
   margin: 16px 0 10px;
   font-size: 0.72rem;
   line-height: 1.8;
 }
 
-.panel-card p,
+.trend-card p,
 .weapon-card p,
-.team-card p,
+.reward-card p,
 .mission-copy p {
   margin: 0;
   color: var(--muted);
@@ -373,8 +334,7 @@ body::after {
 
 .showcase,
 .gallery-block,
-.mission-board,
-.team-wall {
+.mission-board {
   margin-top: 24px;
 }
 
@@ -389,11 +349,16 @@ body::after {
   line-height: 1.45;
 }
 
+.trend-grid,
 .weapon-grid,
 .gallery-grid,
-.team-grid {
+.reward-grid {
   display: grid;
   gap: 18px;
+}
+
+.trend-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .weapon-grid {
@@ -404,20 +369,47 @@ body::after {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
-.team-grid {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+.reward-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.trend-art,
 .weapon-art,
 .gallery-card img,
 .weapon-art img,
-.team-art {
+.reward-card img {
   width: 100%;
   display: block;
 }
 
+.trend-art,
+.reward-card img {
+  aspect-ratio: 16 / 11;
+  object-fit: cover;
+  border-radius: 24px;
+  background: linear-gradient(180deg, rgba(129, 0, 217, 0.08), rgba(255, 255, 255, 0.25));
+}
+
+.trend-copy {
+  margin-top: 16px;
+}
+
+.trend-tag {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 0 12px;
+  border-radius: 999px;
+  font-family: "mocoSansBold", sans-serif;
+  font-size: 0.48rem;
+  line-height: 1.8;
+  color: #fff;
+  background: linear-gradient(135deg, #6c78ff, #57dcff);
+}
+
 .weapon-card h3,
-.gallery-card h3 {
+.gallery-card h3,
+.reward-card h3 {
   margin: 16px 0 10px;
   font-size: 0.66rem;
   line-height: 1.8;
@@ -482,20 +474,14 @@ body::after {
   border-radius: 24px;
 }
 
-.team-art {
-  height: 180px;
-  object-fit: contain;
-  margin-bottom: 18px;
-}
-
 @media (max-width: 1050px) {
   .hero,
-  .panel-strip,
+  .trend-grid,
   .weapon-grid,
   .gallery-grid,
+  .reward-grid,
   .mission-layout,
-  .mission-panel,
-  .team-grid {
+  .mission-panel {
     grid-template-columns: 1fr;
   }
 
@@ -518,12 +504,12 @@ body::after {
   .moco-header,
   .hero-copy,
   .hero-stage,
-  .panel-card,
+  .trend-card,
   .weapon-card,
   .gallery-card,
+  .reward-card,
   .mission-tabs,
-  .mission-panel,
-  .team-card {
+  .mission-panel {
     padding: 18px;
   }
 
@@ -533,10 +519,5 @@ body::after {
 
   .hero-stage {
     min-height: 420px;
-  }
-
-  .portal {
-    width: 150px;
-    height: 150px;
   }
 }
